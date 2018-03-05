@@ -1,48 +1,36 @@
-#### Thanks to each person who takes their time to help me with the project.
-#### I thank specific people who stand out in this project as major contributors.
+### GIT
+
+Please use GIT to clone our code.
+
+# Installing *Git* on *Linux*
+
+Determine on **which *Linux* distribution** your system is based on. See [List of Linux distributions – Wikipedia](http://en.wikipedia.org/wiki/List_of_Linux_distributions) for a list. **Most *Linux* systems – including *Ubuntu* – are *Debian*-based**.
 
 
-The nicknames of these people are from Discord.
+## *Debian*-based linux systems
 
-##### Anetwork --- Project
-* @Thranrion#3322 [ Owner ]
+**[Open a terminal window](https://help.ubuntu.com/community/UsingTheTerminal). Copy & paste the following** into the terminal window and **hit `Return`**. You may be prompted to enter your password.
 
-##### Sponsor
-> Thanks for your monetary help
+```shell
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install git
+```
 
-* @Rinzler#6754
-
-##### Developers
-> Thanks for your work to improve the development of BlizzCMS
-
-* @Scott#2935 - [ API Selector ]
-* @ZWolf#4200 - [ Analyzer ]
+**You can use *Git* now.**
 
 
-##### Partner
-> Thank you for believing in my project and using it on your server
+## *Red Hat*-based linux systems
 
-* @Darkero12#3477 - [ExileHeroes](http://exileheroes.com/)
-* @Felstrider#0548 - [Uncrowned](http://uncrowned.servegame.com/)
-* @Sagrario#5625 - [Xavius](http://xavius.ru/)
-* @Alterac WoW#2591 - [Alterac WoW](https://www.alterac-wow.org/)
-* @OMGhixD#4382 - [Cruel-WoW](https://www.cruel-wow.net/)
-* @Tyrelis#4924 - [Worselis](https://www.worselis.com/)
+**Open a terminal. Copy & paste the following** into the terminal window and **hit `Return`**. You may be prompted to enter your password.
 
+```shell
+sudo yum upgrade
+sudo yum install git
+```
 
-##### Premium
-> Thank you for your unconditional support
-
-##### Creator of Ideas
-> Thanks for being so creative, help with the progress of the project
-
-* @haritz#5688
-* @MaxtorCoder#2831
-* @OMGhixD#4382
+**You can use *Git* now.**
 
 
-##### Tester
-> Thank you for participating in my UPDATE, you are always aware of my changes and the tests
-
-* @Alterac WoW#2591
-* @Sagrario#5625
+# Installing *Git* on *Windows*
+[Sourcetree](https://www.sourcetreeapp.com/)
