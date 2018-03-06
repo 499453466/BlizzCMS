@@ -9,7 +9,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | Write the name of your website this will appear by default.
 |
 */
-$config['ProjectName'] = "ProjectName_fixcore";
+$config['ProjectName'] = 'ProjectName_fixcore';
 
 /*
 |--------------------------------------------------------------------------
@@ -19,7 +19,7 @@ $config['ProjectName'] = "ProjectName_fixcore";
 | http://php.net/manual/en/timezones.php
 |
 */
-$config['timezone'] = "GMT";
+$config['timezone'] = 'GMT';
 
 /*
 |--------------------------------------------------------------------------
@@ -30,7 +30,7 @@ $config['timezone'] = "GMT";
 | 0 = Disable
 |
 */
-$config['maintenance_mode'] = "0";
+$config['maintenance_mode'] = '0';
 
 /*
 |--------------------------------------------------------------------------
@@ -40,7 +40,7 @@ $config['maintenance_mode'] = "0";
 | Write the invitation of your discord channel.
 |
 */
-$config['discord_inv'] = "WGGGVgX";
+$config['discord_inv'] = 'WGGGVgX';
 
 /*
 |--------------------------------------------------------------------------
@@ -50,7 +50,7 @@ $config['discord_inv'] = "WGGGVgX";
 | Write the realmlist used on your server to publish it on the website.
 |
 */
-$config['realmlist'] = "ProjectRealmlist_fixcore";
+$config['realmlist'] = 'ProjectRealmlist_fixcore';
 
 /*
 |--------------------------------------------------------------------------
@@ -63,7 +63,7 @@ $config['realmlist'] = "ProjectRealmlist_fixcore";
 | Default: 00b4ff
 |
 */
-$config['staff_forum_color'] = "00b4ff";
+$config['staff_forum_color'] = '00b4ff';
 
 /*
 |--------------------------------------------------------------------------
@@ -82,7 +82,7 @@ $config['staff_forum_color'] = "00b4ff";
 | 8 = Battle for Azeroth
 |
 */
-$config['expansion_id'] = "ProjectExpansion_fixcore";
+$config['expansion_id'] = 'ProjectExpansion_fixcore';
 
 /*
 |--------------------------------------------------------------------------
@@ -94,7 +94,7 @@ $config['expansion_id'] = "ProjectExpansion_fixcore";
 | The css must also have the same name
 | Default: default
 */
-$config['theme_name'] = "default";
+$config['theme_name'] = 'default';
 
 /*
 |--------------------------------------------------------------------------
@@ -122,4 +122,4 @@ $config['fx_devbar'] = FALSE;
 | th_TH = Thai (Thailand)
 |
 */
-$config['tinymce_language'] = "";
+$config['tinymce_language'] = '';

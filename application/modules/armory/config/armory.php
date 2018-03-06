@@ -19,4 +19,4 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | pt = Portuguese
 |
 */
-$config['itemsArmoryLang'] = "en";
+$config['itemsArmoryLang'] = 'en';

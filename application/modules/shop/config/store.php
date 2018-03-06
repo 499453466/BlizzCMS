@@ -12,4 +12,4 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | 2 = Store with Icons
 |
 */
-$config['shopStyle'] = "1";
+$config['shopStyle'] = '1';

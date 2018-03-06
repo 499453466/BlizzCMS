@@ -12,6 +12,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 */
 
-$config['recaptcha_sitekey'] = "6LfJFEAUAAAAAKBrGYQaX-TeWGBG1vTNlqUuNyNA";
-$config['recaptcha_secretkey'] = "6LfJFEAUAAAAAEbY3UgbdfmbOPd86Qs2LtnbPtXL";
-$config['lang'] = "en";
+$config['recaptcha_sitekey'] = '6LfJFEAUAAAAAKBrGYQaX-TeWGBG1vTNlqUuNyNA';
+$config['recaptcha_secretkey'] = '6LfJFEAUAAAAAEbY3UgbdfmbOPd86Qs2LtnbPtXL';
+$config['lang'] = 'en';
