@@ -926,7 +926,7 @@ class Admin_model extends CI_Model {
         $fileHandle = file($filename);
         $fileHandle = substr($fileHandle[11], 26);
         $fileHandle = explode(";", $fileHandle);
-        return str_replace('"', "", $fileHandle[0]);
+        return str_replace("'", "", $fileHandle[0]);
     }
 
     public function getFixCoreTimeZone($filename)
@@ -934,7 +934,7 @@ class Admin_model extends CI_Model {
         $fileHandle = file($filename);
         $fileHandle = substr($fileHandle[21], 23);
         $fileHandle = explode(";", $fileHandle);
-        return str_replace('"', "", $fileHandle[0]);
+        return str_replace("'", "", $fileHandle[0]);
     }
 
     public function getFixCoreDiscordInv($filename)
@@ -942,7 +942,7 @@ class Admin_model extends CI_Model {
         $fileHandle = file($filename);
         $fileHandle = substr($fileHandle[42], 25);
         $fileHandle = explode(";", $fileHandle);
-        return str_replace('"', "", $fileHandle[0]);
+        return str_replace("'", "", $fileHandle[0]);
     }
 
     public function getFixCoreRealmlist($filename)
@@ -950,7 +950,7 @@ class Admin_model extends CI_Model {
         $fileHandle = file($filename);
         $fileHandle = substr($fileHandle[52], 24);
         $fileHandle = explode(";", $fileHandle);
-        return str_replace('"', "", $fileHandle[0]);
+        return str_replace("'", "", $fileHandle[0]);
     }
 
     public function getFixCoreStaffColor($filename)
@@ -958,7 +958,7 @@ class Admin_model extends CI_Model {
         $fileHandle = file($filename);
         $fileHandle = substr($fileHandle[65], 31);
         $fileHandle = explode(";", $fileHandle);
-        return str_replace('"', "", $fileHandle[0]);
+        return str_replace("'", "", $fileHandle[0]);
     }
 
     public function getFixCoreThemeName($filename)
@@ -966,7 +966,7 @@ class Admin_model extends CI_Model {
         $fileHandle = file($filename);
         $fileHandle = substr($fileHandle[96], 25);
         $fileHandle = explode(";", $fileHandle);
-        return str_replace('"', "", $fileHandle[0]);
+        return str_replace("'", "", $fileHandle[0]);
     }
 
     public function getFixCoreNavBar($filename)
@@ -974,7 +974,7 @@ class Admin_model extends CI_Model {
         $fileHandle = file($filename);
         $fileHandle = substr($fileHandle[106], 23);
         $fileHandle = explode(";", $fileHandle);
-        return str_replace('"', "", $fileHandle[0]);
+        return str_replace("'", "", $fileHandle[0]);
     }
 
     //database
@@ -1108,7 +1108,7 @@ class Admin_model extends CI_Model {
         $fileHandle = file($filename);
         $fileHandle = substr($fileHandle[14], 32);
         $fileHandle = explode(";", $fileHandle);
-        return str_replace('"', "", $fileHandle[0]);
+        return str_replace("'", "", $fileHandle[0]);
     }
 
     public function getRecaptchaPrivateKey($filename)
@@ -1116,7 +1116,7 @@ class Admin_model extends CI_Model {
         $fileHandle = file($filename);
         $fileHandle = substr($fileHandle[15], 34);
         $fileHandle = explode(";", $fileHandle);
-        return str_replace('"', "", $fileHandle[0]);
+        return str_replace("'", "", $fileHandle[0]);
     }
 
     public function getRecaptchaLang($filename)
@@ -1124,7 +1124,7 @@ class Admin_model extends CI_Model {
         $fileHandle = file($filename);
         $fileHandle = substr($fileHandle[16], 19);
         $fileHandle = explode(";", $fileHandle);
-        return str_replace('"', "", $fileHandle[0]);
+        return str_replace("'", "", $fileHandle[0]);
     }
 
     //bugtracker
@@ -1154,7 +1154,7 @@ class Admin_model extends CI_Model {
         $fileHandle = file($filename);
         $fileHandle = substr($fileHandle[11], 23);
         $fileHandle = explode(";", $fileHandle);
-        return str_replace('"', "", $fileHandle[0]);
+        return str_replace("'", "", $fileHandle[0]);
     }
 
     //donate
@@ -1190,7 +1190,7 @@ class Admin_model extends CI_Model {
         $fileHandle = file($filename);
         $fileHandle = substr($fileHandle[12], 27);
         $fileHandle = explode(";", $fileHandle);
-        return str_replace('"', "", $fileHandle[0]);
+        return str_replace("'", "", $fileHandle[0]);
     }
 
     public function getPaypalMode($filename)
@@ -1198,7 +1198,7 @@ class Admin_model extends CI_Model {
         $fileHandle = file($filename);
         $fileHandle = substr($fileHandle[25], 21);
         $fileHandle = explode(";", $fileHandle);
-        return str_replace('"', "", $fileHandle[0]);
+        return str_replace("'", "", $fileHandle[0]);
     }
 
     public function getPaypalClientID($filename)
@@ -1206,7 +1206,7 @@ class Admin_model extends CI_Model {
         $fileHandle = file($filename);
         $fileHandle = substr($fileHandle[36], 21);
         $fileHandle = explode(";", $fileHandle);
-        return str_replace('"', "", $fileHandle[0]);
+        return str_replace("'", "", $fileHandle[0]);
     }
 
     public function getPaypalPassword($filename)
@@ -1214,7 +1214,7 @@ class Admin_model extends CI_Model {
         $fileHandle = file($filename);
         $fileHandle = substr($fileHandle[47], 25);
         $fileHandle = explode(";", $fileHandle);
-        return str_replace('"', "", $fileHandle[0]);
+        return str_replace("'", "", $fileHandle[0]);
     }
 
     //store
@@ -1244,7 +1244,7 @@ class Admin_model extends CI_Model {
         $fileHandle = file($filename);
         $fileHandle = substr($fileHandle[14], 24);
         $fileHandle = explode(";", $fileHandle);
-        return str_replace('"', "", $fileHandle[0]);
+        return str_replace("'", "", $fileHandle[0]);
     }
 
     public function delSpecifyRealm($id)
