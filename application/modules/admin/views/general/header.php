@@ -115,8 +115,7 @@
                         <ul class="uk-nav-sub">
                             <li><a href="<?= base_url('admin/manageapi'); ?>"><span class="uk-margin-small-right" data-uk-icon="icon: code"></span>API</a></li>
                             <li class="uk-nav-divider"></li>
-                            <li><a target="_blank" href="https://fixcore.github.io"><span class="uk-margin-small-right" data-uk-icon="icon: info"></span>Wiki</a></li>
-                            <li><a target="_blank" href="https://github.com/fixcore/BlizzCMS/issues"><span class="uk-margin-small-right" data-uk-icon="icon: lifesaver"></span>Issues</a></li>
+                            <li><a target="_blank" href="https://gitlab.com/BlizzCMS/BlizzCMS/issues"><span class="uk-margin-small-right" data-uk-icon="icon: lifesaver"></span>Issues</a></li>
                         </ul>
                     </li>
                     <li class="uk-nav-divider"></li>
@@ -164,7 +163,6 @@
                         <ul class="uk-nav-sub">
                             <li><a href="<?= base_url('admin/manageapi'); ?>"><span class="uk-margin-small-right" data-uk-icon="icon: code"></span>API</a></li>
                             <li class="uk-nav-divider"></li>
-                            <li><a target="_blank" href="https://fixcore.github.io"><span class="uk-margin-small-right" data-uk-icon="icon: info"></span>Wiki</a></li>
                             <li><a target="_blank" href="https://gitlab.com/BlizzCMS/BlizzCMS/issues"><span class="uk-margin-small-right" data-uk-icon="icon: lifesaver"></span>Issues</a></li>
                         </ul>
                     </li>
