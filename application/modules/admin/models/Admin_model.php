@@ -1163,15 +1163,17 @@ class Admin_model extends CI_Model {
         $filename = $data['filename'];
 
         $Configsearch = array(
-            $data['actualdonateKey'],
-            $data['actualdonatePrivateKey'],
-            $data['actualdonateWidgetCode']
+            $data['actualpaypalCurrency'],
+            $data['actualpaypalMode'],
+            $data['actualpaypalclientId'],
+            $data['actualpaypalPassword']
         );
 
         $Configreplace = array(
-            $data['donateKey'],
-            $data['donatePrivateKey'],
-            $data['donateWidgetCode']
+            $data['paypalCurrency'],
+            $data['paypalMode'],
+            $data['paypalclientId'],
+            $data['paypalPassword']
         );
 
         $fileConfig = file_get_contents($filename);
@@ -1183,26 +1185,34 @@ class Admin_model extends CI_Model {
         redirect(base_url('admin/settings'),'refresh');
     }
 
-    public function getDonateKey($filename)
+    public function getPaypalCurrency($filename)
     {
         $fileHandle = file($filename);
-        $fileHandle = substr($fileHandle[11], 38);
+        $fileHandle = substr($fileHandle[12], 27);
         $fileHandle = explode(";", $fileHandle);
         return str_replace('"', "", $fileHandle[0]);
     }
 
-    public function getDonatePrivateKey($filename)
+    public function getPaypalMode($filename)
     {
         $fileHandle = file($filename);
-        $fileHandle = substr($fileHandle[12], 37);
+        $fileHandle = substr($fileHandle[25], 21);
         $fileHandle = explode(";", $fileHandle);
         return str_replace('"', "", $fileHandle[0]);
     }
 
-    public function getDonateWidgetCode($filename)
+    public function getPaypalClientID($filename)
     {
         $fileHandle = file($filename);
-        $fileHandle = substr($fileHandle[13], 38);
+        $fileHandle = substr($fileHandle[36], 21);
+        $fileHandle = explode(";", $fileHandle);
+        return str_replace('"', "", $fileHandle[0]);
+    }
+
+    public function getPaypalPassword($filename)
+    {
+        $fileHandle = file($filename);
+        $fileHandle = substr($fileHandle[47], 25);
         $fileHandle = explode(";", $fileHandle);
         return str_replace('"', "", $fileHandle[0]);
     }

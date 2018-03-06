@@ -1,16 +1,22 @@
-<?php 
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
 
 /*
- # Select the language to use
- # Options:
- # English 		= en
- # Italian 		= it
- # Russian 		= ru
- # French  		= fr
- # Spanish 		= es
- # Korean  		= ko
- # Chinese 		= cn
- # Germany 		= de
- # Portuguese 	= pt
+|--------------------------------------------------------------------------
+| Armory Language
+|--------------------------------------------------------------------------
+|
+| Select the language options available:
+|
+| en = English
+| it = Italian
+| ru = Russian
+| fr = French
+| es = Spanish
+| ko = Korean
+| cn = Chinese
+| de = Germany
+| pt = Portuguese
+|
 */
-$config['itemsArmoryLang'] = "en"; //default en
+$config['itemsArmoryLang'] = "en";
