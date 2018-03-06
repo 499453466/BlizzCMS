@@ -379,8 +379,8 @@ class Admin extends MX_Controller {
     {
         ini_set('max_execution_time', 186400);
 
-        $startitem = 1;
-        $maxitemid = 50000;
+        $startitem = 99999;
+        $maxitemid = 150000;
 
         for ($i = $startitem; $i < $maxitemid; $i++) {
         {
