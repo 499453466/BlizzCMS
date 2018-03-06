@@ -68,7 +68,7 @@ class Donate_model extends CI_Model
 	    ->setTax($setTax)
 	    ->setSubtotal($setPrice);
 		
-		$amount->setCurrency("USD")
+		$amount->setCurrency($this->config->item('currencyType'))
 	    ->setTotal($setTotal)
 	    ->setDetails($details);
 
