@@ -7,7 +7,7 @@
         'filename' => $fileConfig,
         'configURL' => str_replace(' ', '', $_POST['configURL']),
         'actualURL' => $this->admin_model->getConfigBaseUrl($fileConfig),
-        'configLang' => str_replace(' ', '', $_POST['configLang']),
+        'configLang' => $_POST['configLang'],
         'actualLang' => $this->admin_model->getConfigLanguage($fileConfig),
         'configCharSet' => str_replace(' ', '', $_POST['configCharSet']),
         'actualCharSet' => $this->admin_model->getConfigCharSet($fileConfig),
@@ -44,7 +44,7 @@
 }?>
 
 <?php
-    $fileDatabase   = FCPATH.'application/config/database.php';
+    $fileDatabase = FCPATH.'application/config/database.php';
 ?>
 
 <?php if(isset($_POST['submitDatabase'])) {
@@ -71,7 +71,7 @@
 }?>
 
 <?php
-    $fileCaptcha    = FCPATH.'application/config/recaptcha.php';
+    $fileCaptcha = FCPATH.'application/config/recaptcha.php';
 ?>
 
 <?php if(isset($_POST['submitCaptcha'])) {
@@ -90,17 +90,17 @@
 <?php
     if ($this->m_modules->getStatusLadBugtracker() == '1')
     {
-        $fileBugtracker    = FCPATH.'application/modules/bugtracker/config/bugtracker.php';
+        $fileBugtracker = FCPATH.'application/modules/bugtracker/config/bugtracker.php';
     }
 
     if ($this->m_modules->getDonation() == '1')
     {
-        $fileDonate    = FCPATH.'application/modules/donate/config/donate.php';
+        $fileDonate = FCPATH.'application/modules/donate/config/donate.php';
     }
 
     if ($this->m_modules->getStatusStore() == '1')
     {
-        $fileStore    = FCPATH.'application/modules/shop/config/store.php';
+        $fileStore = FCPATH.'application/modules/shop/config/store.php';
     }
 ?>
 
@@ -116,12 +116,14 @@
 <?php if(isset($_POST['submitDonate'])) {
     $datadonate = array(
         'filename' => $fileDonate,
-        'donateKey' => str_replace(' ', '', $_POST['donatekey']),
-        'actualdonateKey' => $this->admin_model->getDonateKey($fileDonate),
-        'donatePrivateKey' => str_replace(' ', '', $_POST['donateprivatekey']),
-        'actualdonatePrivateKey' => $this->admin_model->getDonatePrivateKey($fileDonate),
-        'donateWidgetCode' => str_replace(' ', '', $_POST['donatewidgetcode']),
-        'actualdonateWidgetCode' => $this->admin_model->getDonateWidgetCode($fileDonate),
+        'paypalCurrency' => str_replace(' ', '', $_POST['paypalCurrency']),
+        'actualpaypalCurrency' => $this->admin_model->getPaypalCurrency($fileDonate),
+        'paypalMode' => $_POST['paypalMode'],
+        'actualpaypalMode' => $this->admin_model->getPaypalMode($fileDonate),
+        'paypalclientId' => str_replace(' ', '', $_POST['paypalclientId']),
+        'actualpaypalclientId' => $this->admin_model->getPaypalClientID($fileDonate),
+        'paypalPassword' => str_replace(' ', '', $_POST['paypalPassword']),
+        'actualpaypalPassword' => $this->admin_model->getPaypalPassword($fileDonate),
     );
     $this->admin_model->settingDonate($datadonate);
 }?>
@@ -129,7 +131,7 @@
 <?php if(isset($_POST['submitStore'])) {
     $datastore = array(
         'filename' => $fileStore,
-        'storeType' => str_replace(' ', '', $_POST['storetype']),
+        'storeType' => $_POST['storeType'],
         'actualstoreType' => $this->admin_model->getStoreType($fileStore),
     );
     $this->admin_model->settingStore($datastore);
@@ -445,29 +447,38 @@
                                 <li>
                                     <form action="" method="post" accept-charset="utf-8">
                                         <div class="uk-margin">
-                                            <label class="uk-form-label uk-text-uppercase">Paymentwall Key</label>
+                                            <label class="uk-form-label uk-text-uppercase">PayPal Currency</label>
                                             <div class="uk-form-controls">
                                                 <div class="uk-inline uk-width-1-1">
                                                     <span class="uk-form-icon uk-form-icon-flip" uk-icon="icon: cog"></span>
-                                                    <input class="uk-input" type="text" name="donatekey" value="<?= $this->admin_model->getDonateKey($fileDonate); ?>" required>
+                                                    <input class="uk-input" type="text" name="paypalCurrency" value="<?= $this->admin_model->getPaypalCurrency($fileDonate); ?>" required>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="uk-margin">
-                                            <label class="uk-form-label uk-text-uppercase">Paymentwall Secret Key</label>
+                                            <label class="uk-form-label uk-text-uppercase">PayPal Mode</label>
+                                            <div class="uk-form-controls">
+                                                <select class="uk-select" name="paypalMode">
+                                                    <option value="sandbox">Sandbox</option>
+                                                    <option value="live">Live</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="uk-margin">
+                                            <label class="uk-form-label uk-text-uppercase">PayPal Client ID</label>
                                             <div class="uk-form-controls">
                                                 <div class="uk-inline uk-width-1-1">
                                                     <span class="uk-form-icon uk-form-icon-flip" uk-icon="icon: cog"></span>
-                                                    <input class="uk-input" type="text" name="donateprivatekey" value="<?= $this->admin_model->getDonatePrivateKey($fileDonate); ?>" required>
+                                                    <input class="uk-input" type="text" name="paypalclientId" value="<?= $this->admin_model->getPaypalClientID($fileDonate); ?>" required>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="uk-margin">
-                                            <label class="uk-form-label uk-text-uppercase">Paymentwall Widget Code</label>
+                                            <label class="uk-form-label uk-text-uppercase">PayPal Secret Password</label>
                                             <div class="uk-form-controls">
                                                 <div class="uk-inline uk-width-1-1">
                                                     <span class="uk-form-icon uk-form-icon-flip" uk-icon="icon: cog"></span>
-                                                    <input class="uk-input" type="text" name="donatewidgetcode" value="<?= $this->admin_model->getDonateWidgetCode($fileDonate); ?>" required>
+                                                    <input class="uk-input" type="text" name="paypalPassword" value="<?= $this->admin_model->getPaypalPassword($fileDonate); ?>" required>
                                                 </div>
                                             </div>
                                         </div>
@@ -483,7 +494,7 @@
                                         <div class="uk-margin">
                                             <label class="uk-form-label uk-text-uppercase">Store Type</label>
                                             <div class="uk-form-controls">
-                                                <select class="uk-select" name="storetype">
+                                                <select class="uk-select" name="storeType">
                                                     <option value="1">Store with Images</option>
                                                     <option value="2">Store with Icons</option>
                                                 </select>
