@@ -58,6 +58,7 @@ $lang['button_create'] = 'Create';
 $lang['button_save'] = 'Save';
 $lang['button_close'] = 'Close';
 $lang['button_reply'] = 'Reply';
+$lang['button_donate'] = 'Donate';
 
 /*Footer Lang*/
 $lang['footer_rights'] = 'ALL RIGHTS RESERVED.';

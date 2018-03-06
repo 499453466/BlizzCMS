@@ -2,13 +2,27 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 /*
-|--------------------------------------------------------------------------
-| Paymentwall (Donations)
-|--------------------------------------------------------------------------
-|
-| Complete correctly the fields
-| https://paymentwall.com
+	Currency to use available with PayPal
+	CHeck the options: 
+	https://developer.paypal.com/docs/classic/api/currency_codes/
 */
-$config['paymentwall_project_key'] = "00000000000000000000000";
-$config['paymentwall_secret_key'] = "00000000000000000000000";
-$config['paymentwall_widget_code'] = "p1_1"; // p10_1 for paymentwall_multi
+$config['currencyType'] = 'USD';
+
+/*
+	Mode PayPal
+	* sandbox
+	* live
+*/
+$config['ppMode'] = 'sandbox';
+
+/* 
+	Client id
+	https://developer.paypal.com/developer/applications
+*/
+$config['userID'] = 'AeEKmkcWH_NGf5Uxkoos5ESv3fffSBnlC1b-BJTAUF2vP02Klwa_IXXzUKqtP1tGZHF_gCRPjNjyBo7V';
+
+/* 
+	secret password
+	https://developer.paypal.com/developer/applications
+*/
+$config['secretPass'] = 'EEaly2bYOVTbv1hsMPesPESGF-fFyFm_HMWij_0mFiiRAEibc-SdSeqCMPFlF0ziuzsZXNcBXxecsn2V';
