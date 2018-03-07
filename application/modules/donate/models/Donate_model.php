@@ -56,8 +56,8 @@ class Donate_model extends CI_Model
     	$payment = new Payment();
     	$redirectUrls = new RedirectUrls();
 
-    	$setTax = $this->getSpecifyDonate($id)->row('price');
-    	$setPrice = $this->getSpecifyDonate($id)->row('tax');
+    	$setTax = $this->getSpecifyDonate($id)->row('tax');
+    	$setPrice = $this->getSpecifyDonate($id)->row('price');
     	$setTotal = ($setTax+$setPrice);
 
     	//Payer
