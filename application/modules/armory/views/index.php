@@ -1,4 +1,4 @@
-<script src="<?= base_url(); ?>core/js/tippy.all.min.js"></script>
+﻿<script src="<?= base_url(); ?>core/js/tippy.all.min.js"></script>
 
     <div class="uk-container">
         <div class="uk-space-xlarge"></div>
