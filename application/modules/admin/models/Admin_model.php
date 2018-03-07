@@ -467,11 +467,55 @@ class Admin_model extends CI_Model {
         redirect(base_url().'admin/managecharacter/'.$id.'/'.$idrealm,'refresh');
     }
 
+    public function getDonationList()
+    {
+        return $this->db->select('*')
+                ->get('fx_donate');
+    }
+
+    public function delSpecifyDonation($id)
+    {
+        $this->db->where('id', $id)
+                ->delete('fx_donate');
+
+        redirect(base_url('admin/donate'),'refresh');
+    }
+
+    public function insertDonation($name, $price, $tax, $points)
+    {
+        $data = array(
+            'name' => $name,
+            'price' => $price,
+            'tax' => $tax,
+            'points' => $points,
+        );
+
+        $this->db->insert('fx_donate', $data);
+
+        redirect(base_url('admin/donate'),'refresh');
+    }
+
     public function getAdminNewsList()
     {
         return $this->db->select('id, title, date')
             ->order_by('id', 'ASC')
             ->get('fx_news');
+    }
+
+    public function getUserHistoryDonate($id)
+    {
+        return $this->db->select('*')
+                ->where('user_id', $id)
+                ->order_by('id', 'DESC')
+                ->get('fx_donate_history');
+    }
+
+    public function getDonateStatus($id)
+    {
+        switch ($id) {
+            case 0: return $this->lang->line('status_donate_cancell'); break;
+            case 1: return $this->lang->line('status_donate_complete'); break;
+        }
     }
 
     public function insertNews($title, $image, $description, $type)

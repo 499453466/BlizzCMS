@@ -103,6 +103,12 @@
                         </ul>
                     </li>
                     <li class="uk-parent">
+                        <a href="javascript:void(0)"><span class="uk-margin-small-right" data-uk-icon="icon: cart"></span> <?= $this->lang->line('admin_donate'); ?></a>
+                        <ul class="uk-nav-sub">
+                            <li><a href="<?= base_url('admin/donate'); ?>"><span class="uk-margin-small-right" data-uk-icon="icon: list"></span><?= $this->lang->line('admin_manage_donations'); ?></a></li>
+                        </ul>
+                    </li>
+                    <li class="uk-parent">
                         <a href="javascript:void(0)"><span class="uk-margin-small-right" data-uk-icon="icon: comments"></span> <?= $this->lang->line('admin_forums'); ?></a>
                         <ul class="uk-nav-sub">
                             <li><a href="<?= base_url('admin/managecategories'); ?>"><span class="uk-margin-small-right" data-uk-icon="icon: list"></span><?= $this->lang->line('admin_manage_categories'); ?></a></li>
