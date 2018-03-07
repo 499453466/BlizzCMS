@@ -42,10 +42,7 @@ $lang['admin_news'] = 'News';
 $lang['admin_changelogs'] = 'Changelogs';
 $lang['admin_pages'] = 'Pages';
 $lang['admin_store'] = 'Store';
-$lang['admin_donate'] = 'Donate';
-$lang['admin_donate_price'] = 'Price';
-$lang['admin_donate_tax'] = 'Tax';
-$lang['admin_donate_points'] = 'Points';
+$lang['admin_points_system'] = 'Points System';
 $lang['admin_manage_donations'] = 'Manage Donations';
 $lang['admin_manage_groups'] = 'Manage Groups';
 $lang['admin_manage_items'] = 'Manage Items';
@@ -110,6 +107,8 @@ $lang['column_action'] = 'Action';
 $lang['column_realm_id'] = 'Realm ID';
 $lang['column_realm_name'] = 'Realm Name';
 $lang['column_realm_char_database'] = 'Character Database Name';
+$lang['column_tax'] = 'Tax';
+$lang['column_points'] = 'Points';
 
 /*Form Lang*/
 $lang['form_create_changelog'] = 'Create a new Changelog';

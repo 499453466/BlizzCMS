@@ -103,9 +103,9 @@
                         </ul>
                     </li>
                     <li class="uk-parent">
-                        <a href="javascript:void(0)"><span class="uk-margin-small-right" data-uk-icon="icon: cart"></span> <?= $this->lang->line('admin_donate'); ?></a>
+                        <a href="javascript:void(0)"><span class="uk-margin-small-right" data-uk-icon="icon: grid"></span> <?= $this->lang->line('admin_points_system'); ?></a>
                         <ul class="uk-nav-sub">
-                            <li><a href="<?= base_url('admin/donate'); ?>"><span class="uk-margin-small-right" data-uk-icon="icon: list"></span><?= $this->lang->line('admin_manage_donations'); ?></a></li>
+                            <li><a href="<?= base_url('admin/donate'); ?>"><span class="uk-margin-small-right" data-uk-icon="icon: credit-card"></span><?= $this->lang->line('admin_manage_donations'); ?></a></li>
                         </ul>
                     </li>
                     <li class="uk-parent">
