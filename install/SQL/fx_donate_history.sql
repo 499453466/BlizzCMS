@@ -24,8 +24,9 @@ CREATE TABLE `fx_donate_history` (
   `total` varchar(10) NOT NULL,
   `complete` int(1) NOT NULL,
   `create_time` varchar(100) NOT NULL,
+  `points` int(10) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
