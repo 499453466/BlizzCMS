@@ -115,18 +115,6 @@ class Donate_model extends CI_Model
    		header('Location: ' .$redirectUrl);
     }
 
-    public function insertTransaction($getId, $hash, $total)
-    {
-    	$dataInsert = array(
-			'user_id' => $this->session->userdata('fx_sess_id'),
-			'payment_id' => $getId,
-			'hash' => $hash,
-			'total' => $total
-		);
-
-		$this->db->insert('fx_donate_history', $dataInsert);
-    }
-
     public function completeTransaction($donate, $id)
     {
     	$qq = $this->db->select('complete')
