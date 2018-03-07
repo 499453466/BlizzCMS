@@ -56,8 +56,8 @@ class Donate_model extends CI_Model
     	$payment = new Payment();
     	$redirectUrls = new RedirectUrls();
 
-    	$setTax = $this->getSpecifyDonate($id)->row('price');
-    	$setPrice = $this->getSpecifyDonate($id)->row('tax');
+    	$setTax = $this->getSpecifyDonate($id)->row('tax');
+    	$setPrice = $this->getSpecifyDonate($id)->row('price');
     	$setTotal = ($setTax+$setPrice);
 
     	//Payer
@@ -113,18 +113,6 @@ class Donate_model extends CI_Model
    		}
 
    		header('Location: ' .$redirectUrl);
-    }
-
-    public function insertTransaction($getId, $hash, $total)
-    {
-    	$dataInsert = array(
-			'user_id' => $this->session->userdata('fx_sess_id'),
-			'payment_id' => $getId,
-			'hash' => $hash,
-			'total' => $total
-		);
-
-		$this->db->insert('fx_donate_history', $dataInsert);
     }
 
     public function completeTransaction($donate, $id)
