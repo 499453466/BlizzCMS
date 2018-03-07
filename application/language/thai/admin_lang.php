@@ -42,6 +42,11 @@ $lang['admin_news'] = 'ข่าว';
 $lang['admin_changelogs'] = 'การอัปเดทและแก้ไข';
 $lang['admin_pages'] = 'หน้าเพจใหม่';
 $lang['admin_store'] = 'ร้านค้า';
+$lang['admin_donate'] = 'บริจาค';
+$lang['admin_donate_price'] = 'ราคา';
+$lang['admin_donate_tax'] = 'ภาษี';
+$lang['admin_donate_points'] = 'แต้ม';
+$lang['admin_manage_donations'] = 'จัดการการบริจาค';
 $lang['admin_manage_groups'] = 'จัดการกลุ่มไอเทม';
 $lang['admin_manage_items'] = 'จัดการไอเทม';
 $lang['admin_forums'] = 'ฟอรั่ม';
@@ -75,6 +80,7 @@ $lang['panel_admin_ban_account'] = 'แบนบัญช';
 $lang['panel_admin_rank_account'] = 'ระดับจีเอ็ม';
 $lang['panel_admin_web_rank'] = 'ระดับบนเว็บ';
 $lang['panel_admin_general_info'] = 'ข้อมูลทั่วไป';
+$lang['panel_admin_donate_history'] = 'ประวัติการบริจาค';
 $lang['panel_admin_annotations'] = 'คำอธิบายประกอบ';
 $lang['panel_admin_mov_forum'] = 'การเปลี่ยนแปลงในฟอรั่ม';
 $lang['panel_admin_last_comments'] = 'ความคิดเห็นล่าสุด';
@@ -89,9 +95,10 @@ $lang['panel_admin_change_faction'] = 'แก้ไขฝ่าย';
 $lang['panel_admin_changelogs_list'] = 'รายการอัปเดทและแก้ไข';
 $lang['panel_admin_pages_list'] = 'รายการหน้าเพจใหม่';
 $lang['panel_admin_news_list'] = 'รายการข่าว';
+$lang['panel_admin_donation_list'] = 'รายการบริจาค';
 $lang['panel_admin_edit_news'] = 'แก้ไขข่าว';
 $lang['panel_admin_edit_pages'] = 'แก้ไขหน้าเพจ';
-$lang['panel_admin_edit_changelogs'] = 'Edit Changelogs';
+$lang['panel_admin_edit_changelogs'] = 'แก้ไขการอัปเดทและแก้ไข';
 
 /*Column Lang*/
 $lang['column_race'] = 'ฝ่าย';
@@ -109,6 +116,8 @@ $lang['form_create_changelog'] = 'สร้างรายการอัปเ�
 $lang['form_changelog_title'] = 'หัวข้อการอัปเดทและแก้ไข';
 $lang['form_create_pages'] = 'สร้างรายการหน้าเพจใหม่';
 $lang['form_create_news'] = 'สร้างรายการข่าว';
+$lang['form_create_donation'] = 'สร้างรายการบริจาค';
+$lang['form_donation_title'] = 'ชื่อของการบริจาค';
 $lang['form_news_title'] = 'หัวข้อข่าว';
 $lang['form_upload_file'] = 'อัปโหลดไฟล์';
 $lang['form_create_category'] = 'สร้างหมวดหมู่';
@@ -134,6 +143,8 @@ $lang['placeholder_forum_icon'] = 'ชื่อโฟลเดอร์/image.jp
 /*Status Lang*/
 $lang['status_is_online'] = 'ผู้เล่นกำลังออนไลน์,โปรดตัดการเชื่อมต่อ';
 $lang['status_name_exist'] = 'ชื่อนี้มีอยู่แล้ว';
+$lang['status_donate_complete'] = 'สำเร็จ';
+$lang['status_donate_cancell'] = 'ยกเลิก';
 
 /*Options Lang*/
 $lang['option_yes'] = 'ใช่';
