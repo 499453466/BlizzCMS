@@ -58,6 +58,7 @@ $lang['button_create'] = 'สร้าง';
 $lang['button_save'] = 'บันทึก';
 $lang['button_close'] = 'ปิด';
 $lang['button_reply'] = 'ตอบ';
+$lang['button_donate'] = 'บริจาค';
 
 /*Footer Lang*/
 $lang['footer_rights'] = 'ALL RIGHTS RESERVED.';
@@ -66,7 +67,7 @@ $lang['footer_terms'] = 'Terms';
 
 //armory
 $lang['playervsplayer'] = 'ผู้เล่น vs ผู้เล่น';
-$lang['notfound'] = 'Not found';
+$lang['notfound'] = 'ไม่พบ!';
 
 /*Login Lang*/
 $lang['login_description'] = 'เพลิดเพลินกับตัวเลือกทั้งหมดที่เรามีให้กับคุณ';
