@@ -28,6 +28,13 @@ class Admin extends MX_Controller {
         $this->load->view('general/footer');
     }
 
+    public function donate()
+    {
+        $this->load->view('general/header');
+        $this->load->view('donate/index');
+        $this->load->view('general/footer');
+    }
+
     public function managerealms()
     {
         $this->load->view('general/header');

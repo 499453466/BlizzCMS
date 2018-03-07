@@ -170,6 +170,45 @@
                         </div>
                     </div>
                 </div>
+
+            <div class="uk-width-1-1@l uk-width-1-1@xl">
+                <div class="uk-card uk-card-default uk-card-small">
+                    <div class="uk-card-header uk-card-secondary">
+                        <div class="uk-grid uk-grid-small">
+                            <div class="uk-width-auto"><h4 class="uk-margin-remove-bottom"><span data-uk-icon="icon: user"></span> <?= $this->lang->line('panel_admin_donate_history'); ?></h4></div>
+                            <div class="uk-width-expand uk-text-right">
+                                <a href="#" class="uk-icon-link uk-margin-small-right" data-uk-icon="icon: info"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="uk-card-body">
+                        <table class="uk-table uk-table-justify uk-table-divider">
+                            <thead>
+                                <tr>
+                                    <th>Payment ID</th>
+                                    <th>Hash</th>
+                                    <th>Total</th>
+                                    <th>Complete</th>
+                                    <th>Create Time</th>
+                                    <th>Points</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php foreach ($this->admin_model->getUserHistoryDonate($idlink)->result() as $donateInfo) { ?>
+                                    <tr>
+                                        <td><?= $donateInfo->payment_id ?></td>
+                                        <td><?= $donateInfo->hash ?></td>
+                                        <td><?= $donateInfo->total ?></td>
+                                        <td><?= $this->admin_model->getDonateStatus($donateInfo->complete); ?></td>
+                                        <td><?= $donateInfo->create_time ?></td>
+                                        <td><?= $donateInfo->points ?></td>
+                                    </tr>
+                                <?php } ?>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
                 <div class="uk-width-1-1@l uk-width-1-1@xl">
                     <div class="uk-card uk-card-default uk-card-small">
                         <div class="uk-card-header uk-card-secondary">
