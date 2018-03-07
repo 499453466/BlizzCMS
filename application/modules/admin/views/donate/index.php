@@ -18,7 +18,7 @@
                     <div class="uk-card uk-card-default uk-card-small">
                         <div class="uk-card-header uk-card-secondary">
                             <div class="uk-grid uk-grid-small">
-                                <div class="uk-width-auto"><h4 class="uk-margin-remove-bottom"><span data-uk-icon="icon: list"></span> <?= $this->lang->line('panel_admin_donation_list'); ?></h4></div>
+                                <div class="uk-width-auto"><h4 class="uk-margin-remove-bottom"><span data-uk-icon="icon: credit-card"></span> <?= $this->lang->line('admin_manage_donations'); ?></h4></div>
                                 <div class="uk-width-expand uk-text-right">
                                     <a href="" class="uk-icon-link uk-margin-small-right" data-uk-icon="icon: pencil" uk-toggle="target: #donationModal"></a>
                                 </div>
@@ -43,7 +43,7 @@
                                             <td class="uk-text-center"><?= $donations->tax ?></td>
                                             <td class="uk-text-center"><?= $donations->points ?></td>
                                             <td class="uk-text-center" uk-margin>
-                                                <a href="<?= base_url(); ?>admin/editdonation/<?= $donations->id ?>" class="uk-button uk-button-primary"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                                                <a href="#" class="uk-button uk-button-primary"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
                                                 <span class="" style="display:inline-block; width: 5px;"></span>
                                                 <form action="" method="post" accept-charset="utf-8" style="display: inline;">
                                                     <button class="uk-button uk-button-danger" name="button_delDonation" value="<?= $donations->id ?>" type="submit"><i class="fa fa-trash" aria-hidden="true"></i></button>
@@ -65,7 +65,7 @@
         </footer>
     </div>
 
-    <div id="donationModal" class="uk-modal-container" uk-modal="bg-close: false">
+    <div id="donationModal" uk-modal="bg-close: false">
         <div class="uk-modal-dialog">
             <button class="uk-modal-close-default" type="button" uk-close></button>
             <div class="uk-modal-header">
@@ -87,13 +87,19 @@
                             <div class="uk-inline uk-width-1-2@s">
                                 <label class="uk-form-label uk-text-uppercase"><?= $this->lang->line('store_item_price'); ?></label>
                                 <div class="uk-form-controls">
-                                    <input class="uk-input" name="donate_price" type="number" placeholder="0.00" value="0.00" required>
+                                    <div class="uk-inline uk-width-1-1">
+                                        <span class="uk-form-icon"><i class="fa fa-usd" aria-hidden="true"></i></span>
+                                        <input class="uk-input" name="donate_price" type="number" placeholder="0.00" min="0" value="0" step="0.01" pattern="^\d+(?:\.\d{1,2})?$" required>
+                                    </div>
                                 </div>
                             </div>
                             <div class="uk-inline uk-width-1-2@s">
                                 <label class="uk-form-label uk-text-uppercase"><?= $this->lang->line('column_tax'); ?></label>
                                 <div class="uk-form-controls">
-                                    <input class="uk-input" name="donate_tax" type="number" placeholder="0.00" value="0.00" required>
+                                    <div class="uk-inline uk-width-1-1">
+                                        <span class="uk-form-icon"><i class="fa fa-usd" aria-hidden="true"></i></span>
+                                        <input class="uk-input" name="donate_tax" type="number" placeholder="0.00" min="0" value="0" step="0.01" pattern="^\d+(?:\.\d{1,2})?$" required>
+                                    </div>
                                 </div>
                             </div>
                         </div>

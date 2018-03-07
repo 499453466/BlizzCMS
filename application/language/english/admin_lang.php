@@ -92,7 +92,6 @@ $lang['panel_admin_change_faction'] = 'Change Faction';
 $lang['panel_admin_changelogs_list'] = 'List of Changelogs';
 $lang['panel_admin_pages_list'] = 'List of Pages';
 $lang['panel_admin_news_list'] = 'News List';
-$lang['panel_admin_donation_list'] = 'Donation List';
 $lang['panel_admin_edit_news'] = 'Edit News';
 $lang['panel_admin_edit_pages'] = 'Edit Pages';
 $lang['panel_admin_edit_changelogs'] = 'Edit Changelogs';
