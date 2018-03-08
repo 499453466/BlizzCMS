@@ -13,6 +13,7 @@ class Armory_model extends CI_Model {
         $this->multirealm = $multirealm;
         $qq = $this->multirealm->select('item')
                 ->where('guid', $id)
+                ->where('bag', '0')
                 ->where('slot', '0')
                 ->get('character_inventory');
         
@@ -27,6 +28,7 @@ class Armory_model extends CI_Model {
         $this->multirealm = $multirealm;
         $qq = $this->multirealm->select('item')
                 ->where('guid', $id)
+                ->where('bag', '0')
                 ->where('slot', '1')
                 ->get('character_inventory');
         
@@ -41,6 +43,7 @@ class Armory_model extends CI_Model {
         $this->multirealm = $multirealm;
         $qq = $this->multirealm->select('item')
                 ->where('guid', $id)
+                ->where('bag', '0')
                 ->where('slot', '2')
                 ->get('character_inventory');
         
@@ -55,6 +58,7 @@ class Armory_model extends CI_Model {
         $this->multirealm = $multirealm;
         $qq = $this->multirealm->select('item')
                 ->where('guid', $id)
+                ->where('bag', '0')
                 ->where('slot', '3')
                 ->get('character_inventory');
         
@@ -69,6 +73,7 @@ class Armory_model extends CI_Model {
         $this->multirealm = $multirealm;
         $qq = $this->multirealm->select('item')
                 ->where('guid', $id)
+                ->where('bag', '0')
                 ->where('slot', '4')
                 ->get('character_inventory');
         
@@ -83,6 +88,7 @@ class Armory_model extends CI_Model {
         $this->multirealm = $multirealm;
         $qq = $this->multirealm->select('item')
                 ->where('guid', $id)
+                ->where('bag', '0')
                 ->where('slot', '5')
                 ->get('character_inventory');
         
@@ -97,6 +103,7 @@ class Armory_model extends CI_Model {
         $this->multirealm = $multirealm;
         $qq = $this->multirealm->select('item')
                 ->where('guid', $id)
+                ->where('bag', '0')
                 ->where('slot', '6')
                 ->get('character_inventory');
         
@@ -111,6 +118,7 @@ class Armory_model extends CI_Model {
         $this->multirealm = $multirealm;
         $qq = $this->multirealm->select('item')
                 ->where('guid', $id)
+                ->where('bag', '0')
                 ->where('slot', '7')
                 ->get('character_inventory');
         
@@ -125,6 +133,7 @@ class Armory_model extends CI_Model {
         $this->multirealm = $multirealm;
         $qq = $this->multirealm->select('item')
                 ->where('guid', $id)
+                ->where('bag', '0')
                 ->where('slot', '8')
                 ->get('character_inventory');
         
@@ -139,6 +148,7 @@ class Armory_model extends CI_Model {
         $this->multirealm = $multirealm;
         $qq = $this->multirealm->select('item')
                 ->where('guid', $id)
+                ->where('bag', '0')
                 ->where('slot', '9')
                 ->get('character_inventory');
         
@@ -153,6 +163,7 @@ class Armory_model extends CI_Model {
         $this->multirealm = $multirealm;
         $qq = $this->multirealm->select('item')
                 ->where('guid', $id)
+                ->where('bag', '0')
                 ->where('slot', '10')
                 ->get('character_inventory');
         
@@ -167,6 +178,7 @@ class Armory_model extends CI_Model {
         $this->multirealm = $multirealm;
         $qq = $this->multirealm->select('item')
                 ->where('guid', $id)
+                ->where('bag', '0')
                 ->where('slot', '11')
                 ->get('character_inventory');
         
@@ -181,6 +193,7 @@ class Armory_model extends CI_Model {
         $this->multirealm = $multirealm;
         $qq = $this->multirealm->select('item')
                 ->where('guid', $id)
+                ->where('bag', '0')
                 ->where('slot', '12')
                 ->get('character_inventory');
         
@@ -195,6 +208,7 @@ class Armory_model extends CI_Model {
         $this->multirealm = $multirealm;
         $qq = $this->multirealm->select('item')
                 ->where('guid', $id)
+                ->where('bag', '0')
                 ->where('slot', '13')
                 ->get('character_inventory');
         
@@ -209,6 +223,7 @@ class Armory_model extends CI_Model {
         $this->multirealm = $multirealm;
         $qq = $this->multirealm->select('item')
                 ->where('guid', $id)
+                ->where('bag', '0')
                 ->where('slot', '14')
                 ->get('character_inventory');
         
@@ -223,6 +238,7 @@ class Armory_model extends CI_Model {
         $this->multirealm = $multirealm;
         $qq = $this->multirealm->select('item')
                 ->where('guid', $id)
+                ->where('bag', '0')
                 ->where('slot', '15')
                 ->get('character_inventory');
         
@@ -237,6 +253,7 @@ class Armory_model extends CI_Model {
         $this->multirealm = $multirealm;
         $qq = $this->multirealm->select('item')
                 ->where('guid', $id)
+                ->where('bag', '0')
                 ->where('slot', '16')
                 ->get('character_inventory');
         
@@ -251,6 +268,7 @@ class Armory_model extends CI_Model {
         $this->multirealm = $multirealm;
         $qq = $this->multirealm->select('item')
                 ->where('guid', $id)
+                ->where('bag', '0')
                 ->where('slot', '17')
                 ->get('character_inventory');
         
@@ -265,6 +283,7 @@ class Armory_model extends CI_Model {
         $this->multirealm = $multirealm;
         $qq = $this->multirealm->select('item')
                 ->where('guid', $id)
+                ->where('bag', '0')
                 ->where('slot', '18')
                 ->get('character_inventory');
         
