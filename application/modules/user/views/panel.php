@@ -221,7 +221,7 @@
                                     <div class="uk-grid uk-grid-small uk-child-width-1-6 uk-flex-center" uk-grid>
                                         <?php foreach($this->m_characters->getGeneralCharactersSpecifyAcc($multiRealm , $this->session->userdata('fx_sess_id'))->result() as $chars) { ?>
                                             <div class="uk-text-center">
-                                                <a href="<?= base_url('armory/player/'); ?><?= $chars->guid ?>-<?= $chars->name ?>/<?= $charsMultiRealm->realmID ?>-<?= $this->m_general->getRealmName($charsMultiRealm->realmID); ?>">
+                                                <a href="<?= base_url('armory/player/'); ?><?= $chars->guid ?>/<?= $charsMultiRealm->realmID ?>">
                                                     <img class="uk-border-circle" src="<?= base_url('assets/images/class/'.$this->m_general->getClassIcon($chars->class)); ?>" title="<?= $chars->name ?> (Lvl <?= $chars->level ?>)" width="50" height="50" uk-tooltip>
                                                 </a>
                                             </div>

@@ -4,7 +4,7 @@
         <div class="uk-space-xlarge"></div>
         <div class="uk-grid uk-grid-medium" data-uk-grid>
             <div class="uk-width-1-1@l">
-                <h3 class="uk-heading-divider uk-text-white"><i class="ra ra-anvil"></i> <?= ucwords($nameplayer) ?></h3>
+                <h3 class="uk-heading-divider uk-text-white"><i class="ra ra-anvil"></i> <?= $this->m_characters->getCharName($idplayer, $this->m_data->getRealmConnectionData($idrealm)); ?></h3>
             </div>
             <div class="uk-width-1-2@l">
                 <div class="uk-grid-small" uk-grid>
