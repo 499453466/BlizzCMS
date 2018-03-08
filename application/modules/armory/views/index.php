@@ -36,33 +36,6 @@
                         <script>tippy('#InvSoulders', { html: '#InvShouldersTemplate' })</script>
 
                         <div class="fx-gap"></div>
-                        <a href="<?= base_url('armory/item/') ?><?= $this->m_characters->getItemInstace($this->m_data->getRealmConnectionData($idrealm), $this->armory_model->getCharInvBody($idplayer, $this->m_data->getRealmConnectionData($idrealm))); ?>" id="InvBody">
-                            <img width="50" height="50" class="uk-border-rounded" src="<?= base_url('assets/icons/items/'); ?><?= $this->m_head->getImageItem($this->m_characters->getItemInstace($this->m_data->getRealmConnectionData($idrealm), $this->armory_model->getCharInvBody($idplayer, $this->m_data->getRealmConnectionData($idrealm)))); ?>.jpg" />
-                        </a>
-                        <div id="InvBodyTemplate" style="display: none">
-                            <?= $this->m_head->getHtmlTooltip($this->config->item('itemsArmoryLang'), $this->m_characters->getItemInstace($this->m_data->getRealmConnectionData($idrealm), $this->armory_model->getCharInvBody($idplayer, $this->m_data->getRealmConnectionData($idrealm)))); ?>
-                        </div>
-                        <script>tippy('#InvBody', { html: '#InvBodyTemplate' })</script>
-
-                        <div class="fx-gap"></div>
-                        <a href="<?= base_url('armory/item/') ?><?= $this->m_characters->getItemInstace($this->m_data->getRealmConnectionData($idrealm), $this->armory_model->getCharInvChest($idplayer, $this->m_data->getRealmConnectionData($idrealm))); ?>" id="InvChest">
-                            <img width="50" height="50" class="uk-border-rounded" src="<?= base_url('assets/icons/items/'); ?><?= $this->m_head->getImageItem($this->m_characters->getItemInstace($this->m_data->getRealmConnectionData($idrealm), $this->armory_model->getCharInvChest($idplayer, $this->m_data->getRealmConnectionData($idrealm)))); ?>.jpg" />
-                        </a>
-                        <div id="InvChestTemplate" style="display: none">
-                            <?= $this->m_head->getHtmlTooltip($this->config->item('itemsArmoryLang'), $this->m_characters->getItemInstace($this->m_data->getRealmConnectionData($idrealm), $this->armory_model->getCharInvChest($idplayer, $this->m_data->getRealmConnectionData($idrealm)))); ?>
-                        </div>
-                        <script>tippy('#InvChest', { html: '#InvChestTemplate' })</script>
-                        
-                        <div class="fx-gap"></div>
-                        <a href="<?= base_url('armory/item/') ?><?= $this->m_characters->getItemInstace($this->m_data->getRealmConnectionData($idrealm), $this->armory_model->getCharInvWrists($idplayer, $this->m_data->getRealmConnectionData($idrealm))); ?>" id="InvWrists">
-                            <img width="50" height="50" class="uk-border-rounded" src="<?= base_url('assets/icons/items/'); ?><?= $this->m_head->getImageItem($this->m_characters->getItemInstace($this->m_data->getRealmConnectionData($idrealm), $this->armory_model->getCharInvWrists($idplayer, $this->m_data->getRealmConnectionData($idrealm)))); ?>.jpg" />
-                        </a>
-                        <div id="InvWristsTemplate" style="display: none">
-                            <?= $this->m_head->getHtmlTooltip($this->config->item('itemsArmoryLang'), $this->m_characters->getItemInstace($this->m_data->getRealmConnectionData($idrealm), $this->armory_model->getCharInvWrists($idplayer, $this->m_data->getRealmConnectionData($idrealm)))); ?>
-                        </div>
-                        <script>tippy('#InvWrists', { html: '#InvWristsTemplate' })</script>
-
-                        <div class="fx-gap"></div>
                         <a href="<?= base_url('armory/item/') ?><?= $this->m_characters->getItemInstace($this->m_data->getRealmConnectionData($idrealm), $this->armory_model->getCharInvBack($idplayer, $this->m_data->getRealmConnectionData($idrealm))); ?>" id="InvBack">
                             <img width="50" height="50" class="uk-border-rounded" src="<?= base_url('assets/icons/items/'); ?><?= $this->m_head->getImageItem($this->m_characters->getItemInstace($this->m_data->getRealmConnectionData($idrealm), $this->armory_model->getCharInvBack($idplayer, $this->m_data->getRealmConnectionData($idrealm)))); ?>.jpg" />
                         </a>
@@ -72,6 +45,24 @@
                         <script>tippy('#InvBack', { html: '#InvBackTemplate' })</script>
 
                         <div class="fx-gap"></div>
+                        <a href="<?= base_url('armory/item/') ?><?= $this->m_characters->getItemInstace($this->m_data->getRealmConnectionData($idrealm), $this->armory_model->getCharInvChest($idplayer, $this->m_data->getRealmConnectionData($idrealm))); ?>" id="InvChest">
+                            <img width="50" height="50" class="uk-border-rounded" src="<?= base_url('assets/icons/items/'); ?><?= $this->m_head->getImageItem($this->m_characters->getItemInstace($this->m_data->getRealmConnectionData($idrealm), $this->armory_model->getCharInvChest($idplayer, $this->m_data->getRealmConnectionData($idrealm)))); ?>.jpg" />
+                        </a>
+                        <div id="InvChestTemplate" style="display: none">
+                            <?= $this->m_head->getHtmlTooltip($this->config->item('itemsArmoryLang'), $this->m_characters->getItemInstace($this->m_data->getRealmConnectionData($idrealm), $this->armory_model->getCharInvChest($idplayer, $this->m_data->getRealmConnectionData($idrealm)))); ?>
+                        </div>
+                        <script>tippy('#InvChest', { html: '#InvChestTemplate' })</script>
+
+                        <div class="fx-gap"></div>
+                        <a href="<?= base_url('armory/item/') ?><?= $this->m_characters->getItemInstace($this->m_data->getRealmConnectionData($idrealm), $this->armory_model->getCharInvBody($idplayer, $this->m_data->getRealmConnectionData($idrealm))); ?>" id="InvBody">
+                            <img width="50" height="50" class="uk-border-rounded" src="<?= base_url('assets/icons/items/'); ?><?= $this->m_head->getImageItem($this->m_characters->getItemInstace($this->m_data->getRealmConnectionData($idrealm), $this->armory_model->getCharInvBody($idplayer, $this->m_data->getRealmConnectionData($idrealm)))); ?>.jpg" />
+                        </a>
+                        <div id="InvBodyTemplate" style="display: none">
+                            <?= $this->m_head->getHtmlTooltip($this->config->item('itemsArmoryLang'), $this->m_characters->getItemInstace($this->m_data->getRealmConnectionData($idrealm), $this->armory_model->getCharInvBody($idplayer, $this->m_data->getRealmConnectionData($idrealm)))); ?>
+                        </div>
+                        <script>tippy('#InvBody', { html: '#InvBodyTemplate' })</script>
+
+                        <div class="fx-gap"></div>
                         <a href="<?= base_url('armory/item/') ?><?= $this->m_characters->getItemInstace($this->m_data->getRealmConnectionData($idrealm), $this->armory_model->getCharInvTabard($idplayer, $this->m_data->getRealmConnectionData($idrealm))); ?>" id="InvTabard">
                             <img width="50" height="50" class="uk-border-rounded" src="<?= base_url('assets/icons/items/'); ?><?= $this->m_head->getImageItem($this->m_characters->getItemInstace($this->m_data->getRealmConnectionData($idrealm), $this->armory_model->getCharInvTabard($idplayer, $this->m_data->getRealmConnectionData($idrealm)))); ?>.jpg" />
                         </a>
@@ -79,6 +70,15 @@
                             <?= $this->m_head->getHtmlTooltip($this->config->item('itemsArmoryLang'), $this->m_characters->getItemInstace($this->m_data->getRealmConnectionData($idrealm), $this->armory_model->getCharInvTabard($idplayer, $this->m_data->getRealmConnectionData($idrealm)))); ?>
                         </div>
                         <script>tippy('#InvTabard', { html: '#InvTabardTemplate' })</script>
+
+                        <div class="fx-gap"></div>
+                        <a href="<?= base_url('armory/item/') ?><?= $this->m_characters->getItemInstace($this->m_data->getRealmConnectionData($idrealm), $this->armory_model->getCharInvWrists($idplayer, $this->m_data->getRealmConnectionData($idrealm))); ?>" id="InvWrists">
+                            <img width="50" height="50" class="uk-border-rounded" src="<?= base_url('assets/icons/items/'); ?><?= $this->m_head->getImageItem($this->m_characters->getItemInstace($this->m_data->getRealmConnectionData($idrealm), $this->armory_model->getCharInvWrists($idplayer, $this->m_data->getRealmConnectionData($idrealm)))); ?>.jpg" />
+                        </a>
+                        <div id="InvWristsTemplate" style="display: none">
+                            <?= $this->m_head->getHtmlTooltip($this->config->item('itemsArmoryLang'), $this->m_characters->getItemInstace($this->m_data->getRealmConnectionData($idrealm), $this->armory_model->getCharInvWrists($idplayer, $this->m_data->getRealmConnectionData($idrealm)))); ?>
+                        </div>
+                        <script>tippy('#InvWrists', { html: '#InvWristsTemplate' })</script>
 
                         <div class="fx-gap"></div>
                     </div>
@@ -117,6 +117,15 @@
 
                     </div>
                     <div class="uk-width-1-5@l">
+                        <a href="<?= base_url('armory/item/') ?><?= $this->m_characters->getItemInstace($this->m_data->getRealmConnectionData($idrealm), $this->armory_model->getCharInvHands($idplayer, $this->m_data->getRealmConnectionData($idrealm))); ?>" id="InvHands">
+                            <img width="50" height="50" class="uk-border-rounded" src="<?= base_url('assets/icons/items/'); ?><?= $this->m_head->getImageItem($this->m_characters->getItemInstace($this->m_data->getRealmConnectionData($idrealm), $this->armory_model->getCharInvHands($idplayer, $this->m_data->getRealmConnectionData($idrealm)))); ?>.jpg" />
+                        </a>
+                        <div id="InvHandsTemplate" style="display: none">
+                            <?= $this->m_head->getHtmlTooltip($this->config->item('itemsArmoryLang'), $this->m_characters->getItemInstace($this->m_data->getRealmConnectionData($idrealm), $this->armory_model->getCharInvHands($idplayer, $this->m_data->getRealmConnectionData($idrealm)))); ?>
+                        </div>
+                        <script>tippy('#InvHands', { html: '#InvHandsTemplate' })</script>
+
+                        <div class="fx-gap"></div>
                         <a href="<?= base_url('armory/item/') ?><?= $this->m_characters->getItemInstace($this->m_data->getRealmConnectionData($idrealm), $this->armory_model->getCharInvWaist($idplayer, $this->m_data->getRealmConnectionData($idrealm))); ?>" id="InvWaist">
                             <img width="50" height="50" class="uk-border-rounded" src="<?= base_url('assets/icons/items/'); ?><?= $this->m_head->getImageItem($this->m_characters->getItemInstace($this->m_data->getRealmConnectionData($idrealm), $this->armory_model->getCharInvWaist($idplayer, $this->m_data->getRealmConnectionData($idrealm)))); ?>.jpg" />
                         </a>
@@ -142,15 +151,6 @@
                             <?= $this->m_head->getHtmlTooltip($this->config->item('itemsArmoryLang'), $this->m_characters->getItemInstace($this->m_data->getRealmConnectionData($idrealm), $this->armory_model->getCharInvFeet($idplayer, $this->m_data->getRealmConnectionData($idrealm)))); ?>
                         </div>
                         <script>tippy('#InvFeet', { html: '#InvFeetTemplate' })</script>
-
-                        <div class="fx-gap"></div>
-                        <a href="<?= base_url('armory/item/') ?><?= $this->m_characters->getItemInstace($this->m_data->getRealmConnectionData($idrealm), $this->armory_model->getCharInvHands($idplayer, $this->m_data->getRealmConnectionData($idrealm))); ?>" id="InvHands">
-                            <img width="50" height="50" class="uk-border-rounded" src="<?= base_url('assets/icons/items/'); ?><?= $this->m_head->getImageItem($this->m_characters->getItemInstace($this->m_data->getRealmConnectionData($idrealm), $this->armory_model->getCharInvHands($idplayer, $this->m_data->getRealmConnectionData($idrealm)))); ?>.jpg" />
-                        </a>
-                        <div id="InvHandsTemplate" style="display: none">
-                            <?= $this->m_head->getHtmlTooltip($this->config->item('itemsArmoryLang'), $this->m_characters->getItemInstace($this->m_data->getRealmConnectionData($idrealm), $this->armory_model->getCharInvHands($idplayer, $this->m_data->getRealmConnectionData($idrealm)))); ?>
-                        </div>
-                        <script>tippy('#InvHands', { html: '#InvHandsTemplate' })</script>
 
                         <div class="fx-gap"></div>
                         <a href="<?= base_url('armory/item/') ?><?= $this->m_characters->getItemInstace($this->m_data->getRealmConnectionData($idrealm), $this->armory_model->getCharInvFingerOne($idplayer, $this->m_data->getRealmConnectionData($idrealm))); ?>" id="InvFingerOne">
