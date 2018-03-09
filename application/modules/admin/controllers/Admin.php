@@ -28,10 +28,10 @@ class Admin extends MX_Controller {
         $this->load->view('general/footer');
     }
 
-    public function donate()
+    public function settings()
     {
         $this->load->view('general/header');
-        $this->load->view('donate/index');
+        $this->load->view('settings/index');
         $this->load->view('general/footer');
     }
 
@@ -40,6 +40,7 @@ class Admin extends MX_Controller {
         $this->load->view('general/header');
         $this->load->view('settings/managerealms');
         $this->load->view('general/footer');
+        $this->load->view('settings/modal');
     }
 
     public function manageslides()
@@ -47,99 +48,13 @@ class Admin extends MX_Controller {
         $this->load->view('general/header');
         $this->load->view('settings/manageslides');
         $this->load->view('general/footer');
+        $this->load->view('settings/modal');
     }
 
     public function accounts()
     {
         $this->load->view('general/header');
         $this->load->view('account/accounts');
-        $this->load->view('general/footer');
-    }
-
-    public function manageitems()
-    {
-        $this->load->view('general/header');
-        $this->load->view('shop/manageitems');
-        $this->load->view('general/footer');
-    }
-
-    public function managegroups()
-    {
-        $this->load->view('general/header');
-        $this->load->view('shop/managegroups');
-        $this->load->view('general/footer');
-    }
-
-    public function manageapi()
-    {
-        $this->load->view('general/header');
-        $this->load->view('api/manageapi');
-        $this->load->view('general/footer');
-    }
-
-    public function managechangelogs()
-    {
-        $this->load->view('general/header');
-        $this->load->view('changelogs/managechangelogs');
-        $this->load->view('general/footer');
-    }
-
-    public function editchangelogs($id)
-    {
-        if (is_null($id) || empty($id))
-            redirect(base_url(),'refresh');
-
-        if ($this->admin_model->getChangelogSpecifyRows($id) < 1)
-            redirect(base_url(),'refresh');
-
-        $data['idlink'] = $id;
-
-        $this->load->view('general/header');
-        $this->load->view('changelogs/editchangelogs', $data);
-        $this->load->view('general/footer');
-    }
-
-    public function managenews()
-    {
-        $this->load->view('general/header');
-        $this->load->view('news/managenews');
-        $this->load->view('general/footer');
-    }
-
-    public function editnews($id)
-    {
-        if (is_null($id) || empty($id))
-            redirect(base_url(),'refresh');
-
-        if ($this->admin_model->getNewsSpecifyRows($id) < 1)
-            redirect(base_url(),'refresh');
-
-        $data['idlink'] = $id;
-
-        $this->load->view('general/header');
-        $this->load->view('news/editnews', $data);
-        $this->load->view('general/footer');
-    }
-
-    public function characters()
-    {
-        $this->load->view('general/header');
-        $this->load->view('characters/characters');
-        $this->load->view('general/footer');
-    }
-
-    public function managecategories()
-    {
-        $this->load->view('general/header');
-        $this->load->view('forum/managecategories');
-        $this->load->view('general/footer');
-    }
-
-    public function manageforums()
-    {
-
-        $this->load->view('general/header');
-        $this->load->view('forum/manageforums');
         $this->load->view('general/footer');
     }
 
@@ -155,6 +70,13 @@ class Admin extends MX_Controller {
 
         $this->load->view('general/header');
         $this->load->view('account/manageaccount', $data);
+        $this->load->view('general/footer');
+    }
+
+    public function characters()
+    {
+        $this->load->view('general/header');
+        $this->load->view('characters/characters');
         $this->load->view('general/footer');
     }
 
@@ -182,11 +104,58 @@ class Admin extends MX_Controller {
         $this->load->view('general/footer');
     }
 
+    public function managenews()
+    {
+        $this->load->view('general/header');
+        $this->load->view('news/managenews');
+        $this->load->view('general/footer');
+        $this->load->view('news/modal');
+    }
+
+    public function editnews($id)
+    {
+        if (is_null($id) || empty($id))
+            redirect(base_url(),'refresh');
+
+        if ($this->admin_model->getNewsSpecifyRows($id) < 1)
+            redirect(base_url(),'refresh');
+
+        $data['idlink'] = $id;
+
+        $this->load->view('general/header');
+        $this->load->view('news/editnews', $data);
+        $this->load->view('general/footer');
+    }
+
+    public function managechangelogs()
+    {
+        $this->load->view('general/header');
+        $this->load->view('changelogs/managechangelogs');
+        $this->load->view('general/footer');
+        $this->load->view('changelogs/modal');
+    }
+
+    public function editchangelogs($id)
+    {
+        if (is_null($id) || empty($id))
+            redirect(base_url(),'refresh');
+
+        if ($this->admin_model->getChangelogSpecifyRows($id) < 1)
+            redirect(base_url(),'refresh');
+
+        $data['idlink'] = $id;
+
+        $this->load->view('general/header');
+        $this->load->view('changelogs/editchangelogs', $data);
+        $this->load->view('general/footer');
+    }
+
     public function managepages()
     {
         $this->load->view('general/header');
         $this->load->view('pages/managepages');
         $this->load->view('general/footer');
+        $this->load->view('pages/modal');
     }
 
     public function editpages($id)
@@ -204,11 +173,20 @@ class Admin extends MX_Controller {
         $this->load->view('general/footer');
     }
 
-    public function settings()
+    public function managegroups()
     {
         $this->load->view('general/header');
-        $this->load->view('settings/index');
+        $this->load->view('shop/managegroups');
         $this->load->view('general/footer');
+        $this->load->view('shop/modal');
+    }
+
+    public function manageitems()
+    {
+        $this->load->view('general/header');
+        $this->load->view('shop/manageitems');
+        $this->load->view('general/footer');
+        $this->load->view('shop/modal');
     }
 
     public function managetickets()
@@ -223,6 +201,39 @@ class Admin extends MX_Controller {
         $this->load->view('general/header');
         $this->load->view('shop/viewticket');
         $this->load->view('general/footer');
+    }
+
+    public function donate()
+    {
+        $this->load->view('general/header');
+        $this->load->view('donate/index');
+        $this->load->view('general/footer');
+        $this->load->view('donate/modal');
+    }
+
+    public function managecategories()
+    {
+        $this->load->view('general/header');
+        $this->load->view('forum/managecategories');
+        $this->load->view('general/footer');
+        $this->load->view('forum/modal');
+    }
+
+    public function manageforums()
+    {
+
+        $this->load->view('general/header');
+        $this->load->view('forum/manageforums');
+        $this->load->view('general/footer');
+        $this->load->view('forum/modal');
+    }
+
+    public function manageapi()
+    {
+        $this->load->view('general/header');
+        $this->load->view('api/manageapi');
+        $this->load->view('general/footer');
+        $this->load->view('api/modal');
     }
 
     public function checkSoap()

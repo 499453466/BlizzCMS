@@ -2,12 +2,6 @@
     $this->admin_model->deleteGroup($_POST['button_deleteGroup']);
 } ?>
 
-<?php if(isset($_POST['button_createGroup'])) {
-    $name = $_POST['group_name'];
-
-    $this->admin_model->insertGroup($name);
-} ?>
-
     <div id="content" data-uk-height-viewport="expand: true">
         <div class="uk-container uk-container-expand">
             <div class="uk-grid uk-grid-medium uk-grid-match" data-uk-grid>
@@ -51,35 +45,3 @@
                 </div>
             </div>
         </div>
-        <footer class="uk-section uk-section-small uk-text-center">
-            <hr>
-            <span><i class="fa fa-gitlab fa-2x" aria-hidden="true"></i></span><br>
-            <span class="uk-text-muted uk-text-small">Proudly powered by BlizzCMS with <i class="fa fa-heart" aria-hidden="true"></i></span>
-        </footer>
-    </div>
-
-    <div id="newGroup" uk-modal="bg-close: false">
-        <div class="uk-modal-dialog">
-            <button class="uk-modal-close-default" type="button" uk-close></button>
-            <div class="uk-modal-header">
-                <h2 class="uk-modal-title uk-text-uppercase"><i class="fa fa-cubes" aria-hidden="true"></i> <?= $this->lang->line('form_create_group'); ?></h2>
-            </div>
-            <form action="" method="post" enctype="multipart/form-data" accept-charset="utf-8" autocomplete="off">
-                <div class="uk-modal-body">
-                    <div class="uk-margin">
-                        <label class="uk-form-label uk-text-uppercase"><?= $this->lang->line('form_group_title'); ?></label>
-                        <div class="uk-form-controls">
-                            <div class="uk-inline uk-width-1-1">
-                                <span class="uk-form-icon uk-form-icon-flip" uk-icon="icon: pencil"></span>
-                                <input class="uk-input" name="group_name" required type="text" placeholder="<?= $this->lang->line('form_group_title'); ?>">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="uk-modal-footer uk-text-right actions">
-                    <button class="uk-button uk-button-default uk-modal-close" type="button"><?= $this->lang->line('button_cancel'); ?></button>
-                    <button class="uk-button uk-button-primary" type="submit" name="button_createGroup"><?= $this->lang->line('button_create'); ?></button>
-                </div>
-            </form>
-        </div>
-    </div>

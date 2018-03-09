@@ -54,8 +54,3 @@
                 <?php } ?>
             </div>
         </div>
-        <footer class="uk-section uk-section-small uk-text-center">
-            <hr>
-            <span class="uk-text-muted uk-text-small"><i class="fa fa-gitlab fa-lg" aria-hidden="true"></i> Proudly powered by BlizzCMS</span>
-        </footer>
-    </div>

@@ -71,9 +71,3 @@
                 </div>
             </div>
         </div>
-        <footer class="uk-section uk-section-small uk-text-center">
-            <hr>
-            <span><i class="fa fa-gitlab fa-2x" aria-hidden="true"></i></span><br>
-            <span class="uk-text-muted uk-text-small">Proudly powered by BlizzCMS with <i class="fa fa-heart" aria-hidden="true"></i></span>
-        </footer>
-    </div>
