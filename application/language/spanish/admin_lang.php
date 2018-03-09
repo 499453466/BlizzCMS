@@ -42,6 +42,8 @@ $lang['admin_news'] = 'Noticias';
 $lang['admin_changelogs'] = 'Changelogs';
 $lang['admin_pages'] = 'Páginas';
 $lang['admin_store'] = 'Tienda';
+$lang['admin_points_system'] = 'Sistema de Puntos';
+$lang['admin_manage_donations'] = 'Gestionar Donaciones';
 $lang['admin_manage_groups'] = 'Gestionar Grupos';
 $lang['admin_manage_items'] = 'Gestionar Artículos';
 $lang['admin_forums'] = 'Foros';
@@ -75,6 +77,7 @@ $lang['panel_admin_ban_account'] = 'Banear Cuenta';
 $lang['panel_admin_rank_account'] = 'Rango de GM';
 $lang['panel_admin_web_rank'] = 'Rango en Web';
 $lang['panel_admin_general_info'] = 'Información General';
+$lang['panel_admin_donate_history'] = 'Historial de Donación';
 $lang['panel_admin_annotations'] = 'Anotaciones';
 $lang['panel_admin_mov_forum'] = 'Cambios en el foro';
 $lang['panel_admin_last_comments'] = 'Últimos comentarios';
@@ -103,12 +106,16 @@ $lang['column_action'] = 'Acción';
 $lang['column_realm_id'] = 'ID Reino';
 $lang['column_realm_name'] = 'Nombre Reino';
 $lang['column_realm_char_database'] = 'Character Database Name';
+$lang['column_tax'] = 'Taxas';
+$lang['column_points'] = 'Puntos';
 
 /*Form Lang*/
 $lang['form_create_changelog'] = 'Crear nuevo Changelog';
 $lang['form_changelog_title'] = 'Título de Changelog';
 $lang['form_create_pages'] = 'Crear nueva Página';
 $lang['form_create_news'] = 'Crear nueva Noticia';
+$lang['form_create_donation'] = 'Crear Donación';
+$lang['form_donation_title'] = 'Título de la donación';
 $lang['form_news_title'] = 'Título de Noticia';
 $lang['form_upload_file'] = 'Subir archivo';
 $lang['form_create_category'] = 'Crear Categoría';
@@ -134,6 +141,8 @@ $lang['placeholder_forum_icon'] = 'foldername/image.jpg o foldername/image.png';
 /*Status Lang*/
 $lang['status_is_online'] = 'EL jugador está online, por favor desconéctate';
 $lang['status_name_exist'] = 'Este nombre ya existe';
+$lang['status_donate_complete'] = 'Completado';
+$lang['status_donate_cancell'] = 'Cancelado';
 
 /*Options Lang*/
 $lang['option_yes'] = 'Si';
