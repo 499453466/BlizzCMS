@@ -1,7 +1,3 @@
-<?php if(isset($_POST['button_deleteCategory'])) {
-    $this->admin_model->deleteCategory($_POST['button_deleteCategory']);
-} ?>
-
     <div id="content" data-uk-height-viewport="expand: true">
         <div class="uk-container uk-container-expand">
             <div class="uk-grid uk-grid-medium uk-grid-match" data-uk-grid>
@@ -10,9 +6,6 @@
                         <div class="uk-card-header uk-card-secondary">
                             <div class="uk-grid uk-grid-small">
                                 <div class="uk-width-auto"><h4 class="uk-margin-remove-bottom"><span data-uk-icon="icon: list"></span> <?= $this->lang->line('admin_manage_categories'); ?></h4></div>
-                                <div class="uk-width-expand uk-text-right">
-                                    <a href="" class="uk-icon-link uk-margin-small-right" data-uk-icon="icon: pencil" uk-toggle="target: #newCategory"></a>
-                                </div>
                             </div>
                         </div>
                         <!-- content -->
@@ -48,7 +41,7 @@
                 dataType:"text",
                 success:function(data){
                     UIkit.notification({
-                        message: '<span uk-icon=\'icon: check\'></span> Updated!', pos: 'top-right'
+                        message: '<span uk-icon=\'icon: info\'></span> Category updated', status: 'primary', pos: 'top-right'
                     })
                 }
             });
@@ -61,7 +54,9 @@
         $(document).on('click', '#button_addCategory', function(){
             var categoryname = $('#newcategoryname').val();
             if(categoryname == ''){
-                alert('Name is empty');
+                UIkit.notification({
+                    message: '<span uk-icon=\'icon: warning\'></span> Title is empty', status: 'warning', pos: 'top-right'
+                })
                 return false;
             }
             $.ajax({
@@ -71,7 +66,7 @@
                 dataType:"text",
                 success:function(){
                     UIkit.notification({
-                        message: '<span uk-icon=\'icon: check\'></span> Added', pos: 'top-right'
+                        message: '<span uk-icon=\'icon: plus-circle\'></span> Category added', status: 'success', pos: 'top-right'
                     })
                     fetch_data();
                 }
@@ -86,7 +81,7 @@
                 dataType:"text",
                 success:function(data){
                     UIkit.notification({
-                        message: '<span uk-icon=\'icon: check\'></span> Deleted', pos: 'top-right'
+                        message: '<span uk-icon=\'icon: minus-circle\'></span> Category deleted', status: 'danger', pos: 'top-right'
                     })
                     fetch_data();
                 }
