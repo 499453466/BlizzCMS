@@ -40,6 +40,32 @@
         </div>
     </div>
 
+    <div id="editCategory" uk-modal="bg-close: false">
+        <div class="uk-modal-dialog">
+            <button class="uk-modal-close-default" type="button" uk-close></button>
+            <div class="uk-modal-header">
+                <h2 class="uk-modal-title uk-text-uppercase"><i class="fa fa-bookmark-o" aria-hidden="true"></i> Edit Category</h2>
+            </div>
+            <form action="" method="post" enctype="multipart/form-data" accept-charset="utf-8" autocomplete="off">
+                <div class="uk-modal-body">
+                    <div class="uk-margin">
+                        <label class="uk-form-label uk-text-uppercase"><?= $this->lang->line('form_category_title'); ?></label>
+                        <div class="uk-form-controls">
+                            <div class="uk-inline uk-width-1-1">
+                                <span class="uk-form-icon uk-form-icon-flip" uk-icon="icon: pencil"></span>
+                                <input class="uk-input" name="cate_name" required type="text" placeholder="<?= $this->lang->line('form_category_title'); ?>">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="uk-modal-footer uk-text-right actions">
+                    <button class="uk-button uk-button-default uk-modal-close" type="button"><?= $this->lang->line('button_cancel'); ?></button>
+                    <button class="uk-button uk-button-primary" type="submit" name="button_createCategory"><?= $this->lang->line('button_create'); ?></button>
+                </div>
+            </form>
+        </div>
+    </div>
+
     <div id="newForum" uk-modal="bg-close: false">
         <div class="uk-modal-dialog">
             <button class="uk-modal-close-default" type="button" uk-close></button>
