@@ -73,7 +73,7 @@ class Admin extends MX_Controller {
                     <td>
                         <input type="text" class="uk-input" id="categoryName" value="'.$list->categoryName.'" data-id1="'.$list->id.'">
                     </td>
-                    <td>
+                    <td class="uk-text-center">
                         <button class="uk-button uk-button-danger" name="button_deleteCategory" id="button_deleteCategory" data-id3="'.$list->id.'">
                             <i class="fa fa-trash" aria-hidden="true"></i>
                         </button>
@@ -85,7 +85,7 @@ class Admin extends MX_Controller {
                 <td>
                     <input type="text" class="uk-input" placeholder="Insert title" id="newcategoryname">
                 </td>
-                <td>
+                <td class="uk-text-center">
                     <button class="uk-button uk-button-primary" name="button_addCategory" id="button_addCategory">
                         <i class="fa fa-plus-circle" aria-hidden="true"></i>
                     </button>
@@ -97,16 +97,14 @@ class Admin extends MX_Controller {
             <td>
                 <input type="text" class="uk-input" placeholder="Insert title" id="newcategoryname">
             </td>
-            <td>
+            <td class="uk-text-center">
                 <button class="uk-button uk-button-primary" name="button_addCategory" id="button_addCategory">
                     <i class="fa fa-plus-circle" aria-hidden="true"></i>
                 </button>
             </td>
 
             <tr>
-                <td>
-                    <td colspan="6">Data not found</td>
-                </td>
+                <td><div class="uk-alert-warning" uk-alert><p class="uk-text-center"><span uk-icon="warning"></span> Data not found</p></div></td>
             </tr>';
         }
         $output .= '</tbody>
@@ -296,7 +294,6 @@ class Admin extends MX_Controller {
         $this->load->view('general/header');
         $this->load->view('forum/managecategories');
         $this->load->view('general/footer');
-        $this->load->view('forum/modal');
     }
 
     public function manageforums()
@@ -305,7 +302,6 @@ class Admin extends MX_Controller {
         $this->load->view('general/header');
         $this->load->view('forum/manageforums');
         $this->load->view('general/footer');
-        $this->load->view('forum/modal');
     }
 
     public function manageapi()
