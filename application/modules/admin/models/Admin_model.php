@@ -346,25 +346,6 @@ class Admin_model extends CI_Model {
         }
     }
 
-    public function deleteCategory($id)
-    {
-        $this->db->where('id', $id)
-                ->delete('fx_forum_category');
-
-        redirect(base_url('admin/managecategories'),'refresh');
-    }
-
-    public function insertCategory($name)
-    {
-        $data = array(
-            'categoryName' => $name,
-        );
-
-        $this->db->insert('fx_forum_category', $data);
-
-        redirect(base_url('admin/managecategories'),'refresh');
-    }
-
     public function insertForum($name, $category, $description, $icon, $type)
     {
         $data = array(
@@ -388,11 +369,32 @@ class Admin_model extends CI_Model {
         redirect(base_url('admin/manageforums'),'refresh');
     }
 
-    public function getForumCategoryList()
+    public function getForumCategoryListAjax()
     {
         return $this->db->select('*')
             ->order_by('id', 'ASC')
             ->get('fx_forum_category');
+    }
+
+    public function insertCategoryAjax($name)
+    {
+        $data = array(
+            'categoryName' => $name
+        );
+        $this->db->insert('fx_forum_category', $data);
+    }
+
+    public function updateCategoryAjax($id, $name, $column)
+    {
+        $this->db->set($column, $name)
+                ->where('id', $id)
+                ->update('fx_forum_category');
+    }
+
+    public function deleteCategoryAjax($id)
+    {
+        $this->db->where('id', $id)
+                ->delete('fx_forum_category');
     }
 
     public function getForumForumList()
