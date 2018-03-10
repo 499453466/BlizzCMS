@@ -106,7 +106,7 @@ $lang['column_action'] = 'Acción';
 $lang['column_realm_id'] = 'ID Reino';
 $lang['column_realm_name'] = 'Nombre Reino';
 $lang['column_realm_char_database'] = 'Character Database Name';
-$lang['column_tax'] = 'Taxas';
+$lang['column_tax'] = 'Impuestos';
 $lang['column_points'] = 'Puntos';
 
 /*Form Lang*/
