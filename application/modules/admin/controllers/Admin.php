@@ -35,6 +35,86 @@ class Admin extends MX_Controller {
         $this->load->view('general/footer');
     }
 
+    public function insertCategory()
+    {
+        $name = $_POST['categoryname'];
+        return $this->admin_model->insertCategoryAjax($name);
+    }
+
+    public function updateCategory()
+    {
+        $id = $_POST['id'];
+        $name = $_POST['text'];
+        $column = $_POST['colum_name'];
+        return $this->admin_model->updateCategoryAjax($id, $name, $column);
+    }
+
+    public function deleteCategory()
+    {
+        $id = $_POST['id'];
+        return $this->admin_model->deleteCategoryAjax($id);
+    }
+
+    public function getCategoryList()
+    {
+        $output = '';
+        $output .= '
+        <table class="uk-table uk-table-justify uk-table-divider">
+            <thead>
+                <tr>
+                    <th>'.$this->lang->line('form_title').'</th>
+                    <th class="uk-text-center">'.$this->lang->line('column_action').'</th>
+                </tr>
+            </thead>
+            <tbody>';
+        if($this->admin_model->getForumCategoryListAjax()->num_rows()){
+            foreach($this->admin_model->getForumCategoryListAjax()->result() as $list) {
+                $output .= '<tr>
+                    <td>
+                        <input type="text" class="uk-input" id="categoryName" value="'.$list->categoryName.'" data-id1="'.$list->id.'">
+                    </td>
+                    <td>
+                        <button class="uk-button uk-button-danger" name="button_deleteCategory" id="button_deleteCategory" data-id3="'.$list->id.'">
+                            <i class="fa fa-trash" aria-hidden="true"></i>
+                        </button>
+                    </td>
+                </tr>';
+            }
+
+            $output .= '
+                <td>
+                    <input type="text" class="uk-input" placeholder="Insert title" id="newcategoryname">
+                </td>
+                <td>
+                    <button class="uk-button uk-button-primary" name="button_addCategory" id="button_addCategory">
+                        <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                    </button>
+                </td>
+            ';
+        }
+        else{
+            $output .= '
+            <td>
+                <input type="text" class="uk-input" placeholder="Insert title" id="newcategoryname">
+            </td>
+            <td>
+                <button class="uk-button uk-button-primary" name="button_addCategory" id="button_addCategory">
+                    <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                </button>
+            </td>
+
+            <tr>
+                <td>
+                    <td colspan="6">Data not found</td>
+                </td>
+            </tr>';
+        }
+        $output .= '</tbody>
+                        </table>';
+
+        echo $output;
+    }
+
     public function managerealms()
     {
         $this->load->view('general/header');

@@ -15,33 +15,82 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- content -->
                         <div class="uk-card-body">
-                            <table class="uk-table uk-table-justify uk-table-divider">
-                                <thead>
-                                    <tr>
-                                        <th><?= $this->lang->line('form_title'); ?></th>
-                                        <th class="uk-text-center"><?= $this->lang->line('column_action'); ?></th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <?php foreach($this->admin_model->getForumCategoryList()->result() as $list) { ?>
-                                        <tr>
-                                            <td>
-                                                <input type="text" class="uk-input" value="<?= $list->categoryName; ?>" disabled>
-                                            </td>
-                                            <td class="uk-text-center" uk-margin>
-                                                <a href="" class="uk-button uk-button-primary" uk-toggle="target: #editCategory"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
-                                                <span class="" style="display:inline-block; width: 5px;"></span>
-                                                <form action="" method="post" accept-charset="utf-8" style="display: inline;">
-                                                    <button class="uk-button uk-button-danger" name="button_deleteCategory" value="<?= $list->id ?>" type="submit"><i class="fa fa-trash" aria-hidden="true"></i></button>
-                                                </form>
-                                            </td>
-                                        </tr>
-                                    <?php } ?>
-                                </tbody>
-                            </table>
+                        <!-- ajax -->
+                            <div id="categoryList"></div>
+                        <!-- ajax -->
                         </div>
+                        <!-- content -->
                     </div>
                 </div>
             </div>
         </div>
+
+<script>
+    $(document).ready(function(){
+        function fetch_data(){
+            $.ajax({
+                url:"<?= base_url('admin/getCategoryList'); ?>",
+                method:"POST",
+                success:function(data){
+                    $('#categoryList').html(data);
+                }
+            });
+        }
+        fetch_data();
+
+        function edit_data(id, text, colum_name){
+            $.ajax({
+                url:"<?= base_url('admin/updateCategory'); ?>",
+                method:"POST",
+                data:{id:id, text:text, colum_name:colum_name},
+                dataType:"text",
+                success:function(data){
+                    UIkit.notification({
+                        message: '<span uk-icon=\'icon: check\'></span> Updated!', pos: 'top-right'
+                    })
+                }
+            });
+        }
+        $(document).on('blur', '#categoryName', function(){
+            var id = $(this).data("id1");
+            var text = $('#categoryName').val();
+            edit_data(id, text, "categoryName");
+        });
+        $(document).on('click', '#button_addCategory', function(){
+            var categoryname = $('#newcategoryname').val();
+            if(categoryname == ''){
+                alert('Name is empty');
+                return false;
+            }
+            $.ajax({
+                url:"<?= base_url('admin/insertCategory'); ?>",
+                method:"POST",
+                data:{categoryname:categoryname},
+                dataType:"text",
+                success:function(){
+                    UIkit.notification({
+                        message: '<span uk-icon=\'icon: check\'></span> Added', pos: 'top-right'
+                    })
+                    fetch_data();
+                }
+            });
+        });
+        $(document).on('click', '#button_deleteCategory', function(){
+            var id = $(this).data("id3");
+            $.ajax({
+                url:"<?= base_url('admin/deleteCategory'); ?>",
+                method:"POST",
+                data:{id:id},
+                dataType:"text",
+                success:function(data){
+                    UIkit.notification({
+                        message: '<span uk-icon=\'icon: check\'></span> Deleted', pos: 'top-right'
+                    })
+                    fetch_data();
+                }
+            });
+        });
+    });
+</script>
