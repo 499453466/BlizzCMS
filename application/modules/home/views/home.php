@@ -117,7 +117,7 @@
                 <?php } ?>
                 <?php if ($this->m_modules->getStatusDiscordExperimental() == '1') { ?>
                     <div class="uk-card uk-width-1-1@m">
-                        <p class="uk-h3 uk-text-white"><i class="icon-discord"></i> Discord</p>
+                        <p class="uk-h3 uk-text-white"><i class="fab fa-discord"></i> Discord</p>
                         <div class="Divider Divider--light"></div>
                         <div class="uk-text-center">
                             <br>
@@ -136,6 +136,7 @@
                 <?php } ?>
                 <?php if ($this->m_modules->getStatusDiscordClassic() == '1') { ?>
                     <div class="uk-card uk-width-1-1@m">
+                        <p class="uk-h3 uk-text-white"><i class="fab fa-discord"></i> Discord</p>
                         <div class="Divider Divider--light"></div>
                         <div class="uk-text-center">
                             <br>

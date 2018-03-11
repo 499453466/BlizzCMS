@@ -23,9 +23,6 @@
     <script>var whTooltips = {colorLinks: true, iconizeLinks: false, renameLinks: false};</script>
     <script type="text/javascript" src="//wow.zamimg.com/widgets/power.js"></script>
 
-    <!-- Discord -->
-    <link rel="stylesheet" href="<?= base_url(); ?>core/discord/discord.css">
-
     <!-- JQuery -->
     <script src="<?= base_url(); ?>core/js/jquery-3.3.1.min.js"></script>
 
