@@ -29,6 +29,7 @@
                 <nav class="uk-navbar uk-light" data-uk-navbar>
                     <div class="uk-navbar-left">
                         <a class="uk-navbar-item uk-logo" href="<?= base_url('admin'); ?>">BlizzCMS</a>
+                        <p>Current version: <?= $this->admin_model->currentVersion(); ?> || BlizzCMS current version: <?= $this->admin_model->currentBlizzCMS() ?></p>
                     </div>
                     <div class="uk-navbar-right">
                         <ul class="uk-navbar-nav">
