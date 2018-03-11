@@ -24,7 +24,7 @@
         <div class="uk-grid uk-grid-large" data-uk-grid>
             <?php if ($this->m_modules->getStatusNews() == '1') { ?>
                 <div class="uk-width-2-3@l">
-                    <p class="uk-h3 uk-text-white"><i class="fa fa-newspaper-o" aria-hidden="true"></i> <?= $this->lang->line('home_latest_news'); ?></p>
+                    <p class="uk-h3 uk-text-white"><i class="far fa-newspaper"></i> <?= $this->lang->line('home_latest_news'); ?></p>
                     <div class="Divider Divider--light"></div>
                     <?php foreach ($this->news_model->getNewSpecifyID($this->news_model->getPrincipalNew())->result() as $principalNew) { ?>
                         <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
@@ -66,13 +66,13 @@
             <?php } ?>
             <div class="uk-width-1-3@l">
                 <?php if ($this->m_modules->getStatusRealmStatus() == '1') { ?>
-                    <p class="uk-h3 uk-text-white"><i class="fa fa-server" aria-hidden="true"></i> <?=$this->lang->line('home_server_status');?></p>
+                    <p class="uk-h3 uk-text-white"><i class="fas fa-server"></i> <?=$this->lang->line('home_server_status');?></p>
                     <div class="label uk-text-center">
                         <h4 class="uk-text-white">
                             <?php if ($this->m_general->getExpansionAction() == 1) { ?>
-                                <i class="fa fa-gamepad" aria-hidden="true"></i> Set Realmlist <?= $this->config->item('realmlist'); ?>
+                                <i class="fas fa-gamepad"></i> Set Realmlist <?= $this->config->item('realmlist'); ?>
                             <?php } else { ?>
-                                <i class="fa fa-gamepad" aria-hidden="true"></i> Set Portal "<?= $this->config->item('realmlist'); ?>"
+                                <i class="fas fa-gamepad"></i> Set Portal "<?= $this->config->item('realmlist'); ?>"
                             <?php } ?>
                         </h4>
                     </div>
@@ -146,7 +146,7 @@
             </div>
             <?php if ($this->m_modules->getStatusStore() == '1') { ?>
                 <div class="uk-width-1-1@l">
-                    <p class="uk-h3 uk-text-white"><i class="fa fa-shopping-bag" aria-hidden="true"></i> <?= $this->lang->line('home_store_top'); ?></p>
+                    <p class="uk-h3 uk-text-white"><i class="fas fa-shopping-bag"></i> <?= $this->lang->line('home_store_top'); ?></p>
                     <div class="Divider Divider--light"></div>
                     <br>
                     <div uk-slider>

@@ -23,11 +23,11 @@
                                         <table class="uk-table uk-table-responsive uk-table-divider">
                                             <thead>
                                                 <tr>
-                                                    <th class="uk-width-small uk-text-white"><i class="fa fa-user" aria-hidden="true"></i> <?=$this->lang->line('column_name');?></th>
-                                                    <th class="uk-width-small uk-text-center uk-text-white"><i class="fa fa-flag" aria-hidden="true"></i> <?=$this->lang->line('column_faction');?></th>
-                                                    <th class="uk-width-small uk-text-center uk-text-white"><i class="fa fa-info-circle" aria-hidden="true"></i> <?=$this->lang->line('column_total_kills');?></th>
-                                                    <th class="uk-width-small uk-text-center uk-text-white"><i class="fa fa-crosshairs" aria-hidden="true"></i> <?=$this->lang->line('column_today_kills');?></th>
-                                                    <th class="uk-width-small uk-text-center uk-text-white"><i class="fa fa-crosshairs" aria-hidden="true"></i> <?=$this->lang->line('column_yersterday_kills');?></th>
+                                                    <th class="uk-width-small uk-text-white"><i class="fas fa-user"></i> <?=$this->lang->line('column_name');?></th>
+                                                    <th class="uk-width-small uk-text-center uk-text-white"><i class="fas fa-flag"></i> <?=$this->lang->line('column_faction');?></th>
+                                                    <th class="uk-width-small uk-text-center uk-text-white"><i class="fas fa-info-circle"></i> <?=$this->lang->line('column_total_kills');?></th>
+                                                    <th class="uk-width-small uk-text-center uk-text-white"><i class="fas fa-crosshairs"></i> <?=$this->lang->line('column_today_kills');?></th>
+                                                    <th class="uk-width-small uk-text-center uk-text-white"><i class="fas fa-crosshairs"></i> <?=$this->lang->line('column_yersterday_kills');?></th>
                                                 </tr>
                                             </thead>
                                             <tbody>

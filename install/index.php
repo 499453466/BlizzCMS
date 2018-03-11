@@ -130,7 +130,7 @@
     <script src="../core/uikit/js/uikit-icons.min.js"></script>
 
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="../core/font-awesome/css/font-awesome.min.css">
+    <script type="text/javascript" defer src="../core/js/fontawesome-all.js"></script>
 
     <!-- JQuery -->
     <script src="../core/js/jquery-3.3.1.min.js"></script>
@@ -150,32 +150,32 @@
                             <h4 class="uk-card-title uk-text-uppercase uk-text-center">What do I need to run this <strong>website</strong>?</h4>
                             <ul uk-accordion>
                                 <li class="uk-open">
-                                    <a class="uk-accordion-title" href="#" style="color: #fff;"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Requirements</a>
+                                    <a class="uk-accordion-title" href="#" style="color: #fff;"><i class="fas fa-exclamation-triangle"></i> Requirements</a>
                                     <div class="uk-accordion-content">
                                         <p>
                                             <div class="uk-alert-warning" uk-alert>
-                                                <p class="uk-text-center uk-text-uppercase uk-text-bold"><i class="fa fa-server" aria-hidden="true"></i> Host Requirements</p>
+                                                <p class="uk-text-center uk-text-uppercase uk-text-bold"><i class="fas fa-server"></i> Host Requirements</p>
                                                 <p class="uk-text-center uk-text-danger uk-text-bold">Minimum PHP 5.6</p>
                                                 <hr class="uk-divider-icon">
-                                                <p class="uk-text-center uk-text-uppercase uk-text-bold"><i class="fa fa-cogs" aria-hidden="true"></i> Apache Modules Required</p>
+                                                <p class="uk-text-center uk-text-uppercase uk-text-bold"><i class="fas fa-cogs"></i> Apache Modules Required</p>
                                                 <p class="uk-text-center">mod_rewrite, mod_headers, mod_expires, mod_deflate</p>
                                                 <hr class="uk-divider-icon">
-                                                <p class="uk-text-center uk-text-uppercase uk-text-bold"><i class="fa fa-cogs" aria-hidden="true"></i> PHP Extensions Required</p>
+                                                <p class="uk-text-center uk-text-uppercase uk-text-bold"><i class="fas fa-cogs"></i> PHP Extensions Required</p>
                                                 <p class="uk-text-center">php_curl, php_openssl, php_soap, php_gd, php_mbstring, php_json</p>
                                             </div>
                                         </p>
                                     </div>
                                 </li>
                                 <li>
-                                    <a class="uk-accordion-title" href="#" style="color: #fff;"><i class="fa fa-info-circle" aria-hidden="true"></i> How to enable required modules/extensions</a>
+                                    <a class="uk-accordion-title" href="#" style="color: #fff;"><i class="fas fa-info-circle"></i> How to enable required modules/extensions</a>
                                     <div class="uk-accordion-content">
                                         <p>
                                             <div class="uk-alert-primary" uk-alert>
-                                                <p class="uk-text-center uk-text-uppercase uk-text-bold"><i class="fa fa-question-circle" aria-hidden="true"></i> How to Enable Apache Modules?</p>
+                                                <p class="uk-text-center uk-text-uppercase uk-text-bold"><i class="fas fa-question-circle"></i> How to Enable Apache Modules?</p>
                                                 <p class="uk-text-center">Go into your Apache directory and find the <b>httpd.conf</b> file. Mine was located in "C:\wamp\bin\apache\apache2.4.27\conf\". Open the file with a text editor and search (CTRL+F) for one of the modules you need to enable. To enable them, simply remove the #-character in front of the line.</p>
                                                 <p class="uk-text-center"><img src="images/apache.jpg" style="border:1px solid #ccc; height: 85%; width: 85%" /></p>
                                                 <hr class="uk-divider-icon">
-                                                <p class="uk-text-center uk-text-uppercase uk-text-bold"><i class="fa fa-question-circle" aria-hidden="true"></i> How to Enable PHP Extensions?</p>
+                                                <p class="uk-text-center uk-text-uppercase uk-text-bold"><i class="fas fa-question-circle"></i> How to Enable PHP Extensions?</p>
                                                 <p class="uk-text-center">Go into your PHP directory and find the <b>php.ini</b> file. Mine was located in "C:\wamp\bin\php\php5.6.31". Open the file with a text editor and search (CTRL+F) for one of the modules you need to enable. To enable them, simply remove the ;-character in front of the line.</p>
                                                 <p class="uk-text-center"><img src="images/php.jpg" style="border:1px solid #ccc; height: 85%; width: 85%" /></p>
                                             </div>
@@ -187,13 +187,13 @@
                             <?php if(isset($_GET['continue'])) { ?>
                                 <div class="uk-margin">
                                     <div class="uk-form-controls">
-                                        <button class="uk-button uk-button-primary uk-width-1-1 uk-margin-small-bottom" type="submit" name="button_deleteinstall"><i class="fa fa-spinner fa-pulse fa-fw"></i> Continue Installation</button>
+                                        <button class="uk-button uk-button-primary uk-width-1-1 uk-margin-small-bottom" type="submit" name="button_deleteinstall"><i class="fas fa-spinner fa-pulse"></i> Continue Installation</button>
                                     </div>
                                 </div>
                             <?php } else { ?>
                                 <div class="uk-margin">
                                     <div class="uk-form-controls">
-                                        <button class="uk-button uk-button-primary uk-width-1-1 uk-margin-small-bottom" type="submit" name="button_startinstall"><i class="fa fa-refresh fa-spin fa-fw"></i> Start Installation</button>
+                                        <button class="uk-button uk-button-primary uk-width-1-1 uk-margin-small-bottom" type="submit" name="button_startinstall"><i class="fas fa-sync fa-spin"></i> Start Installation</button>
                                     </div>
                                 </div>
                             <?php } ?>
@@ -201,7 +201,7 @@
                     </div>
                     <div>
                         <div class="uk-card uk-card-secondary uk-card-hover uk-card-body uk-light">
-                            <h3 class="uk-card-title uk-text-uppercase uk-text-bold uk-text-center"><i class="fa fa-wrench" aria-hidden="true"></i> Settings</h3>
+                            <h3 class="uk-card-title uk-text-uppercase uk-text-bold uk-text-center"><i class="fas fa-wrench"></i> Settings</h3>
                             <?php if(isset($_GET['continue'])) { ?>
                                 <p>
                                     <fieldset class="uk-fieldset">

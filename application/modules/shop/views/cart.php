@@ -32,7 +32,7 @@
             <div class="uk-width-1-5@l"></div>
             <div class="uk-width-3-5@l">
                 <form action="" method="post" accept-charset="utf-8" class="uk-text-white">
-                    <h2 class="uk-text-white"><i class="fa fa-shopping-cart" aria-hidden="true"></i> <?=$this->lang->line('store_cart_description');?>: <a rel="item=<?= $this->shop_model->getItem($idlink); ?>"><?= $this->shop_model->getName($idlink); ?></a></h2>
+                    <h2 class="uk-text-white"><i class="fas fa-shopping-cart"></i> <?=$this->lang->line('store_cart_description');?>: <a rel="item=<?= $this->shop_model->getItem($idlink); ?>"><?= $this->shop_model->getName($idlink); ?></a></h2>
                     <div class="uk-space-small"></div>
                     <div class="uk-margin uk-text-center">
                         <div class="uk-inline">
@@ -40,10 +40,10 @@
                                 <img class="uk-border-rounded" src="//wow.zamimg.com/images/wow/icons/large/<?= $this->shop_model->getIcon($idlink) ?>.jpg" />
                             </a>
                         </div>
-                        <p><i class="fa fa-info-circle" aria-hidden="true"></i> <?=$this->lang->line('store_item_name');?>: <?= $this->shop_model->getName($idlink); ?></p>
+                        <p><i class="fas fa-info-circle"></i> <?=$this->lang->line('store_item_name');?>: <?= $this->shop_model->getName($idlink); ?></p>
                     </div>
                     <div class="uk-margin uk-text-center">
-                        <p><i class="fa fa-list-ul" aria-hidden="true"></i> <?=$this->lang->line('store_select_character');?>:</p>
+                        <p><i class="fas fa-list-ul"></i> <?=$this->lang->line('store_select_character');?>:</p>
                         <div class="uk-inline">
                             <div class="uk-form-controls">
                                 <select class="uk-select uk-form-width-medium uk-form-small" name="charSelects">
@@ -59,7 +59,7 @@
                         </div>
                     </div>
                     <div class="uk-margin uk-text-center">
-                        <p><i class="fa fa-money" aria-hidden="true"></i> <?=$this->lang->line('store_item_price');?>:</p>
+                        <p><i class="fas fa-money-bill-alt"></i> <?=$this->lang->line('store_item_price');?>:</p>
                         <div class="uk-inline">
                             <h4>
                                 <?php if($_GET['tp'] == "dp"): ?>
@@ -78,11 +78,11 @@
                             $qqs = $this->m_general->getCharVPTotal($this->session->userdata('fx_sess_id'));
                         ?>
                         <?php if ($qqs >= $this->shop_model->getPriceType($idlink, $_GET['tp'])) { ?>
-                            <button type="submit" name="buyNowGetItem" class="uk-button uk-button-primary uk-button-large" title="<?= $this->lang->line('button_buy'); ?>"><i class="fa fa-shopping-cart" aria-hidden="true"></i> <?= $this->lang->line('button_buy'); ?></button>
+                            <button type="submit" name="buyNowGetItem" class="uk-button uk-button-primary uk-button-large" title="<?= $this->lang->line('button_buy'); ?>"><i class="fas fa-shopping-cart"></i> <?= $this->lang->line('button_buy'); ?></button>
                         <?php } else { ?>
-                            <div class="uk-alert-warning" uk-alert><p><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> <?=$this->lang->line('points_insuff');?></p></div>
+                            <div class="uk-alert-warning" uk-alert><p><i class="fas fa-exclamation-triangle"></i> <?=$this->lang->line('points_insuff');?></p></div>
                         <?php } ?>
-                        <!--<button class="button" title=""><i class="fa fa-gift" aria-hidden="true"></i> Gift</button>-->
+                        <!--<button class="button" title=""><i class="fas fa-gift"></i> Gift</button>-->
                     </div>
                 </form>
             </div>

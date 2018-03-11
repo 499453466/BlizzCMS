@@ -3,7 +3,7 @@
         <div class="uk-grid uk-grid-large" data-uk-grid>
             <div class="uk-width-1-5@l"></div>
             <div class="uk-width-3-5@l">
-                <h2 class="uk-text-primary uk-text-center"><i class="fa fa-user-plus" aria-hidden="true"></i> <?= $this->lang->line('button_account_create'); ?></h2>
+                <h2 class="uk-text-primary uk-text-center"><i class="fas fa-user-plus"></i> <?= $this->lang->line('button_account_create'); ?></h2>
                 <p class="uk-text-center uk-text-white"><?= $this->lang->line('register_description'); ?></p>
 
                 <?php if (isset($_POST['button_register']))
@@ -35,17 +35,17 @@
                         if ($password == $pascword)
                         {
                             if ($this->m_data->getSpecifyAccount($username)->num_rows())
-                                echo '<div class="uk-alert-danger" uk-alert><a class="uk-alert-close" uk-close></a><p class="uk-text-center"><i class="fa fa-exclamation-circle" aria-hidden="true"></i> '.$this->lang->line('account_already_exist').'</p></div>';
+                                echo '<div class="uk-alert-danger" uk-alert><a class="uk-alert-close" uk-close></a><p class="uk-text-center"><i class="fas fa-exclamation-circle"></i> '.$this->lang->line('account_already_exist').'</p></div>';
                             else if ($this->m_data->getSpecifyEmail($email)->num_rows())
-                                echo '<div class="uk-alert-warning" uk-alert><a class="uk-alert-close" uk-close></a><p class="uk-text-center"><i class="fa fa-exclamation-circle" aria-hidden="true"></i> '.$this->lang->line('email_used').'</p></div>';
+                                echo '<div class="uk-alert-warning" uk-alert><a class="uk-alert-close" uk-close></a><p class="uk-text-center"><i class="fas fa-exclamation-circle"></i> '.$this->lang->line('email_used').'</p></div>';
                             else
                                         $this->user_model->insertRegister($name, $surname, $username, $email, $question, $password, $answer, $year, $month, $day, $country);
                         }
                         else
-                            echo '<div class="uk-alert-warning" uk-alert><a class="uk-alert-close" uk-close></a><p class="uk-text-center"><i class="fa fa-exclamation-circle" aria-hidden="true"></i> '.$this->lang->line('password_not_match').'</p></div>';
+                            echo '<div class="uk-alert-warning" uk-alert><a class="uk-alert-close" uk-close></a><p class="uk-text-center"><i class="fas fa-exclamation-circle"></i> '.$this->lang->line('password_not_match').'</p></div>';
                     }
                     else
-                        echo '<div class="uk-alert-danger" uk-alert><a class="uk-alert-close" uk-close></a><p class="uk-text-center"><i class="fa fa-exclamation-circle" aria-hidden="true"></i> '.$this->lang->line('captcha_error').'</p></div>';
+                        echo '<div class="uk-alert-danger" uk-alert><a class="uk-alert-close" uk-close></a><p class="uk-text-center"><i class="fas fa-exclamation-circle"></i> '.$this->lang->line('captcha_error').'</p></div>';
                 } ?>
 
                 <form action="" method="post" accept-charset="utf-8">
@@ -194,7 +194,7 @@
                             <?= $this->recaptcha->render(); ?>
                         </div>
                     <?php } ?>
-                    <button class="uk-button uk-button-primary uk-width-1-1" type="submit" name="button_register"><i class="fa fa-user-plus" aria-hidden="true"></i> <?= $this->lang->line('button_register'); ?></button>
+                    <button class="uk-button uk-button-primary uk-width-1-1" type="submit" name="button_register"><i class="fas fa-user-plus"></i> <?= $this->lang->line('button_register'); ?></button>
                 </form>
             </div>
             <div class="uk-width-1-5@l"></div>

@@ -23,7 +23,7 @@
         <div class="uk-modal-dialog">
             <button class="uk-modal-close-default" type="button" uk-close></button>
             <div class="uk-modal-header">
-                <h2 class="uk-modal-title uk-text-uppercase"><i class="fa fa-key" aria-hidden="true"></i> <?= $this->lang->line('button_change_password'); ?></h2>
+                <h2 class="uk-modal-title uk-text-uppercase"><i class="fas fa-key"></i> <?= $this->lang->line('button_change_password'); ?></h2>
             </div>
             <form action="" method="post" accept-charset="utf-8">
                 <div class="uk-modal-body">
@@ -66,7 +66,7 @@
         <div class="uk-modal-dialog">
             <button class="uk-modal-close-default" type="button" uk-close></button>
             <div class="uk-modal-header">
-                <h2 class="uk-modal-title uk-text-uppercase"><i class="fa fa-envelope-o" aria-hidden="true"></i> <?= $this->lang->line('button_change_email'); ?></h2>
+                <h2 class="uk-modal-title uk-text-uppercase"><i class="far fa-envelope"></i> <?= $this->lang->line('button_change_email'); ?></h2>
             </div>
             <form action="" method="post" accept-charset="utf-8">
                 <div class="uk-modal-body">
@@ -109,7 +109,7 @@
         <div class="uk-modal-dialog">
             <button class="uk-modal-close-default" type="button" uk-close></button>
             <div class="uk-modal-header">
-                <h2 class="uk-modal-title uk-text-uppercase"><i class="fa fa-camera" aria-hidden="true"></i> <?= $this->lang->line('button_change_avatar'); ?></h2>
+                <h2 class="uk-modal-title uk-text-uppercase"><i class="fas fa-camera"></i> <?= $this->lang->line('button_change_avatar'); ?></h2>
             </div>
             <form action="" method="post" accept-charset="utf-8">
                 <div class="uk-modal-body">
@@ -138,7 +138,7 @@
         <div class="uk-modal-dialog">
             <button class="uk-modal-close-default" type="button" uk-close></button>
             <div class="uk-modal-header">
-                <h2 class="uk-modal-title uk-text-uppercase"><i class="fa fa-user-o" aria-hidden="true"></i> <?= $this->lang->line('button_add_personal_info'); ?></h2>
+                <h2 class="uk-modal-title uk-text-uppercase"><i class="far fa-user"></i> <?= $this->lang->line('button_add_personal_info'); ?></h2>
             </div>
             <form action="" method="post" accept-charset="utf-8">
                 <div class="uk-modal-body">

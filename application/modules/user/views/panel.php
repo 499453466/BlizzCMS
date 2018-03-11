@@ -38,14 +38,14 @@
                             if ($this->m_data->getPasswordAccountID($this->session->userdata('fx_sess_id')) == strtoupper($compare))
                             {
                                 if ($newpassI == $this->m_data->getPasswordAccountID($this->session->userdata('fx_sess_id')))
-                                    echo '<div class="uk-alert-warning" uk-alert><a class="uk-alert-close" uk-close></a><p class="uk-text-center"><i class="fa fa-exclamation-circle" aria-hidden="true"></i> '.$this->lang->line('password_same').'</p></div>';
+                                    echo '<div class="uk-alert-warning" uk-alert><a class="uk-alert-close" uk-close></a><p class="uk-text-center"><i class="fas fa-exclamation-circle"></i> '.$this->lang->line('password_same').'</p></div>';
                                 else
                                 {
                                     $this->user_model->changePasswordI($this->session->userdata('fx_sess_id'), $newpassI);
                                 }
                             }
                             else
-                                echo '<div class="uk-alert-warning" uk-alert><a class="uk-alert-close" uk-close></a><p class="uk-text-center"><i class="fa fa-exclamation-circle" aria-hidden="true"></i> '.$this->lang->line('opassword_not_match').'</p></div>';
+                                echo '<div class="uk-alert-warning" uk-alert><a class="uk-alert-close" uk-close></a><p class="uk-text-center"><i class="fas fa-exclamation-circle"></i> '.$this->lang->line('opassword_not_match').'</p></div>';
                         }
                         else if ($this->m_general->getExpansionAction() == 2)
                         {
@@ -58,20 +58,20 @@
                             if ($this->m_data->getPasswordBnetID($this->session->userdata('fx_sess_id')) == strtoupper($compare))
                             {
                                 if ($newpassII == $this->m_data->getPasswordBnetID($this->session->userdata('fx_sess_id')))
-                                    echo '<div class="uk-alert-warning" uk-alert><a class="uk-alert-close" uk-close></a><p class="uk-text-center"><i class="fa fa-exclamation-circle" aria-hidden="true"></i> '.$this->lang->line('password_same').'</p></div>';
+                                    echo '<div class="uk-alert-warning" uk-alert><a class="uk-alert-close" uk-close></a><p class="uk-text-center"><i class="fas fa-exclamation-circle"></i> '.$this->lang->line('password_same').'</p></div>';
                                 else
                                 {
                                     $this->user_model->changePasswordII($this->session->userdata('fx_sess_id'), $newpassI, $newpassII);
                                 }
                             }
                             else
-                                echo '<div class="uk-alert-warning" uk-alert><a class="uk-alert-close" uk-close></a><p class="uk-text-center"><i class="fa fa-exclamation-circle" aria-hidden="true"></i> '.$this->lang->line('opassword_not_match').'</p></div>';
+                                echo '<div class="uk-alert-warning" uk-alert><a class="uk-alert-close" uk-close></a><p class="uk-text-center"><i class="fas fa-exclamation-circle"></i> '.$this->lang->line('opassword_not_match').'</p></div>';
                         }
                         else
-                            echo '<div class="uk-alert-danger" uk-alert><a class="uk-alert-close" uk-close></a><p class="uk-text-center"><i class="fa fa-exclamation-circle" aria-hidden="true"></i> '.$this->lang->line('expansion_not_found').'</p></div>';
+                            echo '<div class="uk-alert-danger" uk-alert><a class="uk-alert-close" uk-close></a><p class="uk-text-center"><i class="fas fa-exclamation-circle"></i> '.$this->lang->line('expansion_not_found').'</p></div>';
                     }
                     else
-                        echo '<div class="uk-alert-warning" uk-alert><a class="uk-alert-close" uk-close></a><p class="uk-text-center"><i class="fa fa-exclamation-circle" aria-hidden="true"></i> '.$this->lang->line('password_not_match').'</p></div>';
+                        echo '<div class="uk-alert-warning" uk-alert><a class="uk-alert-close" uk-close></a><p class="uk-text-center"><i class="fas fa-exclamation-circle"></i> '.$this->lang->line('password_not_match').'</p></div>';
                 } ?>
 
                 <?php if(isset($_POST['button_changeemail'])) {
@@ -90,10 +90,10 @@
                                 $this->user_model->changeEmailI($this->session->userdata('fx_sess_id'), $newemail);
                             }
                             else
-                                echo '<div class="uk-alert-warning" uk-alert><a class="uk-alert-close" uk-close></a><p class="uk-text-center"><i class="fa fa-exclamation-circle" aria-hidden="true"></i> '.$this->lang->line('opassword_not_match').'</p></div>';
+                                echo '<div class="uk-alert-warning" uk-alert><a class="uk-alert-close" uk-close></a><p class="uk-text-center"><i class="fas fa-exclamation-circle"></i> '.$this->lang->line('opassword_not_match').'</p></div>';
                         }
                         else
-                            echo '<div class="uk-alert-warning" uk-alert><a class="uk-alert-close" uk-close></a><p class="uk-text-center"><i class="fa fa-exclamation-circle" aria-hidden="true"></i> '.$this->lang->line('oemail_not_match').'</p></div>';
+                            echo '<div class="uk-alert-warning" uk-alert><a class="uk-alert-close" uk-close></a><p class="uk-text-center"><i class="fas fa-exclamation-circle"></i> '.$this->lang->line('oemail_not_match').'</p></div>';
                     }
                     else if ($this->m_general->getExpansionAction() == 2)
                     {
@@ -102,7 +102,7 @@
                         $newpasscompare = $this->m_data->encryptBattlenet($newemail, $password);
 
                         if ($this->user_model->getExistEmail(strtoupper($newemail)) > 0)
-                            echo '<div class="uk-alert-warning" uk-alert><a class="uk-alert-close" uk-close></a><p class="uk-text-center"><i class="fa fa-exclamation-circle" aria-hidden="true"></i> '.$this->lang->line('email_used').'</p></div>';
+                            echo '<div class="uk-alert-warning" uk-alert><a class="uk-alert-close" uk-close></a><p class="uk-text-center"><i class="fas fa-exclamation-circle"></i> '.$this->lang->line('email_used').'</p></div>';
                         else
                         {
                             if (strtoupper($this->session->userdata('fx_sess_email')) == strtoupper($oldemail))
@@ -112,41 +112,41 @@
                                     $this->user_model->changeEmailII($this->session->userdata('fx_sess_id'), $newemail, $newpasscompare);
                                 }
                                 else
-                                    echo '<div class="uk-alert-warning" uk-alert><a class="uk-alert-close" uk-close></a><p class="uk-text-center"><i class="fa fa-exclamation-circle" aria-hidden="true"></i> '.$this->lang->line('opassword_not_match').'</p></div>';
+                                    echo '<div class="uk-alert-warning" uk-alert><a class="uk-alert-close" uk-close></a><p class="uk-text-center"><i class="fas fa-exclamation-circle"></i> '.$this->lang->line('opassword_not_match').'</p></div>';
                             }
                             else
-                                echo '<div class="uk-alert-warning" uk-alert><a class="uk-alert-close" uk-close></a><p class="uk-text-center"><i class="fa fa-exclamation-circle" aria-hidden="true"></i> '.$this->lang->line('oemail_not_match').'</p></div>';
+                                echo '<div class="uk-alert-warning" uk-alert><a class="uk-alert-close" uk-close></a><p class="uk-text-center"><i class="fas fa-exclamation-circle"></i> '.$this->lang->line('oemail_not_match').'</p></div>';
                         }
                     }
                     else
-                        echo '<div class="uk-alert-danger" uk-alert><a class="uk-alert-close" uk-close></a><p class="uk-text-center"><i class="fa fa-exclamation-circle" aria-hidden="true"></i> '.$this->lang->line('expansion_notfound').'</p></div>';
+                        echo '<div class="uk-alert-danger" uk-alert><a class="uk-alert-close" uk-close></a><p class="uk-text-center"><i class="fas fa-exclamation-circle"></i> '.$this->lang->line('expansion_notfound').'</p></div>';
                 } ?>
                 <div class="uk-scrollspy-inview uk-animation-slide-bottom uk-text-white" uk-scrollspy-class="">
                     <div class="uk-column-1-2 uk-column-divider">
                         <div>
-                            <p><i class="fa fa-user-circle-o" aria-hidden="true"></i> <?= $this->lang->line('panel_acc_rank'); ?>: <span class="uk-label">
+                            <p><i class="far fa-user-circle"></i> <?= $this->lang->line('panel_acc_rank'); ?>: <span class="uk-label">
                                 <?php if($this->m_data->getRank($this->session->userdata('fx_sess_id')) > 0) { echo 'STAFF'; } else echo 'Player'; ?></span>
                             </p>
                         </div>
                         <div>
-                            <p><i class="fa fa-credit-card" aria-hidden="true"></i> <?= $this->lang->line('panel_dp'); ?>: <span class="uk-badge"><?= $this->m_general->getCharDPTotal($this->session->userdata('fx_sess_id')); ?></span></p>
+                            <p><i class="far fa-credit-card"></i> <?= $this->lang->line('panel_dp'); ?>: <span class="uk-badge"><?= $this->m_general->getCharDPTotal($this->session->userdata('fx_sess_id')); ?></span></p>
                         </div>
                     </div>
                     <div class="uk-column-1-2 uk-column-divider">
                         <div>
-                            <p><i class="fa fa-globe" aria-hidden="true"></i> <?= $this->lang->line('panel_location'); ?>: <span class="uk-label"><?= $this->user_model->getLocation($this->session->userdata('fx_sess_id')); ?></span></p>
+                            <p><i class="fas fa-globe"></i> <?= $this->lang->line('panel_location'); ?>: <span class="uk-label"><?= $this->user_model->getLocation($this->session->userdata('fx_sess_id')); ?></span></p>
                         </div>
                         <div>
-                            <p><i class="fa fa-star" aria-hidden="true"></i> <?= $this->lang->line('panel_vp'); ?>: <span class="uk-badge"><?= $this->m_general->getCharVPTotal($this->session->userdata('fx_sess_id')); ?></span></p>
+                            <p><i class="fas fa-star"></i> <?= $this->lang->line('panel_vp'); ?>: <span class="uk-badge"><?= $this->m_general->getCharVPTotal($this->session->userdata('fx_sess_id')); ?></span></p>
                         </div>
                     </div>
                     <div class="uk-column-1-2 uk-column-divider">
                         <div>
-                            <p><i class="fa fa-gamepad" aria-hidden="true"></i> <?= $this->lang->line('panel_expansion'); ?>: <span class="uk-label"><?= $this->m_general->getExpansionName(); ?></span></p>
+                            <p><i class="fas fa-gamepad"></i> <?= $this->lang->line('panel_expansion'); ?>: <span class="uk-label"><?= $this->m_general->getExpansionName(); ?></span></p>
                         </div>
                         <?php if($this->user_model->getExistInfo()->num_rows()) { ?>
                             <div>
-                                <p><i class="fa fa-clock-o" aria-hidden="true"></i> <?= $this->lang->line('panel_member'); ?>: <span class="uk-label"><?= date('Y/m/d',$this->user_model->getDateMember($this->session->userdata('fx_sess_id'))); ?></span></p>
+                                <p><i class="far fa-clock"></i> <?= $this->lang->line('panel_member'); ?>: <span class="uk-label"><?= date('Y/m/d',$this->user_model->getDateMember($this->session->userdata('fx_sess_id'))); ?></span></p>
                             </div>
                         <?php } ?>
                     </div>
@@ -155,26 +155,26 @@
                         <?php if($this->m_modules->getVote() == '1') { ?>
                             <div>
                                 <a href="<?= base_url('vote'); ?>">
-                                    <button class="uk-button uk-button-primary uk-width-1-1 uk-margin-small-bottom"><i class="fa fa-star" aria-hidden="true"></i> <?= $this->lang->line('button_vote_panel'); ?></button>
+                                    <button class="uk-button uk-button-primary uk-width-1-1 uk-margin-small-bottom"><i class="fas fa-star"></i> <?= $this->lang->line('button_vote_panel'); ?></button>
                                 </a>
                             </div>
                         <?php } else { ?>
                             <div>
                                 <a href="<?= base_url('vote'); ?>" class="uk-disabled">
-                                    <button class="uk-button uk-button-secondary uk-width-1-1 uk-margin-small-bottom"><i class="fa fa-star" aria-hidden="true"></i> <?= $this->lang->line('button_vote_panel'); ?></button>
+                                    <button class="uk-button uk-button-secondary uk-width-1-1 uk-margin-small-bottom"><i class="fas fa-star"></i> <?= $this->lang->line('button_vote_panel'); ?></button>
                                 </a>
                             </div>
                         <?php } ?>
                         <?php if($this->m_modules->getDonation() == '1') { ?>
                             <div>
                                 <a href="<?= base_url('donate'); ?>">
-                                    <button class="uk-button uk-button-primary uk-width-1-1 uk-margin-small-bottom"><i class="fa fa-credit-card" aria-hidden="true"></i> <?= $this->lang->line('button_donate_panel'); ?></button>
+                                    <button class="uk-button uk-button-primary uk-width-1-1 uk-margin-small-bottom"><i class="far fa-credit-card"></i> <?= $this->lang->line('button_donate_panel'); ?></button>
                                 </a>
                             </div>
                         <?php } else { ?>
                             <div>
                                 <a href="<?= base_url('donate'); ?>" class="uk-disabled">
-                                    <button class="uk-button uk-button-secondary uk-width-1-1 uk-margin-small-bottom"><i class="fa fa-credit-card" aria-hidden="true"></i> <?= $this->lang->line('button_donate_panel'); ?></button>
+                                    <button class="uk-button uk-button-secondary uk-width-1-1 uk-margin-small-bottom"><i class="far fa-credit-card"></i> <?= $this->lang->line('button_donate_panel'); ?></button>
                                 </a>
                             </div>
                         <?php } ?>
@@ -182,18 +182,18 @@
                     <div class="uk-column-1-2">
                         <div>
                             <a href="">
-                                <button class="uk-button uk-button-primary uk-width-1-1 uk-margin-small-bottom"><i class="fa fa-ticket" aria-hidden="true"></i> <?= $this->lang->line('button_support'); ?></button>
+                                <button class="uk-button uk-button-primary uk-width-1-1 uk-margin-small-bottom"><i class="fas fa-ticket-alt"></i> <?= $this->lang->line('button_support'); ?></button>
                             </a>
                         </div>
                         <div>
                             <?php if($this->user_model->getExistInfo()->num_rows()) { ?>
                                 <a href="#" uk-toggle="target: #avatars">
-                                    <button class="uk-button uk-button-primary uk-width-1-1 uk-margin-small-bottom"><i class="fa fa-camera" aria-hidden="true"></i> <?= $this->lang->line('button_change_avatar'); ?></button>
+                                    <button class="uk-button uk-button-primary uk-width-1-1 uk-margin-small-bottom"><i class="fas fa-camera"></i> <?= $this->lang->line('button_change_avatar'); ?></button>
                                 </a>
                             <?php } ?>
                             <?php if(!$this->user_model->getExistInfo()->num_rows()) { ?>
                                 <a href="#" uk-toggle="target: #personalinfo">
-                                    <button class="uk-button uk-button-primary uk-width-1-1 uk-margin-small-bottom"><i class="fa fa-user-o" aria-hidden="true"></i> <?= $this->lang->line('button_add_personal_info'); ?></button>
+                                    <button class="uk-button uk-button-primary uk-width-1-1 uk-margin-small-bottom"><i class="far fa-user-circle"></i> <?= $this->lang->line('button_add_personal_info'); ?></button>
                                 </a>
                             <?php } ?>
                         </div>
@@ -201,12 +201,12 @@
                     <div class="uk-column-1-2">
                         <div>
                             <a href="#" uk-toggle="target: #changePassword">
-                                <button class="uk-button uk-button-primary uk-width-1-1 uk-margin-small-bottom"><i class="fa fa-key" aria-hidden="true"></i> <?= $this->lang->line('button_change_password'); ?></button>
+                                <button class="uk-button uk-button-primary uk-width-1-1 uk-margin-small-bottom"><i class="fas fa-key"></i> <?= $this->lang->line('button_change_password'); ?></button>
                             </a>
                         </div>
                         <div>
                             <a href="#" uk-toggle="target: #changeEmail">
-                                <button class="uk-button uk-button-primary uk-width-1-1 uk-margin-small-bottom"><i class="fa fa-envelope-o" aria-hidden="true"></i> <?= $this->lang->line('button_change_email'); ?></button>
+                                <button class="uk-button uk-button-primary uk-width-1-1 uk-margin-small-bottom"><i class="far fa-envelope"></i> <?= $this->lang->line('button_change_email'); ?></button>
                             </a>
                         </div>
                     </div>
@@ -216,7 +216,7 @@
                             $multiRealm = $this->m_data->realmConnection($charsMultiRealm->username, $charsMultiRealm->password, $charsMultiRealm->hostname, $charsMultiRealm->char_database);
                         ?>
                             <li class="uk-open">
-                                <h3 class="uk-accordion-title uk-text-white"><i class="fa fa-server" aria-hidden="true"></i> <?= $this->m_general->getRealmName($charsMultiRealm->realmID); ?> - <?= $this->lang->line('panel_chars_list'); ?></h3>
+                                <h3 class="uk-accordion-title uk-text-white"><i class="fas fa-server"></i> <?= $this->m_general->getRealmName($charsMultiRealm->realmID); ?> - <?= $this->lang->line('panel_chars_list'); ?></h3>
                                 <div class="uk-accordion-content">
                                     <div class="uk-grid uk-grid-small uk-child-width-1-6 uk-flex-center" uk-grid>
                                         <?php foreach($this->m_characters->getGeneralCharactersSpecifyAcc($multiRealm , $this->session->userdata('fx_sess_id'))->result() as $chars) { ?>

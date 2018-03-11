@@ -25,7 +25,7 @@
                 <?php foreach($this->forum_model->getCategory() as $categorys) { ?>
                     <div class="ForumCategory">
                         <?php if($this->forum_model->getCategoryRows($categorys->id)) { ?>
-                            <h4 class="uk-text-uppercase uk-text-white"><i class="fa fa-bookmark-o" aria-hidden="true"></i> <?= $categorys->categoryName ?></h4>
+                            <h4 class="uk-text-uppercase uk-text-white"><i class="far fa-bookmark"></i> <?= $categorys->categoryName ?></h4>
                         <?php } ?>
                         <div class="ForumCards" uk-scrollspy="cls: uk-animation-fade; repeat: true">
                             <?php foreach($this->forum_model->getCategoryForums($categorys->id) as $sections) { ?>

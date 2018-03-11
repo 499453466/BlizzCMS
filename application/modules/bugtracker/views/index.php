@@ -23,11 +23,11 @@
         <div class="uk-grid uk-grid-large" data-uk-grid>
             <div class="uk-width-1-6@l"></div>
             <div class="uk-width-4-6@l">
-                <div class="uk-principal-title uk-text-white"><i class="fa fa-bug" aria-hidden="true"></i> <?= $this->lang->line('nav_bugtracker'); ?></div>
+                <div class="uk-principal-title uk-text-white"><i class="fas fa-bug"></i> <?= $this->lang->line('nav_bugtracker'); ?></div>
                 <?php if ($this->m_data->isLogged()) { ?>
                     <span class="uk-align-right">
                         <a href="#" uk-toggle="target: #createReport">
-                            <button class="uk-button uk-button-primary"><i class="fa fa-pencil" aria-hidden="true"></i> <?= $this->lang->line('button_create_report'); ?></button>
+                            <button class="uk-button uk-button-primary"><i class="fas fa-pencil-alt"></i> <?= $this->lang->line('button_create_report'); ?></button>
                         </a>
                     </span>
                 <?php } ?>

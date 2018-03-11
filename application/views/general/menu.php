@@ -107,7 +107,7 @@
                                                 <?php if($this->m_modules->getStatusUCP() == '1') { ?>
                                                 <?php if($this->m_permissions->getMyPermissions('Permission_Panel')) { //permissions ?>
                                                     <a href="<?= base_url('panel'); ?>">
-                                                        <button class="uk-button uk-button-primary"><i class="fa fa-user-circle-o" aria-hidden="true"></i> <?= $this->lang->line('button_user_panel'); ?></button>
+                                                        <button class="uk-button uk-button-primary"><i class="far fa-user-circle"></i> <?= $this->lang->line('button_user_panel'); ?></button>
                                                     </a>
                                                 <?php } ?>
                                                 <?php } ?>
@@ -197,7 +197,7 @@
                                                 <?php if($this->m_modules->getStatusUCP() == '1') { ?>
                                                 <?php if($this->m_permissions->getMyPermissions('Permission_Panel')) { //permissions ?>
                                                     <a href="<?= base_url('panel'); ?>">
-                                                        <button class="uk-button uk-button-primary"><i class="fa fa-user-circle-o" aria-hidden="true"></i> <?= $this->lang->line('button_user_panel'); ?></button>
+                                                        <button class="uk-button uk-button-primary"><i class="far fa-user-circle"></i> <?= $this->lang->line('button_user_panel'); ?></button>
                                                     </a>
                                                 <?php } ?>
                                                 <?php } ?>
