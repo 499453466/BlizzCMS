@@ -46,3 +46,13 @@ $config['userID'] = 'AeEKmkcWH_NGf5Uxkoos5ESv3fffSBnlC1b-BJTAUF2vP02Klwa_IXXzUKq
 |
 */
 $config['secretPass'] = 'EEaly2bYOVTbv1hsMPesPESGF-fFyFm_HMWij_0mFiiRAEibc-SdSeqCMPFlF0ziuzsZXNcBXxecsn2V';
+
+/*
+|--------------------------------------------------------------------------
+| Currency Symbol
+|--------------------------------------------------------------------------
+|
+| Write the symbol of currency used in paypal
+|
+*/
+$config['currencySymbol'] = '$';

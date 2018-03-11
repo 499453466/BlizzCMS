@@ -18,7 +18,7 @@ body{margin:0;background-color:#0f2a48;background-image:url(../../assets/images/
 .uk-space-large{height:40px}
 .uk-space-xlarge{height:80px}
 .uk-space-xxlarge{height:160px}
-.uk-principal-title{font-family:Helvetica,sans-serif;font-size:36.5px;font-weight:400;line-height:1.05;padding:0;margin:0;margin-left:-.05em}
+.uk-principal-title{font-family:Helvetica,sans-serif;font-size:36.5px;font-weight:400;line-height:1.05;padding:0;margin:0;margin-left:-.05em;color: #ffffff;}
 
 .ForumCard-state,.Icon,.Navbar-modalContent .menu-content .menu-item .Icon-profileLink,.PatchNotes-statusTagContent .checkmark,.PatchNotes-statusTagContent .thumbsup,.Post-rank:before,.TopicPost-rank:before,.TopicPost-statusTagContent .checkmark,.TopicPost-statusTagContent .thumbsup,.User-menu .Icon-profileLink{background-repeat:no-repeat;display:inline-block}
 .Cards,.ForumCards{border-top:1px solid rgba(255,255,255,.15);display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap}
@@ -197,12 +197,12 @@ body{margin:0;background-color:#0f2a48;background-image:url(../../assets/images/
 .uk-heading-primary{letter-spacing: -0.028em;font-weight: 300;}
 .uk-card{-webkit-transition: box-shadow 0.5s ease-out;transition: box-shadow 0.5s ease-out;}
 
-.uk-card-donate{position: relative;max-width: 300px;height: auto;background: linear-gradient(-45deg,#248bff,#b64eff);border-radius: 15px;padding: 40px 20px;-webkit-box-shadow: 0 10px 15px rgba(0,0,0,.1);box-shadow: 0 10px 15px rgba(0,0,0,.1);}
-.uk-card-donate-title .fa{color:#fff;font-size: 60px;width: 100px;height: 100px;border-radius:  50%;text-align: center;line-height: 100px;-webkit-box-shadow: 0 10px 10px rgba(0,0,0,.1);box-shadow: 0 10px 10px rgba(0,0,0,.1);}
-.uk-card-donate-price,.uk-card-donate-option{position: relative;z-index: 2;}
-.uk-card-donate-option ul{margin: 0;padding: 0;}
-.uk-card-donate-option ul li{margin: 0 0 10px;padding: 0;list-style: none;color: #fff;font-size: 16px;}
-.uk-card-donate button{position: relative;z-index: 2;background: #fff;color: black;width: 150px;height: 40px;line-height: 40px;border-radius: 40px;display: block;text-align: center;margin: 20px auto 0;font-size: 16px;cursor: pointer;-webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, .1);box-shadow: 0 5px 10px rgba(0, 0, 0, .1);}
+.uk-card-donate{background: linear-gradient(-45deg,#248bff,#b64eff);border-radius: 15px;color:#fff;box-shadow: 0 10px 15px rgba(0,0,0,.1);}
+.uk-card-donate .fab{color:#fff;font-size: 60px;width: 100px;height: 100px;border-radius: 50%;text-align: center;line-height: 100px;-webkit-box-shadow: 0 10px 10px rgba(0,0,0,.1);box-shadow: 0 10px 10px rgba(0,0,0,.1);}
+.uk-card-donate .uk-card-title{color:#fff}
+.uk-card-donate.uk-card-hover:hover{background-color: linear-gradient(-45deg,#248bff,#b64eff);box-shadow:0 14px 25px rgba(0,0,0,.16);}
+.uk-card-donate .uk-input{border-radius: 10px;}
+.uk-card-donate .uk-button-secondary{border-radius: 40px;}
 
 .heartbeat{position: absolute;width: 26px;height: 26px;animation: heartbeat 1s infinite;margin: (-26px/2) 0px 0px (-26px/2);text-align: center;line-height: 26px;font-size: 26px;color: #a335ee;cursor: default;}
 @keyframes heartbeat{
