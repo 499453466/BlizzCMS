@@ -21,7 +21,7 @@
         <div class="uk-modal-dialog">
             <button class="uk-modal-close-default" type="button" uk-close></button>
             <div class="uk-modal-header">
-                <h2 class="uk-modal-title uk-text-uppercase"><i class="fa fa-cubes" aria-hidden="true"></i> <?= $this->lang->line('form_create_group'); ?></h2>
+                <h2 class="uk-modal-title uk-text-uppercase"><i class="fas fa-cubes"></i> <?= $this->lang->line('form_create_group'); ?></h2>
             </div>
             <form action="" method="post" enctype="multipart/form-data" accept-charset="utf-8" autocomplete="off">
                 <div class="uk-modal-body">
@@ -47,7 +47,7 @@
         <div class="uk-modal-dialog">
             <button class="uk-modal-close-default" type="button" uk-close></button>
             <div class="uk-modal-header">
-                <h2 class="uk-modal-title uk-text-uppercase"><i class="fa fa-cube" aria-hidden="true"></i> <?= $this->lang->line('form_create_item'); ?></h2>
+                <h2 class="uk-modal-title uk-text-uppercase"><i class="fas fa-cube"></i> <?= $this->lang->line('form_create_item'); ?></h2>
             </div>
             <form action="" method="post" enctype="multipart/form-data" accept-charset="utf-8" autocomplete="off">
                 <div class="uk-modal-body">

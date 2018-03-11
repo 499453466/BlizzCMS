@@ -33,7 +33,7 @@
         <div class="uk-modal-dialog">
             <button class="uk-modal-close-default" type="button" uk-close></button>
             <div class="uk-modal-header">
-                <h2 class="uk-modal-title uk-text-uppercase"><i class="fa fa-microchip" aria-hidden="true"></i> Create API TOKEN</h2>
+                <h2 class="uk-modal-title uk-text-uppercase"><i class="fas fa-microchip"></i> Create API TOKEN</h2>
             </div>
             <form action="" method="post" enctype="multipart/form-data" accept-charset="utf-8" autocomplete="off">
                 <div class="uk-modal-body">
@@ -105,7 +105,7 @@
                     </div>
                     <div class="uk-margin">
                         <div class="uk-alert-warning" uk-alert>
-                            <p class="uk-text-center"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Remember that all API features are still under development</p>
+                            <p class="uk-text-center"><i class="fas fa-exclamation-triangle"></i> Remember that all API features are still under development</p>
                         </div>
                     </div>
                 </div>

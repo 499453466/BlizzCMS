@@ -16,7 +16,7 @@
         <div class="uk-modal-dialog">
             <button class="uk-modal-close-default" type="button" uk-close></button>
             <div class="uk-modal-header">
-                <h2 class="uk-modal-title uk-text-uppercase"><i class="fa fa-server" aria-hidden="true"></i> Add Realm</h2>
+                <h2 class="uk-modal-title uk-text-uppercase"><i class="fas fa-server"></i> Add Realm</h2>
             </div>
             <form action="" method="post" enctype="multipart/form-data" accept-charset="utf-8" autocomplete="off">
                 <div class="uk-modal-body">
@@ -103,7 +103,7 @@
         <div class="uk-modal-dialog">
             <button class="uk-modal-close-default" type="button" uk-close></button>
             <div class="uk-modal-header">
-                <h2 class="uk-modal-title uk-text-uppercase"><i class="fa fa-picture-o" aria-hidden="true"></i> Add Image to Slideshow</h2>
+                <h2 class="uk-modal-title uk-text-uppercase"><i class="far fa-image"></i> Add Image to Slideshow</h2>
             </div>
             <form action="" method="post" enctype="multipart/form-data" accept-charset="utf-8" autocomplete="off">
                 <div class="uk-modal-body">

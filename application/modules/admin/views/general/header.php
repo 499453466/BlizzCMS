@@ -14,12 +14,12 @@
     <script src="<?= base_url(); ?>core/uikit/js/uikit.min.js"></script>
     <script src="<?= base_url(); ?>core/uikit/js/uikit-icons.min.js"></script>
 
+    <!-- Font Awesome -->
+    <script type="text/javascript" defer src="<?= base_url(); ?>core/js/fontawesome-all.js"></script>
+
     <!-- JQuery -->
     <script src="<?= base_url(); ?>core/js/jquery-3.3.1.min.js"></script>
     <script src="<?= base_url(); ?>core/js/jquery.transit.min.js"></script>
-    
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="<?= base_url(); ?>core/font-awesome/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -29,7 +29,10 @@
                 <nav class="uk-navbar uk-light" data-uk-navbar>
                     <div class="uk-navbar-left">
                         <a class="uk-navbar-item uk-logo" href="<?= base_url('admin'); ?>">BlizzCMS</a>
-                        <p>Current version: <?= $this->admin_model->currentVersion(); ?> || BlizzCMS current version: <?= $this->admin_model->currentBlizzCMS() ?></p>
+                        <p class="uk-text-small">
+                            Current version: <span class="uk-label"><?= $this->admin_model->currentVersion(); ?></span><br>
+                            BlizzCMS current version: <span class="uk-label"><?= $this->admin_model->currentBlizzCMS() ?></span>
+                        </p>
                     </div>
                     <div class="uk-navbar-right">
                         <ul class="uk-navbar-nav">

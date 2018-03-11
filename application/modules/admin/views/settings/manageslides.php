@@ -19,7 +19,7 @@
                         $this->admin_model->insertNewSlides($title, $name_slider);
                     }
                     else
-                        echo '<div class="uk-width-1-1@l uk-width-1-1@xl"><div class="uk-alert-danger" uk-alert><a class="uk-alert-close" uk-close></a><p><i class="fa fa-exclamation-circle" aria-hidden="true"></i> '.$this->lang->line('image_upload_error').'</p></div></div>';
+                        echo '<div class="uk-width-1-1@l uk-width-1-1@xl"><div class="uk-alert-danger" uk-alert><a class="uk-alert-close" uk-close></a><p><i class="fas fa-exclamation-circle"></i> '.$this->lang->line('image_upload_error').'</p></div></div>';
                 } ?>
                 <div class="uk-width-1-1@l uk-width-1-1@xl">
                     <div class="uk-card uk-card-default uk-card-small">
@@ -47,7 +47,7 @@
                                             </td>
                                             <td class="uk-text-center" uk-margin>
                                                 <form action="" method="post" accept-charset="utf-8">
-                                                    <button class="uk-button uk-button-danger" name="button_delSlide" value="<?= $slides->id ?>" type="submit"><i class="fa fa-trash" aria-hidden="true"></i></button>
+                                                    <button class="uk-button uk-button-danger" name="button_delSlide" value="<?= $slides->id ?>" type="submit"><i class="fas fa-trash-alt"></i></button>
                                                 </form>
                                             </td>
                                         </tr>

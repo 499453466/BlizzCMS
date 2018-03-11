@@ -25,7 +25,7 @@
                         $this->admin_model->updateSpecifyNews($idlink, $title, $name_new, $desc, $type);
                     }
                     else
-                        echo '<div class="uk-width-1-1@l uk-width-1-1@xl"><div class="uk-alert-danger" uk-alert><a class="uk-alert-close" uk-close></a><p><i class="fa fa-exclamation-circle" aria-hidden="true"></i> '.$this->lang->line('image_upload_error').'</p></div></div>';
+                        echo '<div class="uk-width-1-1@l uk-width-1-1@xl"><div class="uk-alert-danger" uk-alert><a class="uk-alert-close" uk-close></a><p><i class="fas fa-exclamation-circle"></i> '.$this->lang->line('image_upload_error').'</p></div></div>';
                 } ?>
                 <div class="uk-width-1-1@l uk-width-1-1@xl">
                     <div class="uk-card uk-card-default uk-card-small">
@@ -74,7 +74,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <button class="uk-button uk-button-primary uk-width-1-1" name="button_updateNews" type="submit"><i class="fa fa-refresh" aria-hidden="true"></i> <?= $this->lang->line('button_save'); ?></button>
+                                <button class="uk-button uk-button-primary uk-width-1-1" name="button_updateNews" type="submit"><i class="fas fa-sync-alt"></i> <?= $this->lang->line('button_save'); ?></button>
                             </form>
                         </div>
                     </div>
