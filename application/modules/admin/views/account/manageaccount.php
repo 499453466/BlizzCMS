@@ -42,10 +42,10 @@
                                 <?php if($this->admin_model->getBanSpecify($idlink)->num_rows()) { ?>
                                     <div>
                                         <div class="uk-card uk-card-default">
-                                            <div class="uk-card-header uk-card-primary uk-text-center uk-text-uppercase"><i class="fa fa-check-circle" aria-hidden="true"></i> <?= $this->lang->line('panel_admin_unban_account'); ?></div>
+                                            <div class="uk-card-header uk-card-primary uk-text-center uk-text-uppercase"><i class="fas fa-check-circle"></i> <?= $this->lang->line('panel_admin_unban_account'); ?></div>
                                             <div class="uk-card-body">
                                                 <form action="" method="post">
-                                                    <button class="uk-button uk-button-primary uk-width-1-1" name="button_unban" type="submit"><i class="fa fa-check-circle" aria-hidden="true"></i><?= $this->lang->line('button_unban'); ?></button>
+                                                    <button class="uk-button uk-button-primary uk-width-1-1" name="button_unban" type="submit"><i class="fas fa-check-circle"></i><?= $this->lang->line('button_unban'); ?></button>
                                                 </form>
                                             </div>
                                         </div>
@@ -53,7 +53,7 @@
                                 <?php } else { ?>
                                     <div>
                                         <div class="uk-card uk-card-default">
-                                            <div class="uk-card-header uk-card-secondary uk-text-center uk-text-uppercase"><i class="fa fa-ban" aria-hidden="true"></i> <?= $this->lang->line('panel_admin_ban_account'); ?></div>
+                                            <div class="uk-card-header uk-card-secondary uk-text-center uk-text-uppercase"><i class="fas fa-ban"></i> <?= $this->lang->line('panel_admin_ban_account'); ?></div>
                                             <div class="uk-card-body">
                                                 <form action="" method="post" accept-charset="utf-8">
                                                     <div class="uk-margin">
@@ -65,7 +65,7 @@
                                                     </div>
                                                     <div class="uk-margin">
                                                         <div class="uk-form-controls">
-                                                            <button class="uk-button uk-button-danger uk-width-1-1" name="action_ban" type="submit"><i class="fa fa-ban" aria-hidden="true"></i> <?= $this->lang->line('button_ban'); ?></button>
+                                                            <button class="uk-button uk-button-danger uk-width-1-1" name="action_ban" type="submit"><i class="fas fa-ban"></i> <?= $this->lang->line('button_ban'); ?></button>
                                                         </div>
                                                     </div>
                                                 </form>
@@ -75,13 +75,13 @@
                                 <?php } ?>
                                 <div>
                                     <div class="uk-card uk-card-default">
-                                        <div class="uk-card-header uk-card-primary uk-text-center uk-text-uppercase"><i class="fa fa-gamepad" aria-hidden="true"></i> <?= $this->lang->line('panel_admin_rank_account'); ?></div>
+                                        <div class="uk-card-header uk-card-primary uk-text-center uk-text-uppercase"><i class="fas fa-gamepad"></i> <?= $this->lang->line('panel_admin_rank_account'); ?></div>
                                         <div class="uk-card-body">
                                             <form action="" method="post">
                                                 <?php if($this->m_data->getGmSpecify($idlink)->num_rows()) { ?>
                                                     <div class="uk-margin">
                                                         <div class="uk-form-controls">
-                                                            <button class="uk-button uk-button-primary uk-width-1-1" name="button_RemoveRankACCWeb" type="submit"><i class="fa fa-user-times" aria-hidden="true"></i> <?= $this->lang->line('button_re_grant_account'); ?></button>
+                                                            <button class="uk-button uk-button-primary uk-width-1-1" name="button_RemoveRankACCWeb" type="submit"><i class="fas fa-user-times"></i> <?= $this->lang->line('button_re_grant_account'); ?></button>
                                                         </div>
                                                     </div>
                                                 <?php } else { ?>
@@ -94,7 +94,7 @@
                                                     </div>
                                                     <div class="uk-margin">
                                                         <div class="uk-form-controls">
-                                                            <button class="uk-button uk-button-primary uk-width-1-1" name="button_AddRankACCWeb" type="submit"><i class="fa fa-user-plus" aria-hidden="true"></i> <?= $this->lang->line('button_grant_account'); ?></button>
+                                                            <button class="uk-button uk-button-primary uk-width-1-1" name="button_AddRankACCWeb" type="submit"><i class="fas fa-user-plus"></i> <?= $this->lang->line('button_grant_account'); ?></button>
                                                         </div>
                                                     </div>
                                                 <?php } ?>
@@ -104,19 +104,19 @@
                                 </div>
                                 <div>
                                     <div class="uk-card uk-card-default">
-                                        <div class="uk-card-header uk-card-primary uk-text-center uk-text-uppercase"><i class="fa fa-star" aria-hidden="true"></i> <?= $this->lang->line('panel_admin_web_rank'); ?></div>
+                                        <div class="uk-card-header uk-card-primary uk-text-center uk-text-uppercase"><i class="fas fa-star"></i> <?= $this->lang->line('panel_admin_web_rank'); ?></div>
                                         <div class="uk-card-body">
                                             <form action="" method="post">
                                                 <?php if($this->m_permissions->getMyRank($idlink)->row('idrank') == 1) { ?>
                                                     <div class="uk-margin">
                                                         <div class="uk-form-controls">
-                                                            <button class="uk-button uk-button-primary uk-width-1-1" name="button_removeADM" type="submit"><i class="fa fa-user-times" aria-hidden="true"></i> <?= $this->lang->line('button_re_grant_web_acc'); ?></button>
+                                                            <button class="uk-button uk-button-primary uk-width-1-1" name="button_removeADM" type="submit"><i class="fas fa-user-times"></i> <?= $this->lang->line('button_re_grant_web_acc'); ?></button>
                                                         </div>
                                                     </div>
                                                 <?php } else { ?>
                                                     <div class="uk-margin">
                                                         <div class="uk-form-controls">
-                                                            <button class="uk-button uk-button-primary uk-width-1-1" name="button_addADM" type="submit"><i class="fa fa-user-plus" aria-hidden="true"></i> <?= $this->lang->line('button_grant_web_acc'); ?></button>
+                                                            <button class="uk-button uk-button-primary uk-width-1-1" name="button_addADM" type="submit"><i class="fas fa-user-plus"></i> <?= $this->lang->line('button_grant_web_acc'); ?></button>
                                                         </div>
                                                     </div>
                                                 <?php } ?>

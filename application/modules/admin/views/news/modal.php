@@ -2,7 +2,7 @@
         <div class="uk-modal-dialog">
             <button class="uk-modal-close-default" type="button" uk-close></button>
             <div class="uk-modal-header">
-                <h2 class="uk-modal-title uk-text-uppercase"><i class="fa fa-newspaper-o" aria-hidden="true"></i> <?= $this->lang->line('form_create_news'); ?></h2>
+                <h2 class="uk-modal-title uk-text-uppercase"><i class="far fa-newspaper"></i> <?= $this->lang->line('form_create_news'); ?></h2>
             </div>
             <form action="" method="post" enctype="multipart/form-data" accept-charset="utf-8" autocomplete="off">
                 <div class="uk-modal-body">
@@ -57,7 +57,7 @@
         <div class="uk-modal-dialog">
             <button class="uk-modal-close-default" type="button" uk-close></button>
             <div class="uk-modal-header">
-                <h2 class="uk-modal-title uk-text-uppercase"><i class="fa fa-newspaper-o" aria-hidden="true"></i> Edit News</h2>
+                <h2 class="uk-modal-title uk-text-uppercase"><i class="far fa-newspaper"></i> Edit News</h2>
             </div>
             <form action="" method="post" enctype="multipart/form-data" accept-charset="utf-8" autocomplete="off">
                 <div class="uk-modal-body">

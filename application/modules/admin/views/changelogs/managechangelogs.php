@@ -28,7 +28,7 @@
                         $this->admin_model->insertChangelog($title, $name_img, $desc);
                     }
                     else
-                        echo '<div class="uk-width-1-1@l uk-width-1-1@xl"><div class="uk-alert-danger" uk-alert><a class="uk-alert-close" uk-close></a><p><i class="fa fa-exclamation-circle" aria-hidden="true"></i> '.$this->lang->line('image_upload_error').'</p></div></div>';
+                        echo '<div class="uk-width-1-1@l uk-width-1-1@xl"><div class="uk-alert-danger" uk-alert><a class="uk-alert-close" uk-close></a><p><i class="fas fa-exclamation-circle"></i> '.$this->lang->line('image_upload_error').'</p></div></div>';
                 } ?>
                 <div class="uk-width-1-1@l uk-width-1-1@xl">
                     <div class="uk-card uk-card-default uk-card-small">
@@ -55,10 +55,10 @@
                                             <td><?= $changelogs->title ?></td>
                                             <td class="uk-text-center"><?= $changelogs->date ?></td>
                                             <td class="uk-text-center" uk-margin>
-                                                <a href="<?= base_url(); ?>admin/editchangelogs/<?= $changelogs->id ?>" class="uk-button uk-button-primary"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                                                <a href="<?= base_url(); ?>admin/editchangelogs/<?= $changelogs->id ?>" class="uk-button uk-button-primary"><i class="far fa-edit"></i></a>
                                                 <span class="" style="display:inline-block; width: 5px;"></span>
                                                 <form action="" method="post" accept-charset="utf-8" style="display: inline;">
-                                                    <button class="uk-button uk-button-danger" name="button_delChangelog" value="<?= $changelogs->id ?>" type="submit"><i class="fa fa-trash" aria-hidden="true"></i></button>
+                                                    <button class="uk-button uk-button-danger" name="button_delChangelog" value="<?= $changelogs->id ?>" type="submit"><i class="fas fa-trash-alt"></i></button>
                                                 </form>
                                             </td>
                                         </tr>

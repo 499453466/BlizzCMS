@@ -160,9 +160,9 @@
                         </div>
                         <div class="uk-card-body">
                             <ul class="uk-subnav uk-subnav-pill" uk-switcher="animation: uk-animation-slide-left-medium, uk-animation-slide-right-medium">
-                                <li><a href="#"><i class="fa fa-cog" aria-hidden="true"></i> Main Settings</a></li>
-                                <li><a href="#"><i class="fa fa-cog" aria-hidden="true"></i> Website Settings</a></li>
-                                <li><a href="#"><i class="fa fa-cog" aria-hidden="true"></i> Database Settings</a></li>
+                                <li><a href="#"><i class="fas fa-cog"></i> Main Settings</a></li>
+                                <li><a href="#"><i class="fas fa-cog"></i> Website Settings</a></li>
+                                <li><a href="#"><i class="fas fa-cog"></i> Database Settings</a></li>
                             </ul>
                             <ul class="uk-switcher uk-margin">
                                 <li>
@@ -210,7 +210,7 @@
                                         </div>
                                         <div class="uk-margin">
                                             <div class="uk-form-controls">
-                                                <button class="uk-button uk-button-primary uk-width-1-1" name="submitConfig" type="submit"><i class="fa fa-refresh" aria-hidden="true"></i> Update</button>
+                                                <button class="uk-button uk-button-primary uk-width-1-1" name="submitConfig" type="submit"><i class="fas fa-sync-alt"></i> Update</button>
                                             </div>
                                         </div>
                                     </form>
@@ -282,7 +282,7 @@
                                         </div>
                                         <div class="uk-margin">
                                             <div class="uk-form-controls">
-                                                <button class="uk-button uk-button-primary uk-width-1-1" name="submitFixCore" type="submit"><i class="fa fa-refresh" aria-hidden="true"></i> Update</button>
+                                                <button class="uk-button uk-button-primary uk-width-1-1" name="submitFixCore" type="submit"><i class="fas fa-sync-alt"></i> Update</button>
                                             </div>
                                         </div>
                                     </form>
@@ -364,7 +364,7 @@
                                         </div>
                                         <div class="uk-margin">
                                             <div class="uk-form-controls">
-                                                <button class="uk-button uk-button-primary uk-width-1-1" name="submitDatabase" type="submit"><i class="fa fa-refresh" aria-hidden="true"></i> Update</button>
+                                                <button class="uk-button uk-button-primary uk-width-1-1" name="submitDatabase" type="submit"><i class="fas fa-sync-alt"></i> Update</button>
                                             </div>
                                         </div>
                                     </form>
@@ -385,10 +385,10 @@
                         </div>
                         <div class="uk-card-body">
                             <ul class="uk-subnav uk-subnav-pill" uk-switcher="animation: uk-animation-slide-left-medium, uk-animation-slide-right-medium">
-                                <li><a href="#"><i class="fa fa-cog" aria-hidden="true"></i> Recaptcha Settings</a></li>
-                                <li><a href="#"><i class="fa fa-cog" aria-hidden="true"></i> Bugtracker Settings</a></li>
-                                <li><a href="#"><i class="fa fa-cog" aria-hidden="true"></i> Donate Settings</a></li>
-                                <li><a href="#"><i class="fa fa-cog" aria-hidden="true"></i> Store Settings</a></li>
+                                <li><a href="#"><i class="fas fa-cog"></i> Recaptcha Settings</a></li>
+                                <li><a href="#"><i class="fas fa-cog"></i> Bugtracker Settings</a></li>
+                                <li><a href="#"><i class="fas fa-cog"></i> Donate Settings</a></li>
+                                <li><a href="#"><i class="fas fa-cog"></i> Store Settings</a></li>
                             </ul>
                             <ul class="uk-switcher uk-margin">
                                 <li>
@@ -422,7 +422,7 @@
                                         </div>
                                         <div class="uk-margin">
                                             <div class="uk-form-controls">
-                                                <button class="uk-button uk-button-primary uk-width-1-1" name="submitCaptcha" type="submit"><i class="fa fa-refresh" aria-hidden="true"></i> Update</button>
+                                                <button class="uk-button uk-button-primary uk-width-1-1" name="submitCaptcha" type="submit"><i class="fas fa-sync-alt"></i> Update</button>
                                             </div>
                                         </div>
                                     </form>
@@ -439,7 +439,7 @@
                                         </div>
                                         <div class="uk-margin">
                                             <div class="uk-form-controls">
-                                                <button class="uk-button uk-button-primary uk-width-1-1" name="submitBugtracker" type="submit"><i class="fa fa-refresh" aria-hidden="true"></i> Update</button>
+                                                <button class="uk-button uk-button-primary uk-width-1-1" name="submitBugtracker" type="submit"><i class="fas fa-sync-alt"></i> Update</button>
                                             </div>
                                         </div>
                                     </form>
@@ -484,7 +484,7 @@
                                         </div>
                                         <div class="uk-margin">
                                             <div class="uk-form-controls">
-                                                <button class="uk-button uk-button-primary uk-width-1-1" name="submitDonate" type="submit"><i class="fa fa-refresh" aria-hidden="true"></i> Update</button>
+                                                <button class="uk-button uk-button-primary uk-width-1-1" name="submitDonate" type="submit"><i class="fas fa-sync-alt"></i> Update</button>
                                             </div>
                                         </div>
                                     </form>
@@ -502,7 +502,7 @@
                                         </div>
                                         <div class="uk-margin">
                                             <div class="uk-form-controls">
-                                                <button class="uk-button uk-button-primary uk-width-1-1" name="submitStore" type="submit"><i class="fa fa-refresh" aria-hidden="true"></i> Update</button>
+                                                <button class="uk-button uk-button-primary uk-width-1-1" name="submitStore" type="submit"><i class="fas fa-sync-alt"></i> Update</button>
                                             </div>
                                         </div>
                                     </form>

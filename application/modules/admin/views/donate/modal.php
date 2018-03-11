@@ -11,7 +11,7 @@
         <div class="uk-modal-dialog">
             <button class="uk-modal-close-default" type="button" uk-close></button>
             <div class="uk-modal-header">
-                <h2 class="uk-modal-title uk-text-uppercase"><i class="fa fa-credit-card" aria-hidden="true"></i> <?= $this->lang->line('form_create_donation'); ?></h2>
+                <h2 class="uk-modal-title uk-text-uppercase"><i class="far fa-credit-card"></i> <?= $this->lang->line('form_create_donation'); ?></h2>
             </div>
             <form action="" method="post" enctype="multipart/form-data" accept-charset="utf-8" autocomplete="off">
                 <div class="uk-modal-body">
@@ -30,7 +30,7 @@
                                 <label class="uk-form-label uk-text-uppercase"><?= $this->lang->line('store_item_price'); ?></label>
                                 <div class="uk-form-controls">
                                     <div class="uk-inline uk-width-1-1">
-                                        <span class="uk-form-icon"><i class="fa fa-usd" aria-hidden="true"></i></span>
+                                        <span class="uk-form-icon"><i class="fas fa-dollar-sign"></i></span>
                                         <input class="uk-input" name="donate_price" type="number" placeholder="0.00" min="0" value="0" step="0.01" pattern="^\d+(?:\.\d{1,2})?$" required>
                                     </div>
                                 </div>
@@ -39,7 +39,7 @@
                                 <label class="uk-form-label uk-text-uppercase"><?= $this->lang->line('column_tax'); ?></label>
                                 <div class="uk-form-controls">
                                     <div class="uk-inline uk-width-1-1">
-                                        <span class="uk-form-icon"><i class="fa fa-usd" aria-hidden="true"></i></span>
+                                        <span class="uk-form-icon"><i class="fas fa-dollar-sign"></i></span>
                                         <input class="uk-input" name="donate_tax" type="number" placeholder="0.00" min="0" value="0" step="0.01" pattern="^\d+(?:\.\d{1,2})?$" required>
                                     </div>
                                 </div>

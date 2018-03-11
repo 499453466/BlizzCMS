@@ -56,7 +56,7 @@
                                 </div>
                                 <div class="uk-margin">
                                     <div class="uk-form-controls">
-                                        <button class="uk-button uk-button-primary uk-width-1-1" name="" type="submit"><i class="fa fa-reply" aria-hidden="true"></i> <?= $this->lang->line('button_reply'); ?></button>
+                                        <button class="uk-button uk-button-primary uk-width-1-1" name="" type="submit"><i class="fas fa-reply"></i> <?= $this->lang->line('button_reply'); ?></button>
                                     </div>
                                 </div>
                             </form>

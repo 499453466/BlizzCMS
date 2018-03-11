@@ -38,7 +38,7 @@
                                                 <input type="text" class="uk-input" value="open" disabled>
                                             </td>
                                             <td class="uk-text-center" uk-margin>
-                                                <a href="#" class="uk-button uk-button-primary"><i class="fa fa-eye" aria-hidden="true"></i></a>
+                                                <a href="#" class="uk-button uk-button-primary"><i class="fas fa-eye"></i></a>
                                             </td>
                                         </tr>
                                     <!-- <?php } ?> -->

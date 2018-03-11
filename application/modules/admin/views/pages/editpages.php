@@ -42,7 +42,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <button class="uk-button uk-button-primary uk-width-1-1" name="button_updatePage" type="submit"><i class="fa fa-refresh" aria-hidden="true"></i> <?= $this->lang->line('button_save'); ?></button>
+                                <button class="uk-button uk-button-primary uk-width-1-1" name="button_updatePage" type="submit"><i class="fas fa-sync-alt"></i> <?= $this->lang->line('button_save'); ?></button>
                             </form>
                         </div>
                     </div>

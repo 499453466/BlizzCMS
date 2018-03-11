@@ -46,10 +46,10 @@
                                             <td><?= $pages->title ?></td>
                                             <td class="uk-text-center"><?= $pages->date ?></td>
                                             <td class="uk-text-center" uk-margin>
-                                                <a href="<?= base_url(); ?>admin/editpages/<?= $pages->id ?>" class="uk-button uk-button-primary"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                                                <a href="<?= base_url(); ?>admin/editpages/<?= $pages->id ?>" class="uk-button uk-button-primary"><i class="far fa-edit"></i></a>
                                                 <span class="" style="display:inline-block; width: 5px;"></span>
                                                 <form action="" method="post" accept-charset="utf-8" style="display: inline;">
-                                                    <button class="uk-button uk-button-danger" name="button_delPage" value="<?= $pages->id ?>" type="submit"><i class="fa fa-trash" aria-hidden="true"></i></button>
+                                                    <button class="uk-button uk-button-danger" name="button_delPage" value="<?= $pages->id ?>" type="submit"><i class="fas fa-trash-alt"></i></button>
                                                 </form>
                                             </td>
                                         </tr>

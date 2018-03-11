@@ -74,7 +74,7 @@
                                                 </div>
                                                 <div class="uk-margin">
                                                     <div class="uk-form-controls">
-                                                        <button class="uk-button uk-button-primary uk-width-1-1" name="button_changeLevel" type="submit"><i class="fa fa-refresh" aria-hidden="true"></i> <?= $this->lang->line('button_change_level'); ?></button>
+                                                        <button class="uk-button uk-button-primary uk-width-1-1" name="button_changeLevel" type="submit"><i class="fas fa-sync-alt"></i> <?= $this->lang->line('button_change_level'); ?></button>
                                                     </div>
                                                 </div>
                                             </form>
@@ -95,7 +95,7 @@
                                                 </div>
                                                 <div class="uk-margin">
                                                     <div class="uk-form-controls">
-                                                        <button class="uk-button uk-button-primary uk-width-1-1" name="button_renamechar" type="submit"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> <?= $this->lang->line('panel_admin_rename'); ?></button>
+                                                        <button class="uk-button uk-button-primary uk-width-1-1" name="button_renamechar" type="submit"><i class="far fa-edit"></i> <?= $this->lang->line('panel_admin_rename'); ?></button>
                                                     </div>
                                                 </div>
                                             </form>
@@ -108,7 +108,7 @@
                                             <div class="uk-card-header uk-card-primary uk-text-center uk-text-uppercase"><span data-uk-icon="icon: cog"></span> <?= $this->lang->line('panel_admin_unban_char'); ?></div>
                                             <div class="uk-card-body">
                                                 <form action="" method="post">
-                                                    <button class="uk-button uk-button-primary uk-width-1-1" name="button_unban" type="submit"><i class="fa fa-check-circle" aria-hidden="true"></i><?= $this->lang->line('button_unban'); ?></button>
+                                                    <button class="uk-button uk-button-primary uk-width-1-1" name="button_unban" type="submit"><i class="fas fa-check-circle"></i><?= $this->lang->line('button_unban'); ?></button>
                                                 </form>
                                             </div>
                                         </div>
@@ -128,7 +128,7 @@
                                                     </div>
                                                     <div class="uk-margin">
                                                         <div class="uk-form-controls">
-                                                            <button class="uk-button uk-button-danger uk-width-1-1" name="button_banchar" type="submit"><i class="fa fa-ban" aria-hidden="true"></i> <?= $this->lang->line('button_ban'); ?></button>
+                                                            <button class="uk-button uk-button-danger uk-width-1-1" name="button_banchar" type="submit"><i class="fas fa-ban"></i> <?= $this->lang->line('button_ban'); ?></button>
                                                         </div>
                                                     </div>
                                                 </form>
@@ -145,7 +145,7 @@
                                             <form action="" method="post">
                                                 <div class="uk-margin">
                                                     <div class="uk-form-controls">
-                                                        <button class="uk-button uk-button-primary uk-width-1-1" name="button_customize" type="submit"><i class="fa fa-cog" aria-hidden="true"></i> <?= $this->lang->line('panel_admin_customize'); ?></button>
+                                                        <button class="uk-button uk-button-primary uk-width-1-1" name="button_customize" type="submit"><i class="fas fa-cog"></i> <?= $this->lang->line('panel_admin_customize'); ?></button>
                                                     </div>
                                                 </div>
                                             </form>
@@ -159,7 +159,7 @@
                                             <form action="" method="post">
                                                 <div class="uk-margin">
                                                     <div class="uk-form-controls">
-                                                        <button class="uk-button uk-button-primary uk-width-1-1" name="button_changerace" type="submit"><i class="fa fa-cog" aria-hidden="true"></i> <?= $this->lang->line('panel_admin_change_race'); ?></button>
+                                                        <button class="uk-button uk-button-primary uk-width-1-1" name="button_changerace" type="submit"><i class="fas fa-cog"></i> <?= $this->lang->line('panel_admin_change_race'); ?></button>
                                                     </div>
                                                 </div>
                                             </form>
@@ -173,7 +173,7 @@
                                             <form action="" method="post">
                                                 <div class="uk-margin">
                                                     <div class="uk-form-controls">
-                                                        <button class="uk-button uk-button-primary uk-width-1-1" name="button_changefaction" type="submit"><i class="fa fa-cog" aria-hidden="true"></i> <?= $this->lang->line('panel_admin_change_faction'); ?></button>
+                                                        <button class="uk-button uk-button-primary uk-width-1-1" name="button_changefaction" type="submit"><i class="fas fa-cog"></i> <?= $this->lang->line('panel_admin_change_faction'); ?></button>
                                                     </div>
                                                 </div>
                                             </form>
