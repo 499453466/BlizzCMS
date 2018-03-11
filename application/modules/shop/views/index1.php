@@ -48,7 +48,7 @@
                             <?php if ($this->m_data->isLogged()) { ?>
                                 <div class="uk-inline uk-width-1-3@s">
                                     <a href="">
-                                        <button class="uk-button uk-button-primary"><i class="fa fa-question-circle" aria-hidden="true"></i> <?=$this->lang->line('store_support');?></button>
+                                        <button class="uk-button uk-button-primary"><i class="fas fa-question-circle"></i> <?=$this->lang->line('store_support');?></button>
                                     </a>
                                 </div>
                             <?php } ?>
@@ -77,7 +77,7 @@
                 <?php if(isset($_GET['complete'])): ?>
                     <div class="uk-alert-success" uk-alert>
                         <a class="uk-alert-close" uk-close></a>
-                        <p><i class="fa fa-check-circle-o" aria-hidden="true"></i> <?=$this->lang->line('store_success');?></p>
+                        <p><i class="far fa-check-circle"></i> <?=$this->lang->line('store_success');?></p>
                     </div>
                 <?php endif; ?>
                 <div class="uk-grid uk-grid-small uk-child-width-1-5 uk-flex-center uk-text-center">

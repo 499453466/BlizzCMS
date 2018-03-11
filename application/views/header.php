@@ -16,7 +16,7 @@
     <script src="<?= base_url(); ?>core/uikit/js/uikit-icons.min.js"></script>
 
     <!-- Font Awesome and Rpg Awesome -->
-    <link rel="stylesheet" href="<?= base_url(); ?>core/font-awesome/css/font-awesome.min.css">
+    <script type="text/javascript" defer src="<?= base_url(); ?>core/js/fontawesome-all.js"></script>
     <link rel="stylesheet" href="<?=base_url('core/rpg_awesome/css/rpg-awesome.css')?>">
 
     <!-- Wowhead -->

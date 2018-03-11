@@ -41,7 +41,7 @@
             <div class="uk-width-4-6@l">
                 <article class="uk-article uk-text-white">
                     <h1 class="uk-article-title uk-text-white"><a class="uk-link-reset" href=""><?= $this->news_model->getNewTitle($idlink); ?></a></h1>
-                    <p class="uk-article-meta uk-text-white"><?= $this->lang->line('news_article_published'); ?> | <i class="fa fa-clock-o" aria-hidden="true"></i> <?= date('d-m-Y', $this->news_model->getNewlogDate($idlink)); ?></p>
+                    <p class="uk-article-meta uk-text-white"><?= $this->lang->line('news_article_published'); ?> | <i class="far fa-clock"></i> <?= date('d-m-Y', $this->news_model->getNewlogDate($idlink)); ?></p>
                     <img class="uk-margin-medium-bottom" src="<?= base_url(); ?>assets/images/news/<?= $this->news_model->getNewImage($idlink); ?>" height="300" alt="">
                     <p><?= $this->news_model->getNewDescription($idlink); ?></p>
                     <hr class="uk-divider-icon">
@@ -55,7 +55,7 @@
                                     <div class="topicplaceholder-details uk-align-center">
                                         <div class="topicplaceholder-message"><?= $this->lang->line('forum_comment_locked'); ?></div>
                                         <a href="<?= base_url('login'); ?>">
-                                            <button class="uk-button uk-button-primary"><i class="fa fa-sign-in" aria-hidden="true"></i> <?= $this->lang->line('button_login'); ?></button>
+                                            <button class="uk-button uk-button-primary"><i class="fas fa-sign-in-alt"></i> <?= $this->lang->line('button_login'); ?></button>
                                         </a>
                                     </div>
                                 </div>
@@ -74,7 +74,7 @@
                                 <div class="TopicForm-content">
                                     <form class="Form uk-align-center" method="post" action="" data-post-form="true" accept-charset="utf-8">
                                         <textarea class="tinyeditor" tabindex="1" spellcheck="true" name="reply_comment" rows="10" cols="80"></textarea>
-                                        <button class="uk-button uk-button-primary uk-width-1-1" type="submit" name="button_addcommentary" id="submit-button"><i class="fa fa-reply" aria-hidden="true"></i> <?= $this->lang->line('button_add_reply'); ?></button>
+                                        <button class="uk-button uk-button-primary uk-width-1-1" type="submit" name="button_addcommentary" id="submit-button"><i class="fas fa-reply"></i> <?= $this->lang->line('button_add_reply'); ?></button>
                                         <a href="#" class="TopicForm-link--conduct"><?= $this->lang->line('forum_code_conduct'); ?></a>
 
                                     </form>
@@ -129,7 +129,7 @@
                                         <footer class="TopicPost-actions">
                                             <form action="" method="post" accept-charset="utf-8">
                                                 <p uk-margin>
-                                                    <button name="button_removecomment" type="submit" value="<?= $commentss->id ?>" class="uk-button uk-button-danger uk-button-small"><i class="fa fa-eraser" aria-hidden="true"></i> <?= $this->lang->line('button_remove'); ?></button>
+                                                    <button name="button_removecomment" type="submit" value="<?= $commentss->id ?>" class="uk-button uk-button-danger uk-button-small"><i class="fas fa-eraser"></i> <?= $this->lang->line('button_remove'); ?></button>
                                                 </p>
                                             </form>
                                         </footer>

@@ -23,10 +23,10 @@
                                         <table class="uk-table uk-table-responsive uk-table-divider">
                                             <thead>
                                                 <tr>
-                                                    <th class="uk-width-small uk-text-white"><i class="fa fa-sitemap" aria-hidden="true"></i> <?=$this->lang->line('column_team_name');?></th>
-                                                    <th class="uk-width-small uk-text-center uk-text-white"><i class="fa fa-users" aria-hidden="true"></i> <?=$this->lang->line('column_members');?></th>
-                                                    <th class="uk-width-small uk-text-center uk-text-white"><i class="fa fa-line-chart" aria-hidden="true"></i> <?=$this->lang->line('column_rating');?></th>
-                                                    <th class="uk-width-small uk-text-center uk-text-white"><i class="fa fa-line-chart" aria-hidden="true"></i> <?=$this->lang->line('column_games');?></th>
+                                                    <th class="uk-width-small uk-text-white"><i class="fas fa-sitemap"></i> <?=$this->lang->line('column_team_name');?></th>
+                                                    <th class="uk-width-small uk-text-center uk-text-white"><i class="fas fa-users"></i> <?=$this->lang->line('column_members');?></th>
+                                                    <th class="uk-width-small uk-text-center uk-text-white"><i class="fas fa-chart-line"></i> <?=$this->lang->line('column_rating');?></th>
+                                                    <th class="uk-width-small uk-text-center uk-text-white"><i class="fas fa-chart-line"></i> <?=$this->lang->line('column_games');?></th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -70,10 +70,10 @@
                                         <table class="uk-table uk-table-responsive uk-table-divider">
                                             <thead>
                                                 <tr>
-                                                    <th class="uk-width-small uk-text-white"><i class="fa fa-sitemap" aria-hidden="true"></i> <?=$this->lang->line('column_team_name');?></th>
-                                                    <th class="uk-width-small uk-text-center uk-text-white"><i class="fa fa-users" aria-hidden="true"></i> <?=$this->lang->line('column_members');?></th>
-                                                    <th class="uk-width-small uk-text-center uk-text-white"><i class="fa fa-line-chart" aria-hidden="true"></i> <?=$this->lang->line('column_rating');?></th>
-                                                    <th class="uk-width-small uk-text-center uk-text-white"><i class="fa fa-line-chart" aria-hidden="true"></i> <?=$this->lang->line('column_games');?></th>
+                                                    <th class="uk-width-small uk-text-white"><i class="fas fa-sitemap"></i> <?=$this->lang->line('column_team_name');?></th>
+                                                    <th class="uk-width-small uk-text-center uk-text-white"><i class="fas fa-users"></i> <?=$this->lang->line('column_members');?></th>
+                                                    <th class="uk-width-small uk-text-center uk-text-white"><i class="fas fa-chart-line"></i> <?=$this->lang->line('column_rating');?></th>
+                                                    <th class="uk-width-small uk-text-center uk-text-white"><i class="fas fa-chart-line"></i> <?=$this->lang->line('column_games');?></th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -117,10 +117,10 @@
                                         <table class="uk-table uk-table-responsive uk-table-divider">
                                             <thead>
                                                 <tr>
-                                                    <th class="uk-width-small uk-text-white"><i class="fa fa-sitemap" aria-hidden="true"></i> <?=$this->lang->line('column_team_name');?></th>
-                                                    <th class="uk-width-small uk-text-center uk-text-white"><i class="fa fa-users" aria-hidden="true"></i> <?=$this->lang->line('column_members');?></th>
-                                                    <th class="uk-width-small uk-text-center uk-text-white"><i class="fa fa-line-chart" aria-hidden="true"></i> <?=$this->lang->line('column_rating');?></th>
-                                                    <th class="uk-width-small uk-text-center uk-text-white"><i class="fa fa-line-chart" aria-hidden="true"></i> <?=$this->lang->line('column_games');?></th>
+                                                    <th class="uk-width-small uk-text-white"><i class="fas fa-sitemap"></i> <?=$this->lang->line('column_team_name');?></th>
+                                                    <th class="uk-width-small uk-text-center uk-text-white"><i class="fas fa-users"></i> <?=$this->lang->line('column_members');?></th>
+                                                    <th class="uk-width-small uk-text-center uk-text-white"><i class="fas fa-chart-line"></i> <?=$this->lang->line('column_rating');?></th>
+                                                    <th class="uk-width-small uk-text-center uk-text-white"><i class="fas fa-chart-line"></i> <?=$this->lang->line('column_games');?></th>
                                                 </tr>
                                             </thead>
                                             <tbody>

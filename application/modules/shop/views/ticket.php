@@ -23,15 +23,15 @@
         <div class="uk-grid uk-grid-large" data-uk-grid>
             <div class="uk-width-1-6@l"></div>
             <div class="uk-width-4-6@l">
-                <div class="uk-principal-title uk-text-uppercase uk-text-center uk-text-white"><i class="fa fa-question-circle" aria-hidden="true"></i> <?= $this->lang->line('store_support'); ?></div>
+                <div class="uk-principal-title uk-text-uppercase uk-text-center uk-text-white"><i class="fas fa-question-circle"></i> <?= $this->lang->line('store_support'); ?></div>
                 <p class="uk-text-uppercase uk-text-bold uk-text-center uk-text-white"><?= $this->lang->line('store_support_description'); ?></p>
                 <table class="uk-table uk-table-divider">
                     <thead>
                         <tr>
-                            <th class="uk-text-white"><i class="fa fa-book" aria-hidden="true"></i> <?= $this->lang->line('column_id'); ?></th>
-                            <th class="uk-text-center uk-text-white"><i class="fa fa-bookmark" aria-hidden="true"></i> <?= $this->lang->line('form_title'); ?></th>
-                            <th class="uk-text-center uk-text-white"><i class="fa fa-clock-o" aria-hidden="true"></i> <?= $this->lang->line('column_date'); ?></th>
-                            <th class="uk-text-center uk-text-white"><i class="fa fa-info-circle" aria-hidden="true"></i> <?= $this->lang->line('column_status'); ?></th>
+                            <th class="uk-text-white"><i class="fas fa-book"></i> <?= $this->lang->line('column_id'); ?></th>
+                            <th class="uk-text-center uk-text-white"><i class="fas fa-bookmark"></i> <?= $this->lang->line('form_title'); ?></th>
+                            <th class="uk-text-center uk-text-white"><i class="far fa-clock"></i> <?= $this->lang->line('column_date'); ?></th>
+                            <th class="uk-text-center uk-text-white"><i class="fas fa-info-circle"></i> <?= $this->lang->line('column_status'); ?></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -56,7 +56,7 @@
                     <div class="space-adaptive-small"></div>
                     <div class="uk-margin uk-text-center">
                         <a uk-toggle="target: #newTicket">
-                            <button class="uk-button uk-button-primary"><i class="fa fa-pencil" aria-hidden="true"></i> <?= $this->lang->line('button_create_ticket'); ?></button>
+                            <button class="uk-button uk-button-primary"><i class="fas fa-pencil-alt"></i> <?= $this->lang->line('button_create_ticket'); ?></button>
                         </a>
                     </div>
                 <?php } ?>

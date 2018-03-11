@@ -27,7 +27,7 @@
                 <?php if($this->m_data->isLogged()) { ?>
                     <span class="uk-align-right">
                         <a href="#" uk-toggle="target: #newTopic">
-                            <button class="uk-button uk-button-primary"><i class="fa fa-pencil" aria-hidden="true"></i> <?= $this->lang->line('button_new_topic'); ?></button>
+                            <button class="uk-button uk-button-primary"><i class="fas fa-pencil-alt"></i> <?= $this->lang->line('button_new_topic'); ?></button>
                         </a>
                     </span>
                 <?php } ?>

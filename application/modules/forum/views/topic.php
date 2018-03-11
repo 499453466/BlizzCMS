@@ -57,7 +57,7 @@
                     <?php if($this->forum_model->getSpecifyPostAuthor($idlink) == $this->session->userdata('fx_sess_id')) { ?>
                         <span class="uk-align-right">
                             <a href="#" uk-toggle="target: #editTopic">
-                                <button class="uk-button uk-button-primary"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> <?= $this->lang->line('button_edit_topic'); ?></button>
+                                <button class="uk-button uk-button-primary"><i class="far fa-edit"></i> <?= $this->lang->line('button_edit_topic'); ?></button>
                             </a>
                         </span>
                     <?php } ?>
@@ -125,7 +125,7 @@
                                 <div class="topicplaceholder-details uk-align-center">
                                     <div class="topicplaceholder-message"><?= $this->lang->line('forum_comment_locked'); ?></div>
                                     <a href="<?= base_url('login'); ?>">
-                                        <button class="uk-button uk-button-primary"><i class="fa fa-sign-in" aria-hidden="true"></i> <?= $this->lang->line('button_login'); ?></button>
+                                        <button class="uk-button uk-button-primary"><i class="fas fa-sign-in-alt"></i> <?= $this->lang->line('button_login'); ?></button>
                                     </a>
                                 </div>
                             </div>
@@ -198,7 +198,7 @@
                                     <footer class="TopicPost-actions">
                                         <form action="" method="post" accept-charset="utf-8">
                                             <p uk-margin>
-                                                <button name="button_removecomment" type="submit" value="<?= $commentss->id ?>" class="uk-button uk-button-danger uk-button-small"><i class="fa fa-eraser" aria-hidden="true"></i> <?= $this->lang->line('button_remove'); ?></button>
+                                                <button name="button_removecomment" type="submit" value="<?= $commentss->id ?>" class="uk-button uk-button-danger uk-button-small"><i class="fas fa-eraser"></i> <?= $this->lang->line('button_remove'); ?></button>
                                             </p>
                                         </form>
                                     </footer>
@@ -219,7 +219,7 @@
                             <div class="TopicForm-content">
                                 <form class="Form uk-align-center" method="post" action="" data-post-form="true" accept-charset="utf-8">
                                     <textarea class="tinyeditor" tabindex="1" spellcheck="true" name="reply_comment" rows="10" cols="80"></textarea>
-                                    <button class="uk-button uk-button-primary uk-width-1-1" type="submit" name="button_addcommentary" id="submit-button"><i class="fa fa-reply" aria-hidden="true"></i> <?= $this->lang->line('button_add_reply'); ?></button>
+                                    <button class="uk-button uk-button-primary uk-width-1-1" type="submit" name="button_addcommentary" id="submit-button"><i class="fas fa-reply"></i> <?= $this->lang->line('button_add_reply'); ?></button>
                                     <a href="#" class="TopicForm-link--conduct"><?= $this->lang->line('forum_code_conduct'); ?></a>
                                 </form>
                             </div>

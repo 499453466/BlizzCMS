@@ -54,7 +54,7 @@
                 <div class="uk-child-width-1-2@s uk-grid-match" uk-grid>
                     <div>
                         <div class="uk-card uk-card-primary uk-card-hover uk-card-body uk-light">
-                            <h3 class="uk-card-title uk-text-uppercase uk-text-bold uk-text-center"><i class="fa fa-star-o" aria-hidden="true"></i> ADM Rank</h3>
+                            <h3 class="uk-card-title uk-text-uppercase uk-text-bold uk-text-center"><i class="far fa-star"></i> ADM Rank</h3>
                             <p>Please enter the email of the account that will receive the administrator rank</p>
                             <p>If you do not have an account available please write "<strong>NULL</strong>" <i>without the quotes</i></p>
                             <div class="uk-margin">
@@ -64,14 +64,14 @@
                             </div>
                             <div class="uk-margin">
                                 <div class="uk-form-controls">
-                                    <button class="uk-button uk-button-primary uk-width-1-1 uk-margin-small-bottom" type="submit" name="finishingIt"><i class="fa fa-cog fa-spin fa-fw"></i> Finish</button>
+                                    <button class="uk-button uk-button-primary uk-width-1-1 uk-margin-small-bottom" type="submit" name="finishingIt"><i class="fas fa-cog fa-spin"></i> Finish</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div>
                         <div class="uk-card uk-card-secondary uk-card-hover uk-card-body uk-light">
-                            <h3 class="uk-card-title uk-text-uppercase uk-text-bold uk-text-center"><i class="fa fa-server" aria-hidden="true"></i> Create REALM</h3>
+                            <h3 class="uk-card-title uk-text-uppercase uk-text-bold uk-text-center"><i class="fas fa-server"></i> Create REALM</h3>
                             <p>
                                 <fieldset class="uk-fieldset">
                                     <div class="uk-margin">
