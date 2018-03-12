@@ -14,7 +14,7 @@ class Admin_model extends CI_Model {
 
     public function currentVersion()
     {
-        $version = 'v_0_002';
+        $version = 'v_0_003';
         return $version;
     }
 
@@ -397,6 +397,17 @@ class Admin_model extends CI_Model {
         $this->db->insert('fx_forum_category', $data);
     }
 
+    public function insertDonationAjax($name, $price, $tax, $points)
+    {
+        $data = array(
+            'name' => $name,
+            'price' => $price,
+            'tax' => $price,
+            'points' => $price
+        );
+        $this->db->insert('fx_donate', $data);
+    }
+
     public function updateCategoryAjax($id, $name, $column)
     {
         $this->db->set($column, $name)
@@ -408,6 +419,12 @@ class Admin_model extends CI_Model {
     {
         $this->db->where('id', $id)
                 ->delete('fx_forum_category');
+    }
+
+    public function deleteDonationAjax($id)
+    {
+        $this->db->where('id', $id)
+                ->delete('fx_donate');
     }
 
     public function getForumForumList()
@@ -482,10 +499,18 @@ class Admin_model extends CI_Model {
         redirect(base_url().'admin/managecharacter/'.$id.'/'.$idrealm,'refresh');
     }
 
-    public function getDonationList()
+    public function getDonateListAjax()
     {
         return $this->db->select('*')
-                ->get('fx_donate');
+            ->order_by('id', 'ASC')
+            ->get('fx_donate');
+    }
+
+    public function updateDonationAjax($id, $name, $column)
+    {
+        $this->db->set($column, $name)
+                ->where('id', $id)
+                ->update('fx_donate');
     }
 
     public function delSpecifyDonation($id)
