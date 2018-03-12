@@ -41,6 +41,15 @@ class Admin extends MX_Controller {
         return $this->admin_model->insertCategoryAjax($name);
     }
 
+    public function insertDonation()
+    {
+        $name = $_POST['donationname'];
+        $price = $_POST['donationprice'];
+        $tax = $_POST['donationtax'];
+        $points = $_POST['donationpoints'];
+        return $this->admin_model->insertDonationAjax($name, $price, $tax, $points);
+    }
+
     public function updateCategory()
     {
         $id = $_POST['id'];
@@ -49,10 +58,94 @@ class Admin extends MX_Controller {
         return $this->admin_model->updateCategoryAjax($id, $name, $column);
     }
 
+    public function updateDonation()
+    {
+        $id = $_POST['id'];
+        $name = $_POST['text'];
+        $column = $_POST['colum_name'];
+        return $this->admin_model->updateDonationAjax($id, $name, $column);
+    }
+
     public function deleteCategory()
     {
         $id = $_POST['id'];
         return $this->admin_model->deleteCategoryAjax($id);
+    }
+
+    public function deleteDonation()
+    {
+        $id = $_POST['id'];
+        return $this->admin_model->deleteDonationAjax($id);
+    }
+
+    public function getDonateList()
+    {
+        $output = '';
+        $output .= '
+        <table class="uk-table uk-table-justify uk-table-divider">
+            <thead>
+                <tr>
+                    <th>'.$this->lang->line('form_title').'</th>
+                    <th class="uk-text-center">'.$this->lang->line('store_item_price').'</th>
+                    <th class="uk-text-center">'.$this->lang->line('column_tax').'</th>
+                    <th class="uk-text-center">'.$this->lang->line('column_points').'</th>
+                    <th class="uk-text-center">'.$this->lang->line('column_action').'</th>
+                </tr>
+            </thead>
+            <tbody>';
+        if($this->admin_model->getDonateListAjax()->num_rows()){
+            foreach($this->admin_model->getDonateListAjax()->result() as $list) {
+                $output .= '<tr>
+                    <td>
+                        <input type="text" class="uk-input" id="donateName" value="'.$list->name.'" data-id1="'.$list->id.'">
+                    </td>
+                    <td>
+                        <input type="text" class="uk-input" id="donatePrice" value="'.$list->price.'" data-id4="'.$list->id.'">
+                    </td>
+                    <td>
+                        <input type="text" class="uk-input" id="donateTax" value="'.$list->tax.'" data-id5="'.$list->id.'">
+                    </td>
+                    <td>
+                        <input type="text" class="uk-input" id="donatePoints" value="'.$list->points.'" data-id6="'.$list->id.'">
+                    </td>
+                    <td class="uk-text-center">
+                        <button class="uk-button uk-button-danger" name="button_deleteDonate" id="button_deleteDonate" data-id3="'.$list->id.'">
+                            <i class="fa fa-trash" aria-hidden="true"></i>
+                        </button>
+                    </td>
+                </tr>';
+            }
+        }
+
+        $output .= '
+                <td>
+                    <input type="text" class="uk-input" placeholder="Insert title" id="newdonatename" value="Classic">
+                </td>
+                <td>
+                    <input type="text" class="uk-input" placeholder="Insert Price" id="newdonateprice" value="1.00">
+                </td>
+                <td>
+                    <input type="text" class="uk-input" placeholder="Insert Tax" id="newonateTax" value="0.00">
+                </td>
+                <td>
+                    <input type="text" class="uk-input" placeholder="Insert Points" id="newdonatepoints" value="1">
+                </td>
+                <td class="uk-text-center">
+                    <button class="uk-button uk-button-primary" name="button_adddonation" id="button_adddonation">
+                        <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                    </button>
+                </td>
+            ';
+        if(!$this->admin_model->getDonateListAjax()->num_rows()){
+            $output .= '
+            <tr>
+                <td><div class="uk-alert-warning" uk-alert><p class="uk-text-center"><span uk-icon="warning"></span> Data not found</p></div></td>
+            </tr>';
+        }
+        $output .= '</tbody>
+                        </table>';
+
+        echo $output;
     }
 
     public function getCategoryList()
@@ -286,7 +379,6 @@ class Admin extends MX_Controller {
         $this->load->view('general/header');
         $this->load->view('donate/index');
         $this->load->view('general/footer');
-        $this->load->view('donate/modal');
     }
 
     public function managecategories()
