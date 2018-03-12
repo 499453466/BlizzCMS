@@ -14,7 +14,7 @@ class Admin_model extends CI_Model {
 
     public function currentVersion()
     {
-        $version = 'v_0_004';
+        $version = 'v_0_005';
         return $version;
     }
 
