@@ -41,7 +41,7 @@
     <script src="<?= base_url(); ?>core/uikit/js/uikit-icons.min.js"></script>
 
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="<?= base_url(); ?>core/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="<?= base_url(); ?>core/fontawesome/css/fontawesome-all.css">
 
     <!-- JQuery -->
     <script src="<?= base_url(); ?>core/js/jquery-3.3.1.min.js"></script>
