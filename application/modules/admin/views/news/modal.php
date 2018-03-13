@@ -53,20 +53,22 @@
         </div>
     </div>
 
+<?php if(isset($_GET['edit']) && !is_null($_GET['edit'])) { 
+    $idd = $_GET['edit']; 
+?>
     <div id="editNews" class="uk-modal-container" uk-modal="bg-close: false">
         <div class="uk-modal-dialog">
             <button class="uk-modal-close-default" type="button" uk-close></button>
             <div class="uk-modal-header">
                 <h2 class="uk-modal-title uk-text-uppercase"><i class="far fa-newspaper"></i> Edit News</h2>
             </div>
-            <form action="" method="post" enctype="multipart/form-data" accept-charset="utf-8" autocomplete="off">
                 <div class="uk-modal-body">
                     <div class="uk-margin">
                         <label class="uk-form-label uk-text-uppercase"><?= $this->lang->line('form_news_title'); ?></label>
                         <div class="uk-form-controls">
                             <div class="uk-inline uk-width-1-1">
                                 <span class="uk-form-icon uk-form-icon-flip" uk-icon="icon: pencil"></span>
-                                <input class="uk-input" name="new_title" required type="text" placeholder="<?= $this->lang->line('form_news_title'); ?>">
+                                <input class="uk-input" id="update_title" type="text" placeholder="<?= $this->lang->line('form_news_title'); ?>" value="<?= $this->admin_model->getNewsSpecifyName($idd) ?>">
                             </div>
                         </div>
                     </div>
@@ -74,7 +76,9 @@
                         <label class="uk-form-label uk-text-uppercase"><?= $this->lang->line('form_description'); ?></label>
                         <div class="uk-form-controls">
                             <div class="uk-width-1-1">
-                                <textarea class="tinyeditor" name="new_description" rows="10" cols="80"></textarea>
+                                <textarea class="tinyeditor" id="update_description" rows="10" cols="80">
+                                    <?= $this->admin_model->getNewsSpecifyDesc($idd); ?>
+                                </textarea>
                             </div>
                         </div>
                     </div>
@@ -92,7 +96,7 @@
                         <div class="uk-form-controls">
                             <div class="uk-inline uk-width-1-1">
                                 <div uk-form-custom="target: true">
-                                    <input type="file" required name="new_imageup">
+                                    <input type="file" name="new_imageup">
                                     <input class="uk-input uk-form-width-medium" type="text" placeholder="Select file" disabled>
                                     <button class="uk-button uk-button-default" type="button" tabindex="-1">Select</button>
                                 </div>
@@ -104,6 +108,50 @@
                     <button class="uk-button uk-button-default uk-modal-close" type="button"><?= $this->lang->line('button_cancel'); ?></button>
                     <button class="uk-button uk-button-primary" type="submit" name="button_createNew"><?= $this->lang->line('button_create'); ?></button>
                 </div>
-            </form>
         </div>
     </div>
+
+<script>
+    $(document).ready(function(){
+        function edit_data(id, text, colum_name){
+            $.ajax({
+                url:"<?= base_url('admin/updateNew'); ?>",
+                method:"POST",
+                data:{id:id, text:text, colum_name:colum_name},
+                dataType:"text",
+                success:function(data){
+                    UIkit.notification({
+                        message: '<span uk-icon=\'icon: info\'></span> New updated', status: 'primary', pos: 'top-right'
+                    })
+                }
+            });
+        }
+        $(document).on('blur', '#update_title', function(){
+            var id = '<?= $idd ?>';
+            var text = $('#update_title').val();
+            if(text == ''){
+                UIkit.notification({
+                    message: '<span uk-icon=\'icon: warning\'></span> Title is Empty', status: 'warning', pos: 'top-right'
+                })
+                return false;
+            }
+            edit_data(id, text, "title");
+        });
+        $(document).on('blur', '#update_description', function(){
+            var id = '<?= $idd ?>';
+            var text = $('#update_description').val();
+            if(text == ''){
+                UIkit.notification({
+                    message: '<span uk-icon=\'icon: warning\'></span> Title is Empty', status: 'warning', pos: 'top-right'
+                })
+                return false;
+            }
+            edit_data(id, text, "title");
+        });
+    });
+</script>
+
+<script>
+    UIkit.modal('#editNews').show();
+</script>
+<?php } ?>
