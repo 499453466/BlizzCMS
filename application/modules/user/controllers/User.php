@@ -10,6 +10,8 @@ class User extends MX_Controller {
 
         if (!ini_get('date.timezone'))
            date_default_timezone_set($this->config->item('timezone'));
+
+        $this->load->library('encrypt');
     }
 
     public function login()
@@ -126,7 +128,7 @@ class User extends MX_Controller {
             redirect(base_url('login?account'),'refresh');
         else
         {
-            $password = $this->m_data->encryptBattlenet($email, $password);
+            $password = $this->encrypt->Battlenet($email, $password);
 
             if (strtoupper($this->m_data->getPasswordBnetID($id)) == strtoupper($password))
                 $this->m_data->arraySession($id);

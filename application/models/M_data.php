@@ -9,30 +9,6 @@ class M_data extends CI_Model {
         $this->auth = $this->load->database('auth', TRUE);
     }
 
-    public function encryptBattlenet($email, $password)
-    {
-        $sha_pass_hash_bnet = strtoupper(bin2hex(strrev(hex2bin(strtoupper(hash("sha256",strtoupper(hash("sha256", strtoupper($email)).":".strtoupper($password))))))));
-
-        return $sha_pass_hash_bnet;
-    }
-
-    public function encryptAccount($username, $password)
-    {
-        if (!is_string($username))
-        {
-            $username = "";
-        }
-
-        if (!is_string($password))
-        {
-            $password = "";
-        }
-
-        $sha_pass_hash = sha1(strtoupper($username).':'.strtoupper($password));
-
-        return strtoupper($sha_pass_hash);
-    }
-
     public function arraySession($id)
     {
         $data = array(
