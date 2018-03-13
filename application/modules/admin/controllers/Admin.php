@@ -66,6 +66,14 @@ class Admin extends MX_Controller {
         return $this->admin_model->updateDonationAjax($id, $name, $column);
     }
 
+    public function updateNew()
+    {
+        $id = $_POST['id'];
+        $name = $_POST['text'];
+        $column = $_POST['colum_name'];
+        return $this->admin_model->updateNewAjax($id, $name, $column);
+    }
+
     public function deleteCategory()
     {
         $id = $_POST['id'];
@@ -76,6 +84,12 @@ class Admin extends MX_Controller {
     {
         $id = $_POST['id'];
         return $this->admin_model->deleteDonationAjax($id);
+    }
+
+    public function deleteNew()
+    {
+        $id = $_POST['id'];
+        return $this->admin_model->deleteNewAjax($id);
     }
 
     public function getDonateList()
@@ -137,6 +151,51 @@ class Admin extends MX_Controller {
                 </td>
             ';
         if(!$this->admin_model->getDonateListAjax()->num_rows()){
+            $output .= '
+            <tr>
+                <td><div class="uk-alert-warning" uk-alert><p class="uk-text-center"><span uk-icon="warning"></span> Data not found</p></div></td>
+            </tr>';
+        }
+        $output .= '</tbody>
+                        </table>';
+
+        echo $output;
+    }
+
+    public function getNewsList()
+    {
+        $output = '';
+        $output .= '
+        <table class="uk-table uk-table-justify uk-table-divider">
+            <thead>
+                <tr>
+                    <th>'.$this->lang->line('form_title').'</th>
+                    <th class="uk-text-center">'.$this->lang->line('column_date').'</th>
+                    <th class="uk-text-center">'.$this->lang->line('column_action').'</th>
+                </tr>
+            </thead>
+            <tbody>';
+        if($this->admin_model->getAdminNewsListAjax()->num_rows()){
+            foreach($this->admin_model->getAdminNewsListAjax()->result() as $list) {
+                $output .= '<tr>
+                    <td>
+                        <input disabled class="uk-input" id="donateName" value="'.$list->title.'">
+                    </td>
+                    <td>
+                        <input disabled class="uk-input" id="donatePrice" value="'.$list->date.'">
+                    </td>
+                    <td class="uk-text-center">
+                        <button class="uk-button uk-button-secondary" name="button_editNew" id="button_editNew" data-id4="'.$list->id.'">
+                            <i class="fas" aria-hidden="true">&#xf303;</i>
+                        </button>
+                        <button class="uk-button uk-button-danger" name="button_deleteNew" id="button_deleteNew" data-id3="'.$list->id.'">
+                            <i class="fa fa-trash" aria-hidden="true"></i>
+                        </button>
+                    </td>
+                </tr>';
+            }
+        }
+        if(!$this->admin_model->getAdminNewsListAjax()->num_rows()){
             $output .= '
             <tr>
                 <td><div class="uk-alert-warning" uk-alert><p class="uk-text-center"><span uk-icon="warning"></span> Data not found</p></div></td>
