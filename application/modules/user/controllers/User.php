@@ -103,7 +103,7 @@ class User extends MX_Controller {
             redirect(base_url('login?account'),'refresh');
         else
         {
-            $password = $this->m_data->encryptAccount($username, $password);
+            $password = $this->encrypt->Account($username, $password);
 
             if (strtoupper($this->m_data->getPasswordAccountID($id)) == strtoupper($password))
             {

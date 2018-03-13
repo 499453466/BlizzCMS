@@ -31,9 +31,9 @@
                     {
                         if ($this->m_general->getExpansionAction() == 1)
                         {
-                            $compare = $this->m_data->encryptAccount($this->session->userdata('fx_sess_username'), $oldpass);
+                            $compare = $this->encrypt->Account($this->session->userdata('fx_sess_username'), $oldpass);
 
-                            $newpassI = $this->m_data->encryptAccount($this->session->userdata('fx_sess_username'), $newpass);
+                            $newpassI = $this->encrypt->Account($this->session->userdata('fx_sess_username'), $newpass);
 
                             if ($this->m_data->getPasswordAccountID($this->session->userdata('fx_sess_id')) == strtoupper($compare))
                             {
@@ -81,7 +81,7 @@
 
                     if ($this->m_general->getExpansionAction() == 1)
                     {
-                        $compare = $this->m_data->encryptAccount($this->session->userdata('fx_sess_username'), $password);
+                        $compare = $this->encrypt->Account($this->session->userdata('fx_sess_username'), $password);
 
                         if (strtoupper($this->session->userdata('fx_sess_email')) == strtoupper($oldemail))
                         {
