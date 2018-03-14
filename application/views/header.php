@@ -33,6 +33,10 @@
         <script type="text/javascript" src="<?= base_url() ?>assets/chat/js/chat/chat.js"></script>
     <?php } ?>
 
+    <!-- notify -->
+    <link rel="stylesheet" href="<?= base_url() ?>core/amaranjs/dist/css/amaran.min.css">
+    <script src="<?= base_url() ?>core/amaranjs/dist/js/jquery.amaran.min.js"></script>
+
     <link rel="stylesheet" href="<?= base_url() ?>core/cookieconsent/cookieconsent.min.css"/>
     <script type="text/javascript" src="<?= base_url() ?>core/cookieconsent/cookieconsent.min.js"></script>
     <script>
