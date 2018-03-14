@@ -300,6 +300,34 @@ class MX_Loader extends CI_Loader
 		return (method_exists($this, '_ci_object_to_array') ? $this->_ci_load(array('_ci_view' => $view, '_ci_vars' => $this->_ci_object_to_array($vars), '_ci_return' => $return)) : $this->_ci_load(array('_ci_view' => $view, '_ci_vars' => $this->_ci_prepare_view_vars($vars), '_ci_return' => $return)));
 	}
 
+	/** Load a module actions **/
+	public function fx_action($view, $vars = array(), $return = FALSE)
+	{
+		list($path, $_view) = Modules::find($view, $this->_module, 'fx_actions/');
+
+		if ($path != FALSE)
+		{
+			$this->_ci_view_paths = array($path => TRUE) + $this->_ci_view_paths;
+			$view = $_view;
+		}
+
+		return (method_exists($this, '_ci_object_to_array') ? $this->_ci_load(array('_ci_view' => $view, '_ci_vars' => $this->_ci_object_to_array($vars), '_ci_return' => $return)) : $this->_ci_load(array('_ci_view' => $view, '_ci_vars' => $this->_ci_prepare_view_vars($vars), '_ci_return' => $return)));
+	}
+
+	/** Load a module fx_calls **/
+	public function fx_call($view, $vars = array(), $return = FALSE)
+	{
+		list($path, $_view) = Modules::find($view, $this->_module, 'fx_calls/');
+
+		if ($path != FALSE)
+		{
+			$this->_ci_view_paths = array($path => TRUE) + $this->_ci_view_paths;
+			$view = $_view;
+		}
+
+		return (method_exists($this, '_ci_object_to_array') ? $this->_ci_load(array('_ci_view' => $view, '_ci_vars' => $this->_ci_object_to_array($vars), '_ci_return' => $return)) : $this->_ci_load(array('_ci_view' => $view, '_ci_vars' => $this->_ci_prepare_view_vars($vars), '_ci_return' => $return)));
+	}
+
 	protected function &_ci_get_component($component)
 	{
 		return CI::$APP->$component;
