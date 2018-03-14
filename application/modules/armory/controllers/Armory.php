@@ -36,6 +36,8 @@ class Armory extends MX_Controller {
             'fxtitle' => $this->lang->line('nav_armory'),
             'idplayer' => $idplayer,
             'idrealm' => $idrealm,
+            'fx_adds' => '<script src="'.base_url('core/js/tippy.all.min.js').'"></script>
+                            <div class="uk-container">'
         );
 
         $this->load->view('header', $data);

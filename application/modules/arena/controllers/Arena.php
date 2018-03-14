@@ -25,7 +25,8 @@ class Arena extends MX_Controller {
     public function index()
     {
         $data['fxtitle'] = $this->lang->line('nav_arena_statistics');
-
+        $data['fx_adds'] = '<div class="uk-container">';
+        
         $this->load->view('header', $data);
         $this->load->view('index');
         $this->load->view('footer');
