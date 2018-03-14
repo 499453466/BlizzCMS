@@ -94,8 +94,8 @@ class User extends MX_Controller {
         if ($this->m_data->isLogged())
             redirect(base_url(),'refresh');
 
-        $username = $this->input->post('login_username');
-        $password = $this->input->post('login_password');
+        $username = $_POST['username'];
+        $password = $_POST['password'];
 
         $id = $this->m_data->getIDAccount($username);
 
@@ -106,9 +106,7 @@ class User extends MX_Controller {
             $password = $this->encrypt->Account($username, $password);
 
             if (strtoupper($this->m_data->getPasswordAccountID($id)) == strtoupper($password))
-            {
                 $this->m_data->arraySession($id);
-            }
             else
                 redirect(base_url('login?password'),'refresh');
         }
