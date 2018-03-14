@@ -20,6 +20,9 @@
     <!-- JQuery -->
     <script src="<?= base_url(); ?>core/js/jquery-3.3.1.min.js"></script>
     <script src="<?= base_url(); ?>core/js/jquery.transit.min.js"></script>
+
+    <!-- notify -->
+    <link rel="stylesheet" href="<?= base_url() ?>core/amaranjs/dist/css/amaran.min.css">
 </head>
 
 <body>

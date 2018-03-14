@@ -69,3 +69,14 @@ $lang['store_see'] = 'See the Store';
 $lang['no_players'] = 'No players Online';
 $lang['users_on'] = 'Users Online';
 $lang['realm_offline'] = 'Realm Offline';
+
+//notify
+$lang['notify_success'] = 'Success!';
+$lang['notify_warning'] = 'Warning!';
+$lang['donation_deleted'] = 'Deleted donation';
+$lang['donation_updated'] = 'Updated donation';
+$lang['donation_added'] = 'Added donation';
+$lang['name_empty'] = 'Name is empty';
+$lang['points_empty'] = 'Points is empty';
+$lang['tax_empty'] = 'Tax is empty';
+$lang['price_empty'] = 'Price is empty';

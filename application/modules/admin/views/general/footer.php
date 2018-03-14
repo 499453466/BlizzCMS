@@ -7,5 +7,8 @@
 
     <!-- Blizzcms JS -->
     <script src="<?= base_url(); ?>core/js/blizzcms.admin.js"></script>
+
+    <!-- notify -->
+    <script src="<?= base_url() ?>core/amaranjs/dist/js/jquery.amaran.min.js"></script>
 </body>
 </html>
