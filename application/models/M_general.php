@@ -521,4 +521,27 @@ class M_general extends CI_Model {
 
         return $config;
     }
+
+    public function tinyEditor($plugin, $tool)
+    {
+        return "<script src=".base_url('core/tinymce/tinymce.min.js')."></script>
+                <script>tinymce.init({
+                    selector: '.tinyeditor',
+                    language: '".$this->config->item('tinymce_language')."',
+                    menubar: false,
+                    plugins: ['".$this->tinyEditorTools($plugin)."'],
+                    toolbar: '".$this->tinyEditorTools($tool)."'});
+                </script>";
+    }
+
+    public function tinyEditorTools($tool)
+    {
+        switch ($tool) {
+            case 'pluginsADM': return 'advlist autolink autosave link image lists charmap preview hr searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media table contextmenu directionality emoticons textcolor paste fullpage textcolor colorpicker textpattern'; break;
+            case 'pluginsUser': return 'advlist autolink autosave link lists charmap preview hr searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime contextmenu directionality emoticons textcolor paste fullpage textcolor colorpicker textpattern'; break;
+
+            case 'toolbarADM': return 'insert unlink emoticons | undo redo | formatselect fontselect fontsizeselect | bold italic underline strikethrough | forecolor backcolor | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | blockquote | removeformat'; break;
+            case 'toolbarUser': return 'emoticons | undo redo | fontselect fontsizeselect | bold italic | forecolor | bullist numlist outdent indent | link unlink | removeformat'; break;
+        }
+    }
 }
