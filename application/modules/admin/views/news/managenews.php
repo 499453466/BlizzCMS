@@ -73,9 +73,18 @@
                 data:{id:id},
                 dataType:"text",
                 success:function(data){
-                    UIkit.notification({
-                        message: '<span uk-icon=\'icon: minus-circle\'></span> New deleted', status: 'danger', pos: 'top-right'
-                    })
+                    $.amaran({
+                        'theme'     :'awesome error',
+                        'content'   :{
+                            title:'<?= $this->lang->line('notify_title_success'); ?>',
+                            message:'<?= $this->lang->line('notify_news_deleted'); ?>',
+                            info:'',
+                            icon:'fas fa-minus'
+                        },
+                        'position'  :'top right',
+                        'inEffect'  :'slideRight',
+                        'outEffect' :'slideRight'
+                    });
                     fetch_data();
                 }
             });
@@ -86,7 +95,6 @@
         });
     });
 </script>
-
 
 <script>
     tinymce.init({
