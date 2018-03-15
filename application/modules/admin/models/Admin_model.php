@@ -14,7 +14,7 @@ class Admin_model extends CI_Model {
 
     public function currentVersion()
     {
-        $version = 'v_0_009';
+        $version = 'v_0_010';
         return $version;
     }
 
@@ -508,7 +508,7 @@ class Admin_model extends CI_Model {
     {
         $this->db->set($column, $name)
                 ->where('id', $id)
-                ->update('fx_news');
+                ->update('fx_donate');
     }
 
      public function updateNewAjax($id, $name, $column)

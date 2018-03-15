@@ -71,6 +71,7 @@ $lang['users_on'] = 'Users Online';
 $lang['realm_offline'] = 'Realm Offline';
 
 //notify
+$lang['incorrect_update'] = 'Unexpected update';
 $lang['notify_success'] = 'Success!';
 $lang['notify_warning'] = 'Warning!';
 $lang['donation_deleted'] = 'Deleted donation';
