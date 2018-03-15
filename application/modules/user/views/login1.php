@@ -46,15 +46,33 @@
             var username = $('#login_username').val();
             var password = $('#login_password').val();
             if(username == ''){
-                UIkit.notification({
-                    message: '<span uk-icon=\'icon: warning\'></span> Username is empty', status: 'warning', pos: 'top-right'
-                })
+                $.amaran({
+                    'theme'     :'awesome warning',
+                    'content'   :{
+                        title:'<?= $this->lang->line('notify_title_warning'); ?>',
+                        message:'<?= $this->lang->line('notify_username_empty'); ?>',
+                        info:'',
+                        icon:'fas fa-exclamation'
+                    },
+                    'position'  :'top right',
+                    'inEffect'  :'slideRight',
+                    'outEffect' :'slideRight'
+                });
                 return false;
             }
             if(password == ''){
-                UIkit.notification({
-                    message: '<span uk-icon=\'icon: warning\'></span> Password is empty', status: 'warning', pos: 'top-right'
-                })
+                $.amaran({
+                    'theme'     :'awesome warning',
+                    'content'   :{
+                        title:'<?= $this->lang->line('notify_title_warning'); ?>',
+                        message:'<?= $this->lang->line('notify_password_empty'); ?>',
+                        info:'',
+                        icon:'fas fa-exclamation'
+                    },
+                    'position'  :'top right',
+                    'inEffect'  :'slideRight',
+                    'outEffect' :'slideRight'
+                });
                 return false;
             }
             $.ajax({
@@ -63,9 +81,18 @@
                 data:{username:username, password:password},
                 dataType:"text",
                 success:function(){
-                    UIkit.notification({
-                        message: '<span uk-icon=\'icon: plus-circle\'></span> Connecting...!', status: 'success', pos: 'top-right'
-                    })
+                    $.amaran({
+                        'theme'     :'awesome ok',
+                        'content'   :{
+                            title:'<?= $this->lang->line('notify_title_success'); ?>',
+                            message:'<?= $this->lang->line('notify_connecting'); ?>',
+                            info:'',
+                            icon:'fas fa-check'
+                        },
+                        'position'  :'top right',
+                        'inEffect'  :'slideRight',
+                        'outEffect' :'slideRight'
+                    });
                     window.location.href = '<?= base_url(); ?>';
                 }
             });

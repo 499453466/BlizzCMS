@@ -120,9 +120,18 @@
                 data:{id:id, text:text, colum_name:colum_name},
                 dataType:"text",
                 success:function(data){
-                    UIkit.notification({
-                        message: '<span uk-icon=\'icon: info\'></span> New updated', status: 'primary', pos: 'top-right'
-                    })
+                    $.amaran({
+                        'theme'     :'awesome ok',
+                        'content'   :{
+                            title:'<?= $this->lang->line('notify_title_success'); ?>',
+                            message:'<?= $this->lang->line('notify_news_updated'); ?>',
+                            info:'',
+                            icon:'fas fa-check'
+                        },
+                        'position'  :'top right',
+                        'inEffect'  :'slideRight',
+                        'outEffect' :'slideRight'
+                    });
                 }
             });
         }
@@ -130,9 +139,18 @@
             var id = '<?= $idd ?>';
             var text = $('#update_title').val();
             if(text == ''){
-                UIkit.notification({
-                    message: '<span uk-icon=\'icon: warning\'></span> Title is Empty', status: 'warning', pos: 'top-right'
-                })
+                $.amaran({
+                    'theme'     :'awesome warning',
+                    'content'   :{
+                        title:'<?= $this->lang->line('notify_title_warning'); ?>',
+                        message:'<?= $this->lang->line('notify_title_empty'); ?>',
+                        info:'',
+                        icon:'fas fa-exclamation'
+                    },
+                    'position'  :'top right',
+                    'inEffect'  :'slideRight',
+                    'outEffect' :'slideRight'
+                });
                 return false;
             }
             edit_data(id, text, "title");
@@ -141,9 +159,18 @@
             var id = '<?= $idd ?>';
             var text = $('#update_description').val();
             if(text == ''){
-                UIkit.notification({
-                    message: '<span uk-icon=\'icon: warning\'></span> Title is Empty', status: 'warning', pos: 'top-right'
-                })
+                $.amaran({
+                    'theme'     :'awesome warning',
+                    'content'   :{
+                        title:'<?= $this->lang->line('notify_title_warning'); ?>',
+                        message:'<?= $this->lang->line('notify_description_empty'); ?>',
+                        info:'',
+                        icon:'fas fa-exclamation'
+                    },
+                    'position'  :'top right',
+                    'inEffect'  :'slideRight',
+                    'outEffect' :'slideRight'
+                });
                 return false;
             }
             edit_data(id, text, "title");

@@ -43,13 +43,14 @@
                     $.amaran({
                         'theme'     :'awesome ok',
                         'content'   :{
-                            title:'<?= $this->lang->line('notify_success'); ?>',
-                            message:'<?= $this->lang->line('donation_updated'); ?>',
+                            title:'<?= $this->lang->line('notify_title_success'); ?>',
+                            message:'<?= $this->lang->line('notify_donation_updated'); ?>',
                             info:'',
                             icon:'fas fa-check'
                         },
                         'position'  :'top right',
-                        'outEffect' :'slideBottom'
+                        'inEffect'  :'slideRight',
+                        'outEffect' :'slideRight'
                     });
                     fetch_data();
                 },
@@ -57,13 +58,14 @@
                     $.amaran({
                         'theme'     :'awesome error',
                         'content'   :{
-                            title:'<?= $this->lang->line('incorrect_update'); ?>',
-                            message:'Donate Module',
+                            title:'<?= $this->lang->line('notify_title_error'); ?>',
+                            message:'<?= $this->lang->line('notify_incorrect_update'); ?>',
                             info:'',
-                            icon:'fas fa-ban'
+                            icon:'fas fa-times'
                         },
                         'position'  :'top right',
-                        'outEffect' :'slideBottom'
+                        'inEffect'  :'slideRight',
+                        'outEffect' :'slideRight'
                     });
                     fetch_data();
                 }
@@ -76,13 +78,14 @@
                 $.amaran({
                     'theme'     :'awesome warning',
                     'content'   :{
-                        title:'<?= $this->lang->line('notify_warning'); ?>',
-                        message:'<?= $this->lang->line('name_empty'); ?>',
+                        title:'<?= $this->lang->line('notify_title_warning'); ?>',
+                        message:'<?= $this->lang->line('notify_name_empty'); ?>',
                         info:'',
-                        icon:'fas fa-exclamation-triangle'
+                        icon:'fas fa-exclamation'
                     },
                     'position'  :'top right',
-                    'outEffect' :'slideBottom'
+                    'inEffect'  :'slideRight',
+                    'outEffect' :'slideRight'
                 });
                 return false;
             }
@@ -95,13 +98,14 @@
                 $.amaran({
                     'theme'     :'awesome warning',
                     'content'   :{
-                        title:'<?= $this->lang->line('notify_warning'); ?>',
-                        message:'<?= $this->lang->line('price_empty'); ?>',
+                        title:'<?= $this->lang->line('notify_title_warning'); ?>',
+                        message:'<?= $this->lang->line('notify_price_empty'); ?>',
                         info:'',
-                        icon:'fas fa-exclamation-triangle'
+                        icon:'fas fa-exclamation'
                     },
                     'position'  :'top right',
-                    'outEffect' :'slideBottom'
+                    'inEffect'  :'slideRight',
+                    'outEffect' :'slideRight'
                 });
                 return false;
             }
@@ -114,13 +118,14 @@
                 $.amaran({
                     'theme'     :'awesome warning',
                     'content'   :{
-                        title:'<?= $this->lang->line('notify_warning'); ?>',
-                        message:'<?= $this->lang->line('tax_empty'); ?>',
+                        title:'<?= $this->lang->line('notify_title_warning'); ?>',
+                        message:'<?= $this->lang->line('notify_tax_empty'); ?>',
                         info:'',
-                        icon:'fas fa-exclamation-triangle'
+                        icon:'fas fa-exclamation'
                     },
                     'position'  :'top right',
-                    'outEffect' :'slideBottom'
+                    'inEffect'  :'slideRight',
+                    'outEffect' :'slideRight'
                 });
                 return false;
             }
@@ -133,13 +138,14 @@
                 $.amaran({
                     'theme'     :'awesome warning',
                     'content'   :{
-                        title:'<?= $this->lang->line('notify_warning'); ?>',
-                        message:'<?= $this->lang->line('points_empty'); ?>',
+                        title:'<?= $this->lang->line('notify_title_warning'); ?>',
+                        message:'<?= $this->lang->line('notify_points_empty'); ?>',
                         info:'',
-                        icon:'fas fa-exclamation-triangle'
+                        icon:'fas fa-exclamation'
                     },
                     'position'  :'top right',
-                    'outEffect' :'slideBottom'
+                    'inEffect'  :'slideRight',
+                    'outEffect' :'slideRight'
                 });
                 return false;
             }
@@ -154,13 +160,14 @@
                 $.amaran({
                     'theme'     :'awesome warning',
                     'content'   :{
-                        title:'<?= $this->lang->line('notify_warning'); ?>',
-                        message:'<?= $this->lang->line('name_empty'); ?>',
+                        title:'<?= $this->lang->line('notify_title_warning'); ?>',
+                        message:'<?= $this->lang->line('notify_name_empty'); ?>',
                         info:'',
-                        icon:'fas fa-exclamation-triangle'
+                        icon:'fas fa-exclamation'
                     },
                     'position'  :'top right',
-                    'outEffect' :'slideBottom'
+                    'inEffect'  :'slideRight',
+                    'outEffect' :'slideRight'
                 });
                 return false;
             }
@@ -173,13 +180,14 @@
                     $.amaran({
                         'theme'     :'awesome ok',
                         'content'   :{
-                            title:'<?= $this->lang->line('notify_success'); ?>',
-                            message:'<?= $this->lang->line('donation_added'); ?>',
+                            title:'<?= $this->lang->line('notify_title_success'); ?>',
+                            message:'<?= $this->lang->line('notify_donation_added'); ?>',
                             info:'',
-                            icon:'fas fa-check'
+                            icon:'fas fa-plus'
                         },
                         'position'  :'top right',
-                        'outEffect' :'slideBottom'
+                        'inEffect'  :'slideRight',
+                        'outEffect' :'slideRight'
                     });
                     fetch_data();
                 }
@@ -196,12 +204,14 @@
                     $.amaran({
                         'theme'     :'awesome error',
                         'content'   :{
-                            title:'<?= $this->lang->line('notify_success'); ?>',
-                            message:'<?= $this->lang->line('donation_deleted'); ?>',
-                            icon:'fas fa-minus-circle'
+                            title:'<?= $this->lang->line('notify_title_success'); ?>',
+                            message:'<?= $this->lang->line('notify_donation_deleted'); ?>',
+                            info:'',
+                            icon:'fas fa-minus'
                         },
                         'position'  :'top right',
-                        'outEffect' :'slideBottom'
+                        'inEffect'  :'slideRight',
+                        'outEffect' :'slideRight'
                     });
                     fetch_data();
                 }

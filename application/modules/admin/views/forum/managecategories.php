@@ -40,9 +40,18 @@
                 data:{id:id, text:text, colum_name:colum_name},
                 dataType:"text",
                 success:function(data){
-                    UIkit.notification({
-                        message: '<span uk-icon=\'icon: info\'></span> Category updated', status: 'primary', pos: 'top-right'
-                    })
+                    $.amaran({
+                        'theme'     :'awesome ok',
+                        'content'   :{
+                            title:'<?= $this->lang->line('notify_title_success'); ?>',
+                            message:'<?= $this->lang->line('notify_category_updated'); ?>',
+                            info:'',
+                            icon:'fas fa-check'
+                        },
+                        'position'  :'top right',
+                        'inEffect'  :'slideRight',
+                        'outEffect' :'slideRight'
+                    });
                 }
             });
         }
@@ -54,9 +63,18 @@
         $(document).on('click', '#button_addCategory', function(){
             var categoryname = $('#newcategoryname').val();
             if(categoryname == ''){
-                UIkit.notification({
-                    message: '<span uk-icon=\'icon: warning\'></span> Title is empty', status: 'warning', pos: 'top-right'
-                })
+                $.amaran({
+                    'theme'     :'awesome warning',
+                    'content'   :{
+                        title:'<?= $this->lang->line('notify_title_warning'); ?>',
+                        message:'<?= $this->lang->line('notify_title_empty'); ?>',
+                        info:'',
+                        icon:'fas fa-exclamation'
+                    },
+                    'position'  :'top right',
+                    'inEffect'  :'slideRight',
+                    'outEffect' :'slideRight'
+                });
                 return false;
             }
             $.ajax({
@@ -65,9 +83,18 @@
                 data:{categoryname:categoryname},
                 dataType:"text",
                 success:function(){
-                    UIkit.notification({
-                        message: '<span uk-icon=\'icon: plus-circle\'></span> Category added', status: 'success', pos: 'top-right'
-                    })
+                    $.amaran({
+                        'theme'     :'awesome ok',
+                        'content'   :{
+                            title:'<?= $this->lang->line('notify_title_success'); ?>',
+                            message:'<?= $this->lang->line('notify_category_added'); ?>',
+                            info:'',
+                            icon:'fas fa-plus'
+                        },
+                        'position'  :'top right',
+                        'inEffect'  :'slideRight',
+                        'outEffect' :'slideRight'
+                    });
                     fetch_data();
                 }
             });
@@ -80,9 +107,18 @@
                 data:{id:id},
                 dataType:"text",
                 success:function(data){
-                    UIkit.notification({
-                        message: '<span uk-icon=\'icon: minus-circle\'></span> Category deleted', status: 'danger', pos: 'top-right'
-                    })
+                    $.amaran({
+                        'theme'     :'awesome error',
+                        'content'   :{
+                            title:'<?= $this->lang->line('notify_title_success'); ?>',
+                            message:'<?= $this->lang->line('notify_category_deleted'); ?>',
+                            info:'',
+                            icon:'fas fa-minus'
+                        },
+                        'position'  :'top right',
+                        'inEffect'  :'slideRight',
+                        'outEffect' :'slideRight'
+                    });
                     fetch_data();
                 }
             });
