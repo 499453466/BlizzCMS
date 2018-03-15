@@ -86,3 +86,15 @@
         });
     });
 </script>
+
+
+<script>
+    tinymce.init({
+      selector: 'textarea',
+      init_instance_callback: function (editor) {
+        editor.on('blur', function (e) {
+          alert('test');
+        });
+      }
+    });
+</script>

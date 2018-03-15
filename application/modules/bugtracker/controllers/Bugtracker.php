@@ -25,6 +25,12 @@ class Bugtracker extends MX_Controller {
 
     public function index()
     {
+
+        if($this->m_permissions->getIsAdmin($this->session->userdata('fx_sess_id')))
+            $tiny = $this->m_general->tinyEditor('pluginsADM', 'toolbarADM');
+        else
+            $tiny = $this->m_general->tinyEditor('pluginsUser', 'toolbarUser');
+
         $data = array(
                 "classDrop" => array(
                     'class' => 'uk-select',
@@ -52,10 +58,11 @@ class Bugtracker extends MX_Controller {
                     'id' => 'button_createIssue',
                     'name' => 'button_createIssue',
                     'value' => $this->lang->line('button_create'),
-                    'class' => 'uk-button uk-button-primary')
+                    'class' => 'uk-button uk-button-primary'),
+                'fxtitle' => $this->lang->line('nav_changelogs'),
+                'tiny' => $tiny,
+                'fx_adds' => '<div class="uk-container">'
             );
-
-        $data['fxtitle'] = $this->lang->line('nav_changelogs');
 
         $this->load->view('header', $data);
         $this->load->view('index', $data);
