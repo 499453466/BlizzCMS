@@ -52,6 +52,20 @@
                         'outEffect' :'slideBottom'
                     });
                     fetch_data();
+                },
+                error:function(){
+                    $.amaran({
+                        'theme'     :'awesome error',
+                        'content'   :{
+                            title:'<?= $this->lang->line('incorrect_update'); ?>',
+                            message:'Donate Module',
+                            info:'',
+                            icon:'fas fa-ban'
+                        },
+                        'position'  :'top right',
+                        'outEffect' :'slideBottom'
+                    });
+                    fetch_data();
                 }
             });
         }
