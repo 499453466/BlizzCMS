@@ -9,10 +9,12 @@ use \PayPal\Auth\OAuthTokenCredential;
 use \PayPal\Api\PaymentExecution;
 
 //adds
+use \PayPal\Api\Item;
 use \PayPal\Api\Payer;
 use \PayPal\Api\Amount;
 use \PayPal\Api\Payment;
 use \PayPal\Api\Details;
+use \PayPal\Api\ItemList;
 use \PayPal\Api\Transaction;
 use \PayPal\Api\RedirectUrls;
 use \PayPal\Exception\PPConnectionException;
@@ -49,19 +51,30 @@ class Donate_model extends CI_Model
 
     public function getDonate($id)
     {
-    	$payer = new Payer();
-    	$details = new Details();
-    	$amount = new Amount();
-    	$transaction = new Transaction();
-    	$payment = new Payment();
-    	$redirectUrls = new RedirectUrls();
+        $item = new Item();
+        $payer = new Payer();
+        $amount = new Amount();
+        $details = new Details();
+        $payment = new Payment();
+        $itemList = new ItemList();
+        $transaction = new Transaction();
+        $redirectUrls = new RedirectUrls();
 
-    	$setTax = $this->getSpecifyDonate($id)->row('tax');
-    	$setPrice = $this->getSpecifyDonate($id)->row('price');
-    	$setTotal = ($setTax+$setPrice);
+        $setTax = $this->getSpecifyDonate($id)->row('tax');
+        $setPrice = $this->getSpecifyDonate($id)->row('price');
+        $setTotal = ($setTax+$setPrice);
 
-    	//Payer
-    	$payer->setPaymentMethod('paypal');
+        //Payer
+        $payer->setPaymentMethod('paypal');
+
+        //item
+        $item->setName('Donation')
+        ->setCurrency($this->config->item('currencyType'))
+        ->setQuantity(1)
+        ->setPrice($setPrice);
+
+        //item list
+        $itemList->setItems([$item]);
 
     	//details
     	$details->setShipping('0.00')
@@ -73,7 +86,10 @@ class Donate_model extends CI_Model
 	    ->setDetails($details);
 
     	//transaction
-    	$transaction->setAmount($amount);
+    	$transaction->setAmount($amount)
+        ->setItemList($itemList)
+        ->setDescription('Donation')
+        ->setInvoiceNumber(uniqid());
 
     	//payment
     	$payment->setIntent('sale')
@@ -84,7 +100,10 @@ class Donate_model extends CI_Model
    		$redirectUrls->setReturnUrl(base_url('donate/complete/'.$id))
    			->setCancelUrl(base_url('donate/cancelled'));
 
-   		$payment->setRedirectUrls($redirectUrls);
+   		$payment->setIntent('sale')
+        ->setPayer($payer)
+        ->setRedirectUrls($redirectUrls)
+        ->setTransactions([$transaction]);
 
    		try {
 		    $payment->create($this->getApi());

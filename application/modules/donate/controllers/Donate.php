@@ -2,6 +2,7 @@
 
 require './vendor/autoload.php';
 
+use \PayPal\Api\Payment;
 use \PayPal\Api\PaymentExecution;
 
 class Donate extends MX_Controller
@@ -40,6 +41,18 @@ class Donate extends MX_Controller
 
     public function complete($id)
     {
+        $execute = new PaymentExecution();
+
+        $paymentId = $_GET['paymentId'];
+        $payerId = $_GET['PayerID'];
+        $payment = Payment::get($paymentId, $this->donate_model->getApi());
+
+        $execute->setPayerId($payerId);
+        try {
+            $result = $payment->execute($execute, $this->donate_model->getApi());
+        } catch (Exception $e) {
+            die($e);
+        }
         $this->donate_model->completeTransaction($id, $_GET['paymentId']);
     }
 
