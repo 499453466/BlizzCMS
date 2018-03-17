@@ -58,7 +58,7 @@ $autoload['packages'] = array(APPPATH . 'third_party/DevelBar');
 |
 |	$autoload['libraries'] = array('user_agent' => 'ua');
 */
-$autoload['libraries'] = array('database', 'session', 'form_validation', 'ci_chat');
+$autoload['libraries'] = array('database', 'session', 'form_validation', 'ci_chat', 'parser');
 
 /*
 | -------------------------------------------------------------------
