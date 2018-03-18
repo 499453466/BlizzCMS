@@ -453,6 +453,7 @@ class Admin extends MX_Controller {
         $this->load->view('general/header');
         $this->load->view('forum/manageforums');
         $this->load->view('general/footer');
+        $this->load->view('forum/modal');
     }
 
     public function manageapi()
