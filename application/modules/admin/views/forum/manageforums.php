@@ -1,3 +1,7 @@
+<?php if(isset($_POST['button_deleteForum'])) {
+    $this->admin_model->deleteForum($_POST['button_deleteForum']);
+} ?>
+
     <div id="content" data-uk-height-viewport="expand: true">
         <div class="uk-container uk-container-expand">
             <div class="uk-grid uk-grid-medium uk-grid-match" data-uk-grid>
@@ -6,6 +10,9 @@
                         <div class="uk-card-header uk-card-secondary">
                             <div class="uk-grid uk-grid-small">
                                 <div class="uk-width-auto"><h4 class="uk-margin-remove-bottom"><span data-uk-icon="icon: list"></span> <?= $this->lang->line('admin_manege_forums'); ?></h4></div>
+                                <div class="uk-width-expand uk-text-right">
+                                    <a href="" class="uk-icon-link uk-margin-small-right" data-uk-icon="icon: pencil" uk-toggle="target: #newForum"></a>
+                                </div>
                             </div>
                         </div>
                         <div class="uk-card-body">
