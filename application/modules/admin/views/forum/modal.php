@@ -12,7 +12,7 @@
         <div class="uk-modal-dialog">
             <button class="uk-modal-close-default" type="button" uk-close></button>
             <div class="uk-modal-header">
-                <h2 class="uk-modal-title uk-text-uppercase"><i class="fa fa-comments-o" aria-hidden="true"></i> <?= $this->lang->line('form_create_forums'); ?></h2>
+                <h2 class="uk-modal-title uk-text-uppercase"><i class="far fa-comments"></i> <?= $this->lang->line('form_create_forums'); ?></h2>
             </div>
             <form action="" method="post" enctype="multipart/form-data" accept-charset="utf-8" autocomplete="off">
                 <div class="uk-modal-body">
@@ -55,7 +55,7 @@
                         <label class="uk-form-label uk-text-uppercase"><?= $this->lang->line('form_category'); ?></label>
                         <div class="uk-form-controls">
                             <select class="uk-select" name="forum_cate">
-                                <?php foreach($this->admin_model->getForumCategoryList()->result() as $categ) { ?>
+                                <?php foreach($this->admin_model->getForumCategoryListAjax()->result() as $categ) { ?>
                                     <option value="<?= $categ->id ?>"><?= $categ->categoryName ?></option>
                                 <?php } ?>
                             </select>
