@@ -856,6 +856,7 @@ class Admin_model extends CI_Model {
     {
         return $this->auth->select('*')
             ->where('id', $id)
+            ->where('active', '1')
             ->get('account_banned');
     }
 
