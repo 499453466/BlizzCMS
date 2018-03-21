@@ -3,7 +3,7 @@
         <div class="uk-grid uk-grid-large" data-uk-grid>
             <div class="uk-width-1-5@l"></div>
             <div class="uk-width-3-5@l">
-                <h2 class="uk-text-primary uk-text-center"><i class="fas fa-sign-out-alt"></i> <?= $this->lang->line('button_login'); ?></h2>
+                <h2 class="uk-text-primary uk-text-center"><i class="fas fa-sign-in-alt"></i> <?= $this->lang->line('button_login'); ?></h2>
                 <p class="uk-text-center uk-text-white"><?= $this->lang->line('login_description'); ?></p>
 
                 <?php if(isset($_GET['password'])) {
