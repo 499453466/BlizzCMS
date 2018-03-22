@@ -18,13 +18,6 @@ class Admin_model extends CI_Model {
         return $version;
     }
 
-    public function currentBlizzCMS()
-    {
-        $url="http://blizzcms.projectscms.ml/home/currentversion";
-        $result = file_get_contents($url);
-        return $result;
-    }
-
     public function insertShop($itemid, $type, $name, $pricedp, $pricevp, $iconname, $groups, $image)
     {
         if ($pricevp == '0' && $pricedp == '0')
