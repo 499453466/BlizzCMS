@@ -213,7 +213,7 @@
                                             <?php } ?>
                                             <script>
                                                 $(document).ready(function() {
-                                                    $("#fx_logout").click(function(e) {
+                                                    $("#fx_mobile_logout").click(function(e) {
                                                         e.preventDefault();
                                                         $.ajax({
                                                             url: '<?= base_url('user/logout') ?>',
@@ -225,7 +225,7 @@
                                                     });
                                                 });
                                             </script>
-                                            <li><a href="#" id="fx_logout"><span uk-icon="icon: sign-out"></span> <?= $this->lang->line('button_logout'); ?></a></li>
+                                            <li><a href="#" id="fx_mobile_logout"><span uk-icon="icon: sign-out"></span> <?= $this->lang->line('button_logout'); ?></a></li>
                                         <?php } ?>
                                         <li class="uk-nav-header uk-text-center"><span uk-icon="icon: world"></span>Navigation</li>
                                         <li class="uk-nav-divider"></li>
