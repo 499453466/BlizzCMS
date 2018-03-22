@@ -141,6 +141,16 @@ class M_characters extends CI_Model {
                 ->num_rows();
     }
 
+    public function getAllCharactersOnline($multiRealm)
+    {
+        $this->multiRealm = $multiRealm;
+
+        return $this->multiRealm->select('online')
+                ->where('online', '1')
+                ->get('characters')
+                ->num_rows();
+    }
+
     public function getInformationCharacter($MultiRealm, $id)
     {
         $this->multirealm = $MultiRealm;
