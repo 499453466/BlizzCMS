@@ -91,7 +91,7 @@
                                 </a>
                                 <div class="uk-accordion-content">
                                     <p class="uk-text-center">
-                                        <?php if ($this->m_data->realm_status($charsMultiRealm->realmID, $charsMultiRealm->hostname)): ?>
+                                        <?php if ($this->m_data->realm_status($charsMultiRealm->realmID, $this->home_model->realmGetHostname($charsMultiRealm->realmID))): ?>
                                             <span class="uk-label">
                                                 <span uk-icon="icon: users"></span>
                                                 <?= $this->m_characters->getCharactersOnlineAlliance($multiRealm); ?>

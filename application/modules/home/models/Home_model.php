@@ -6,6 +6,7 @@ class Home_model extends CI_Model {
     public function __construct()
     {
         parent::__construct();
+        $this->auth = $this->load->database('auth', TRUE);
     }
 
     public function getSlides()
@@ -28,5 +29,13 @@ class Home_model extends CI_Model {
         $this->db->set('status', '0')
                 ->where('id', '20')
                 ->update('fx_modules');
+    }
+
+    public function realmGetHostname($id)
+    {
+        return $this->auth->select('address')
+                ->where('id', $id)
+                ->get('realmlist')
+                ->row_array()['address'];
     }
 }
