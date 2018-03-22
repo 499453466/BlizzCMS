@@ -1,6 +1,6 @@
-<?php 
+<?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class MY_Encrypt extends CI_Encrypt
+class Fx_Encrypts
 {
     public function __construct()
     {
