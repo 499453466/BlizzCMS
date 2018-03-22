@@ -1,98 +1,97 @@
     <header id="top-head">
-        <?php if ($this->m_modules->getStatusSlides() == '1') { ?>
-            <?php if ($this->home_model->getSlides()->num_rows()) { ?>
+        <?php if($this->m_modules->getStatusSlides()): ?>
+            <?php if($this->home_model->getSlides()->num_rows()): ?>                
                 <div class="uk-position-relative uk-visible-toggle uk-light" uk-slideshow="animation: fade; autoplay: true; autoplay-interval: 5000; min-height: 200; max-height: 400;">
                     <ul class="uk-slideshow-items">
-                        <?php foreach ($this->home_model->getSlides()->result() as $slides) { ?>
+                        <?php foreach ($slides as $slides): ?>
                             <li>
-                                <img src="<?= base_url(); ?>assets/images/slides/<?= $slides->image; ?>" alt="" uk-cover>
+                                <img src="{slide_url}<?= $slides->image; ?>" alt="" uk-cover>
                                 <div class="uk-position-center-left uk-position-medium uk-text-center uk-light">
                                     <h2 class="uk-margin-medium-left"><?= $slides->title ?></h2>
-                                    <!-- <p class="uk-margin-medium-left">Lorem ipsum dolor sit amet.</p> -->
                                 </div>
                             </li>
-                        <?php } ?>
+                        <?php endforeach ?>
                     </ul>
                     <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
                     <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
                 </div>
-            <?php } ?>
-        <?php } ?>
+            <?php endif ?>
+        <?php endif ?>
     </header>
     <br>
     <div class="uk-container">
         <div class="uk-grid uk-grid-large" data-uk-grid>
-            <?php if ($this->m_modules->getStatusNews() == '1') { ?>
+            <?php if ($this->m_modules->getStatusNews()): ?>
                 <div class="uk-width-2-3@l">
-                    <p class="uk-h3 uk-text-white"><i class="far fa-newspaper"></i> <?= $this->lang->line('home_latest_news'); ?></p>
+                    <p class="uk-h3 uk-text-white"><i class="far fa-newspaper"></i> {home_latest_news}</p>
                     <div class="Divider Divider--light"></div>
-                    <?php foreach ($this->news_model->getNewSpecifyID($this->news_model->getPrincipalNew())->result() as $principalNew) { ?>
+                    <?php foreach ($principalNew as $principalNew): ?>
                         <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
                             <div class="uk-card-media-left uk-cover-container">
-                                <img src="<?= base_url(); ?>assets/images/news/<?= $principalNew->image; ?>" alt="" uk-cover>
+                                <img src="{news_url}<?= $principalNew->image; ?>" alt="" uk-cover>
                                 <canvas width="500" height="250"></canvas>
                             </div>
                             <div>
                                 <div class="uk-card-body">
                                     <h3 class="uk-card-title uk-text-break"><?= $principalNew->title; ?></h3>
                                     <p><?= substr(ucfirst(strtolower(strip_tags($principalNew->description))), 0, 260).' ...'; ?></p>
-                                    <p class="uk-text-right"><a href="<?= base_url() ;?>news/<?= $principalNew->id ?>"><button  class="uk-button uk-button-primary"><?= $this->lang->line('button_learn_more'); ?></button></a></p>
+                                    <p class="uk-text-right"><a href="<?= base_url() ;?>news/<?= $principalNew->id ?>"><button  class="uk-button uk-button-primary">{button_learn_more}</button></a></p>
                                 </div>
                             </div>
                         </div>
-                    <?php } ?>
+                    <?php endforeach ?>
                     <div uk-slider>
                         <div class="uk-position-relative uk-visible-toggle uk-light">
                             <ul class="uk-slider-items uk-child-width-1-3@s uk-grid">
-                                <?php foreach ($this->news_model->getNewsTree()->result() as $newstree) { ?>
+                                <?php foreach ($threeNews as $newstree): ?>
                                     <li>
                                         <div class="uk-text-center">
                                             <div class="uk-inline-clip uk-transition-toggle" tabindex="0">
-                                                <img src="<?= base_url(); ?>assets/images/news/<?= $newstree->image ?>" alt="">
+                                                <img src="{news_url}<?= $newstree->image ?>" alt="">
                                                 <div class="uk-transition-slide-bottom uk-position-bottom uk-overlay uk-overlay-primary">
                                                     <p class="uk-h4 uk-margin-remove uk-text-truncate"><?= $newstree->title ?></p>
-                                                    <p><a href="<?= base_url() ;?>news/<?= $newstree->id ?>" class="uk-button uk-button-primary uk-button-small"><?= $this->lang->line('button_learn_more'); ?></a></p>
+                                                    <p><a href="<?= base_url('news/') ;?><?= $newstree->id ?>" class="uk-button uk-button-primary uk-button-small">{button_learn_more}</a></p>
                                                 </div>
                                             </div>
                                         </div>
                                     </li>
-                                <?php } ?>
+                                <?php endforeach ?>
                             </ul>
                             <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
                             <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
                         </div>
                     </div>
                 </div>
-            <?php } ?>
+            <?php endif ?>
             <div class="uk-width-1-3@l">
-                <?php if ($this->m_modules->getStatusRealmStatus() == '1') { ?>
-                    <p class="uk-h3 uk-text-white"><i class="fas fa-server"></i> <?=$this->lang->line('home_server_status');?></p>
+                <?php if($this->m_modules->getStatusRealmStatus()): ?>
+                    <p class="uk-h3 uk-text-white"><i class="fas fa-server"></i> {home_server_status}</p>
                     <div class="label uk-text-center">
                         <h4 class="uk-text-white">
-                            <?php if ($this->m_general->getExpansionAction() == 1) { ?>
-                                <i class="fas fa-gamepad"></i> Set Realmlist <?= $this->config->item('realmlist'); ?>
-                            <?php } else { ?>
-                                <i class="fas fa-gamepad"></i> Set Portal "<?= $this->config->item('realmlist'); ?>"
-                            <?php } ?>
+                            <?php if ($this->m_general->getExpansionAction() == 1): ?>
+                                <i class="fas fa-gamepad"></i> Set Realmlist {conf_realmlist}
+                            <?php else: ?>
+                                <i class="fas fa-gamepad"></i> Set Portal "{conf_realmlist}"
+                            <?php endif ?>
                         </h4>
                     </div>
                     <div class="Divider Divider--light"></div>
                     <ul uk-accordion="multiple: true">
-                        <?php foreach ($this->m_data->getRealms()->result() as $charsMultiRealm) { 
-                            $multiRealm = $this->m_data->realmConnection($charsMultiRealm->username, $charsMultiRealm->password, $charsMultiRealm->hostname, $charsMultiRealm->char_database); 
+                        <?php foreach ($realmsList as $charsMultiRealm): 
+                            $multiRealm = $this->m_data->getRealmConnectionData($charsMultiRealm->id);
                         ?>
                             <li class="uk-open">
                                 <a class="uk-accordion-title uk-text-white" href="#">
-                                    <?php if ($this->m_data->realm_status($charsMultiRealm->realmID, $charsMultiRealm->hostname)) { ?>
+                                    <?php if ($this->m_data->realm_status($charsMultiRealm->realmID, $charsMultiRealm->hostname)): ?>
                                         <span class="uk-text-success uk-text-bold" uk-icon="icon: chevron-up; ratio: 1.5"></span>
-                                    <?php } else { ?>
+                                    <?php else: ?>
                                         <span class="uk-text-danger uk-text-bold" uk-icon="icon: chevron-down; ratio: 1.5"></span>
-                                    <?php } ?>
+                                    <?php endif ?>
                                     Realm <?= $this->m_general->getRealmName($charsMultiRealm->realmID); ?>
                                 </a>
                                 <div class="uk-accordion-content">
                                     <p class="uk-text-center">
-                                        <?php if ($this->m_data->realm_status($charsMultiRealm->realmID, $charsMultiRealm->hostname)) { ?>
+                                        <?php if ($this->m_data->realm_status($charsMultiRealm->realmID, $charsMultiRealm->hostname)): ?>
                                             <span class="uk-label">
                                                 <span uk-icon="icon: users"></span>
                                                 <?= $this->m_characters->getCharactersOnlineAlliance($multiRealm); ?>
@@ -104,73 +103,73 @@
                                                 <?= $this->m_characters->getCharactersOnlineHorde($multiRealm); ?>
                                                 <?= $this->lang->line('faction_horde'); ?>
                                             </span>
-                                        <?php } else { ?>
+                                        <?php else: ?>
                                             <div class="uk-alert-danger" uk-alert>
                                                 <p class="uk-position-center"><?= $this->lang->line('realm_offline'); ?></p>
                                             </div>
-                                        <?php } ?>
+                                        <?php endif ?>
                                     </p>
                                 </div>
                             </li>
-                        <?php } ?>
+                        <?php endforeach ?>
                     </ul>
-                <?php } ?>
-                <?php if ($this->m_modules->getStatusDiscordExperimental() == '1') { ?>
+                <?php endif ?>
+                <?php if ($this->m_modules->getStatusDiscordExperimental() == '1'): ?>
                     <div class="uk-card uk-width-1-1@m">
                         <p class="uk-h3 uk-text-white"><i class="fab fa-discord"></i> Discord</p>
                         <div class="Divider Divider--light"></div>
                         <div class="uk-text-center">
                             <br>
-                            <a target="_blank" href="https://discord.gg/<?= $this->home_model->getDiscordInfo()['code'] ?>" class="uk-h3 uk-text-white">
-                                <img class="uk-border-circle uk-text-center" src="https://cdn.discordapp.com/icons/<?= $this->home_model->getDiscordInfo()['guild']['id']; ?>/<?= $this->home_model->getDiscordInfo()['guild']['icon']; ?>.png" width="70" height="70" alt="">
+                            <a target="_blank" href="{conf_discordurl}{discord_code}" class="uk-h3 uk-text-white">
+                                <img class="uk-border-circle uk-text-center" src="{conf_discordcdn}{discord_id}/{discord_icon}.png" {discord_width_exp} {discord_height_exp} alt="">
                                 <div class="label">
-                                    <?= $this->home_model->getDiscordInfo()['guild']['name']; ?>
+                                    {discord_name}
                                 </div>
                             </a>
                             <span class="uk-label uk-label-warning">
-                                <?=$this->lang->line('users_on');?>
-                                <?= $this->home_model->getDiscordInfo()['approximate_presence_count']; ?> 
+                                {users_on}
+                                {discord_counts} 
                             </span>
                         </div>
                     </div>
-                <?php } ?>
-                <?php if ($this->m_modules->getStatusDiscordClassic() == '1') { ?>
+                <?php endif ?>
+                <?php if ($this->m_modules->getStatusDiscordClassic() == '1'): ?>
                     <div class="uk-card uk-width-1-1@m">
                         <p class="uk-h3 uk-text-white"><i class="fab fa-discord"></i> Discord</p>
                         <div class="Divider Divider--light"></div>
                         <div class="uk-text-center">
                             <br>
-                            <iframe src="https://discordapp.com/widget?id=<?= $this->home_model->getDiscordInfo()['guild']['id']; ?>&theme=dark" width="300" height="300" allowtransparency="true" frameborder="0"></iframe>
+                            <iframe src="{conf_discordwidget}{discord_id}&theme={conf_discordtheme}" {discord_width_class} {discord_height_class} {discord_extras}></iframe>
                         </div>
                     </div>
-                <?php } ?>
+                <?php endif ?>
             </div>
-            <?php if ($this->m_modules->getStatusStore() == '1') { ?>
+            <?php if($this->m_modules->getStatusStore() == '1'): ?>
                 <div class="uk-width-1-1@l">
-                    <p class="uk-h3 uk-text-white"><i class="fas fa-shopping-bag"></i> <?= $this->lang->line('home_store_top'); ?></p>
+                    <p class="uk-h3 uk-text-white"><i class="fas fa-shopping-bag"></i> {home_store_top}</p>
                     <div class="Divider Divider--light"></div>
                     <br>
                     <div uk-slider>
                         <div class="uk-position-relative uk-visible-toggle uk-light">
                             <ul class="uk-slider-items uk-child-width-1-6@s uk-grid">
-                                <?php foreach ($this->shop_model->getShopTop()->result() as $listTopShop) { ?>
+                                <?php foreach ($shopTop as $listTopShop): ?>
                                     <li>
                                         <div class="uk-text-center">
                                             <div class="uk-inline-clip uk-transition-toggle" tabindex="0">
-                                                <img src="<?= base_url(); ?>assets/images/store/<?= $this->shop_model->getImage($listTopShop->id_shop); ?>" alt="">
+                                                <img src="{store_url}<?= $this->shop_model->getImage($listTopShop->id_shop); ?>" alt="">
                                                 <div class="uk-transition-slide-bottom uk-position-bottom uk-overlay uk-overlay-primary">
                                                     <p class="uk-h4 uk-margin-remove uk-text-truncate"><?= $this->shop_model->getName($listTopShop->id_shop); ?></p>
-                                                    <p><a href="<?= base_url('store/'); ?><?= $this->shop_model->getGroup($listTopShop->id_shop); ?>" class="uk-button uk-button-primary uk-button-small"><?= $this->lang->line('button_buy'); ?></a></p>
+                                                    <p><a href="<?= base_url('store/'); ?><?= $this->shop_model->getGroup($listTopShop->id_shop); ?>" class="uk-button uk-button-primary uk-button-small">{button_buy}</a></p>
                                                 </div>
                                             </div>
                                         </div>
                                     </li>
-                                <?php } ?>
+                                <?php endforeach ?>
                             </ul>
                             <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
                             <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
                         </div>
                     </div>
                 </div>
-            <?php } ?>
+            <?php endif ?>
         </div>
