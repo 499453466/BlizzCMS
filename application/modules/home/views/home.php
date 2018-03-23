@@ -121,7 +121,7 @@
                         <div class="uk-text-center">
                             <br>
                             <a target="_blank" href="{conf_discordurl}{discord_code}" class="uk-h3 uk-text-white">
-                                <img class="uk-border-circle uk-text-center" src="{conf_discordcdn}{discord_id}/{discord_icon}.png" {discord_width_exp} {discord_height_exp} alt="">
+                                <img class="uk-border-circle uk-text-center" src="{conf_discordcdn}{discord_id}/{discord_icon}.png" width="{discord_width_exp}" height="{discord_height_exp}" alt="">
                                 <div class="label">
                                     {discord_name}
                                 </div>
@@ -139,7 +139,7 @@
                         <div class="Divider Divider--light"></div>
                         <div class="uk-text-center">
                             <br>
-                            <iframe src="{conf_discordwidget}{discord_id}&theme={conf_discordtheme}" {discord_width_class} {discord_height_class} {discord_extras}></iframe>
+                            <iframe src="{conf_discordwidget}{discord_id}&theme={conf_discordtheme}" width="{discord_width_class}" height="{discord_height_class}" {discord_extras}></iframe>
                         </div>
                     </div>
                 <?php endif ?>
