@@ -8,50 +8,36 @@
                 <div class="uk-navbar-left">
                     <a href="<?= base_url(); ?>" class="uk-navbar-item uk-logo uk-margin-small-right" width="28" height="34"><?= $this->config->item('ProjectName'); ?></a>
                     <ul class="uk-navbar-nav uk-visible@m">
-                        <li>
-                            <a href="#" class="uk-text-white"><?= $this->lang->line('nav_menu'); ?></a>
-                            <div class="uk-navbar-dropdown">
-                                <ul class="uk-nav uk-navbar-dropdown-nav">
-                                    <li><a href="<?= base_url('faq'); ?>"><i class="ra ra-uncertainty"></i> <?= $this->lang->line('nav_faq'); ?></a></li>
-                                    <?php if($this->m_modules->getStatusLadBugtracker() == '1') { ?>
-                                    <?php if($this->m_permissions->getMyPermissions('Permission_Bugtracker')) { //permissions ?>
-                                        <li><a href="<?= base_url('bugtracker'); ?>"><i class="ra ra-book"></i> <?= $this->lang->line('nav_bugtracker'); ?></a></li>
-                                    <?php } ?>
-                                    <?php } ?>
-                                    <?php if($this->m_modules->getStatusChangelogs() == '1') { ?>
-                                    <?php if($this->m_permissions->getMyPermissions('Permission_Changelogs')) { //permissions ?>
-                                        <li><a href="<?= base_url('changelogs'); ?>"><i class="ra ra-clockwork"></i> <?= $this->lang->line('nav_changelogs'); ?></a></li>
-                                    <?php } ?>
-                                    <?php } ?>
-                                    <li class="uk-nav-divider"></li>
-                                    <?php if ($this->m_modules->getStatusLadPVP() == '1') { ?>
-                                    <?php if($this->m_permissions->getMyPermissions('Permission_PVPStats')) { //permissions ?>
-                                        <li><a href="<?= base_url('pvp'); ?>"><i class="ra ra-axe"></i> <?=$this->lang->line('nav_pvp_statistics');?></a></li>
-                                    <?php } ?>
-                                    <?php } ?>
-                                    <?php if ($this->m_modules->getStatusLadArena() == '1') { ?>
-                                    <?php if($this->m_permissions->getMyPermissions('Permission_ArenaStats')) { //permissions ?>
-                                        <li><a href="<?= base_url('arena'); ?>"><i class="ra ra-arena"></i> <?=$this->lang->line('nav_arena_statistics');?></a></li>
-                                    <?php } ?>
-                                    <?php } ?>
-                                </ul>
-                            </div>
-                        </li>
-                        <?php if($this->m_modules->getStatusNews() == '1') { ?>
-                        <?php if($this->m_permissions->getMyPermissions('Permission_News')) { //permissions ?>
-                            <li><a href="<?= base_url('news'); ?>" class="uk-text-white"><?= $this->lang->line('nav_news'); ?></a></li>
-                        <?php } ?>
-                        <?php } ?>
-                        <?php if($this->m_modules->getStatusForums() == '1') { ?>
-                        <?php if($this->m_permissions->getMyPermissions('Permission_Forums')) { //permissions ?>
-                            <li><a href="<?= base_url('forums'); ?>" class="uk-text-white"><?= $this->lang->line('nav_forums'); ?></a></li>
-                        <?php } ?>
-                        <?php } ?>
-                        <?php if($this->m_modules->getStatusStore() == '1') { ?>
-                        <?php if($this->m_permissions->getMyPermissions('Permission_Store')) { //permissions ?>
-                            <li><a href="<?= base_url('store'); ?>" class="uk-text-white"><?= $this->lang->line('nav_store'); ?></a></li>
-                        <?php } ?>
-                        <?php } ?>
+                        <?php foreach ($this->m_general->getMenu()->result() as $menulist): ?>
+                            <?php if($this->m_permissions->getMyPermissions($menulist->permissions)): //permissions ?>
+                                <?php if($menulist->father == '1'): ?>
+                                    <li>
+                                        <a href="<?= $menulist->url ?>" class="uk-text-white" <?= $menulist->extras ?>>
+                                            <i class="<?= $menulist->icon ?>"></i>&nbsp;<?= $menulist->name ?>
+                                        </a>
+                                        <!-- -->
+                                        <div class="uk-navbar-dropdown">
+                                            <ul class="uk-nav uk-navbar-dropdown-nav">
+                                                <?php foreach ($this->m_general->getMenuSon($menulist->id)->result() as $menusonlist): ?>
+                                                    <li>
+                                                        <a href="<?= $menusonlist->url ?>" <?= $menusonlist->extras ?>>
+                                                            <i class="<?= $menusonlist->icon ?>"></i>&nbsp;<?= $menusonlist->name ?>
+                                                        </a>
+                                                    </li>
+                                                <?php endforeach ?>
+                                            </ul>
+                                        </div>
+                                        <!-- -->
+                                    </li>
+                                <?php elseif($menulist->father == '0' && $menulist->son == '0'): ?>
+                                    <li>
+                                        <a href="<?= $menulist->url ?>" class="uk-text-white" <?= $menulist->extras ?>>
+                                            <i class="<?= $menulist->icon ?>"></i>&nbsp;<?= $menulist->name ?>
+                                        </a>
+                                    </li>
+                                <?php endif ?>
+                            <?php endif ?>
+                        <?php endforeach ?>
                     </ul>
                 </div>
                 <div class="uk-navbar-right">
@@ -229,48 +215,32 @@
                                         <?php } ?>
                                         <li class="uk-nav-header uk-text-center"><span uk-icon="icon: world"></span>Navigation</li>
                                         <li class="uk-nav-divider"></li>
+                            <?php foreach ($this->m_general->getMenu()->result() as $menulist): ?>
+                                <?php if($this->m_permissions->getMyPermissions($menulist->permissions)): //permissions ?>
+                                    <?php if($menulist->father == '1'): ?>
                                         <li class="uk-parent">
-                                            <a href="#" class="uk-text-white"><?= $this->lang->line('nav_menu'); ?></a>
+                                            <a href="<?= $menulist->url ?>" class="uk-text-white" <?= $menulist->extras ?>>
+                                                <i class="<?= $menulist->icon ?>"></i>&nbsp;<?= $menulist->name ?>
+                                            </a>
                                             <ul class="uk-nav-sub">
-                                                <li><a href="<?= base_url('faq'); ?>"><i class="ra ra-uncertainty"></i> <?= $this->lang->line('nav_faq'); ?></a></li>
-                                                <?php if($this->m_modules->getStatusLadBugtracker() == '1') { ?>
-                                                <?php if($this->m_permissions->getMyPermissions('Permission_Bugtracker')) { //permissions ?>
-                                                    <li><a href="<?= base_url('bugtracker'); ?>"><i class="ra ra-book"></i> <?= $this->lang->line('nav_bugtracker'); ?></a></li>
-                                                <?php } ?>
-                                                <?php } ?>
-                                                <?php if($this->m_modules->getStatusChangelogs() == '1') { ?>
-                                                <?php if($this->m_permissions->getMyPermissions('Permission_Changelogs')) { //permissions ?>
-                                                    <li><a href="<?= base_url('changelogs'); ?>"><i class="ra ra-clockwork"></i> <?= $this->lang->line('nav_changelogs'); ?></a></li>
-                                                <?php } ?>
-                                                <?php } ?>
-                                                <li class="uk-nav-divider"></li>
-                                                <?php if ($this->m_modules->getStatusLadPVP() == '1') { ?>
-                                                <?php if($this->m_permissions->getMyPermissions('Permission_PVPStats')) { //permissions ?>
-                                                    <li><a href="<?= base_url('pvp'); ?>"><i class="ra ra-axe"></i> <?=$this->lang->line('nav_pvp_statistics');?></a></li>
-                                                <?php } ?>
-                                                <?php } ?>
-                                                <?php if ($this->m_modules->getStatusLadArena() == '1') { ?>
-                                                <?php if($this->m_permissions->getMyPermissions('Permission_ArenaStats')) { //permissions ?>
-                                                    <li><a href="<?= base_url('arena'); ?>"><i class="ra ra-arena"></i> <?=$this->lang->line('nav_arena_statistics');?></a></li>
-                                                <?php } ?>
-                                                <?php } ?>
+                                                <?php foreach ($this->m_general->getMenuSon($menulist->id)->result() as $menusonlist): ?>
+                                                    <li>
+                                                        <a href="<?= $menusonlist->url ?>" <?= $menusonlist->extras ?>>
+                                                            <i class="<?= $menusonlist->icon ?>"></i>&nbsp;<?= $menusonlist->name ?>
+                                                        </a>
+                                                    </li>
+                                                <?php endforeach ?>
                                             </ul>
                                         </li>
-                                        <?php if($this->m_modules->getStatusNews() == '1') { ?>
-                                        <?php if($this->m_permissions->getMyPermissions('Permission_News')) { //permissions ?>
-                                            <li><a href="<?= base_url('news'); ?>" class="uk-text-white"><?= $this->lang->line('nav_news'); ?></a></li>
-                                        <?php } ?>
-                                        <?php } ?>
-                                        <?php if($this->m_modules->getStatusForums() == '1') { ?>
-                                        <?php if($this->m_permissions->getMyPermissions('Permission_Forums')) { //permissions ?>
-                                            <li><a href="<?= base_url('forums'); ?>" class="uk-text-white"><?= $this->lang->line('nav_forums'); ?></a></li>
-                                        <?php } ?>
-                                        <?php } ?>
-                                        <?php if($this->m_modules->getStatusStore() == '1') { ?>
-                                        <?php if($this->m_permissions->getMyPermissions('Permission_Store')) { //permissions ?>
-                                            <li><a href="<?= base_url('store'); ?>" class="uk-text-white"><?= $this->lang->line('nav_store'); ?></a></li>
-                                        <?php } ?>
-                                        <?php } ?>
+                                        <?php elseif($menulist->father == '0' && $menulist->son == '0'): ?>
+                                        <li class="uk-parent">
+                                            <a href="<?= $menulist->url ?>" class="uk-text-white" <?= $menulist->extras ?>>
+                                                <i class="<?= $menulist->icon ?>"></i>&nbsp;<?= $menulist->name ?>
+                                            </a>
+                                        </li>
+                                    <?php endif ?>
+                                <?php endif ?>
+                            <?php endforeach ?>
                                     </ul>
                                 </div>
                             </div>

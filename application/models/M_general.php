@@ -552,4 +552,17 @@ class M_general extends CI_Model {
                 ->get('realmlist')
                 ->row_array()['address'];
     }
+
+    public function getMenu()
+    {
+        return $this->db->select('*')
+                ->get('fx_menu');
+    }
+
+    public function getMenuSon($id)
+    {
+        return $this->db->select('*')
+                ->where('son', $id)
+                ->get('fx_menu');
+    }
 }

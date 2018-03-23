@@ -32,26 +32,31 @@ class M_permissions extends CI_Model {
 
     public function getMyPermissions($expr)
     {
-        if(!$this->m_data->isLogged())
-            $rank = '2';
-        else
-        {
-            $qq = $this->getMyRank($this->session->userdata('fx_sess_id'));
-            if($qq->num_rows())
-                $rank = $qq->row('idrank');
-            else
-                $rank = '3';
-        }
-
-        $qq = $this->db->select('permission')
-                ->where('id', $rank)
-                ->where('permission', $this->getPermissionClasification($expr))
-                ->get('fx_ranks_linked');
-
-        if($qq->num_rows())
+        if($expr == 'Permission_FREE')
             return true;
         else
-            return false;
+        {
+            if(!$this->m_data->isLogged())
+                $rank = '2';
+            else
+            {
+                $qq = $this->getMyRank($this->session->userdata('fx_sess_id'));
+                if($qq->num_rows())
+                    $rank = $qq->row('idrank');
+                else
+                    $rank = '3';
+            }
+
+            $qq = $this->db->select('permission')
+                    ->where('id', $rank)
+                    ->where('permission', $this->getPermissionClasification($expr))
+                    ->get('fx_ranks_linked');
+
+            if($qq->num_rows())
+                return true;
+            else
+                return false;
+        }
     }
 
     public function getPermissionClasification($expr)
