@@ -544,4 +544,12 @@ class M_general extends CI_Model {
             case 'toolbarUser': return 'emoticons | undo redo | fontselect fontsizeselect | bold italic | forecolor | bullist numlist outdent indent | link unlink | removeformat'; break;
         }
     }
+
+    public function realmGetHostname($id)
+    {
+        return $this->auth->select('address')
+                ->where('id', $id)
+                ->get('realmlist')
+                ->row_array()['address'];
+    }
 }

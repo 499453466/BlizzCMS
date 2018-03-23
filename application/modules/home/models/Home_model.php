@@ -30,12 +30,4 @@ class Home_model extends CI_Model {
                 ->where('id', '20')
                 ->update('fx_modules');
     }
-
-    public function realmGetHostname($id)
-    {
-        return $this->auth->select('address')
-                ->where('id', $id)
-                ->get('realmlist')
-                ->row_array()['address'];
-    }
 }
