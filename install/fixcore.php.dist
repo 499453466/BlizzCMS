@@ -123,3 +123,9 @@ $config['fx_devbar'] = FALSE;
 |
 */
 $config['tinymce_language'] = '';
+
+/*
+| Social Links
+*/
+$config['social_facebook'] = "";
+$config['social_twitter'] = "";
