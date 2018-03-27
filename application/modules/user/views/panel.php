@@ -31,9 +31,9 @@
                     {
                         if ($this->m_general->getExpansionAction() == 1)
                         {
-                            $compare = $this->fx_encrypts->Account($this->session->userdata('fx_sess_username'), $oldpass);
+                            $compare = $this->m_data->Account($this->session->userdata('fx_sess_username'), $oldpass);
 
-                            $newpassI = $this->fx_encrypts->Account($this->session->userdata('fx_sess_username'), $newpass);
+                            $newpassI = $this->m_data->Account($this->session->userdata('fx_sess_username'), $newpass);
 
                             if ($this->m_data->getPasswordAccountID($this->session->userdata('fx_sess_id')) == strtoupper($compare))
                             {
@@ -49,11 +49,11 @@
                         }
                         else if ($this->m_general->getExpansionAction() == 2)
                         {
-                            $compare = $this->fx_encrypts->Battlenet($this->session->userdata('fx_sess_email'), $oldpass);
+                            $compare = $this->m_data->Battlenet($this->session->userdata('fx_sess_email'), $oldpass);
 
-                            $newpassI = $this->fx_encrypts->Account($this->session->userdata('fx_sess_username'), $newpass);
+                            $newpassI = $this->m_data->Account($this->session->userdata('fx_sess_username'), $newpass);
 
-                            $newpassII = $this->fx_encrypts->Battlenet($this->session->userdata('fx_sess_email'), $newpass);
+                            $newpassII = $this->m_data->Battlenet($this->session->userdata('fx_sess_email'), $newpass);
 
                             if ($this->m_data->getPasswordBnetID($this->session->userdata('fx_sess_id')) == strtoupper($compare))
                             {
@@ -81,7 +81,7 @@
 
                     if ($this->m_general->getExpansionAction() == 1)
                     {
-                        $compare = $this->fx_encrypts->Account($this->session->userdata('fx_sess_username'), $password);
+                        $compare = $this->m_data->Account($this->session->userdata('fx_sess_username'), $password);
 
                         if (strtoupper($this->session->userdata('fx_sess_email')) == strtoupper($oldemail))
                         {
@@ -97,9 +97,9 @@
                     }
                     else if ($this->m_general->getExpansionAction() == 2)
                     {
-                        $compare = $this->fx_encrypts->Battlenet($this->session->userdata('fx_sess_email'), $password);
+                        $compare = $this->m_data->Battlenet($this->session->userdata('fx_sess_email'), $password);
 
-                        $newpasscompare = $this->fx_encrypts->Battlenet($newemail, $password);
+                        $newpasscompare = $this->m_data->Battlenet($newemail, $password);
 
                         if ($this->user_model->getExistEmail(strtoupper($newemail)) > 0)
                             echo '<div class="uk-alert-warning" uk-alert><a class="uk-alert-close" uk-close></a><p class="uk-text-center"><i class="fas fa-exclamation-circle"></i> '.$this->lang->line('email_used').'</p></div>';
