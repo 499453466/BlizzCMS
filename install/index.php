@@ -195,6 +195,7 @@
                                                             <option value="french">French</option>
                                                             <option value="german">German</option>
                                                             <option value="hungarian">Hungarian</option>
+                                                            <option value="portuguese">Portuguese</option>
                                                             <option value="russian">Russian</option>
                                                             <option value="spanish">Spanish</option>
                                                             <option value="thai">Thai</option>
